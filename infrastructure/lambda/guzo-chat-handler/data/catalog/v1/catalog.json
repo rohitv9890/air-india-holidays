@@ -1,0 +1,2711 @@
+{
+  "schemaVersion": "1.0.0",
+  "version": "v1",
+  "currency": "GBP",
+  "generatedAt": "2026-09-03T00:00:00Z",
+  "notes": "Air India Holidays demo catalog covering two verticals on the shared Guzo/EasyGDS schema: ICC Men's Cricket World Cup 2027 (South Africa, hosted with Zimbabwe and Namibia) and Taj Holidays (real IHCL/Taj Hotels properties across India and the Maldives). basePrice.currency is GBP to satisfy scripts/lib/catalog-integrity.mjs's hardcoded currency gate and the GBP-only runtime pricing pipeline (guzo/display-currency.js, infrastructure lib/flights.js); the commercially-quoted USD prices requested for this build are preserved verbatim in each product's priceProvenance.sourceAmount/sourceCurrency and in flights.json's baseFareUsd field.",
+  "products": [
+    {
+      "id": "pkg-cwc-opener-ind-aus-jnb",
+      "type": "package",
+      "name": "CWC 2027 Opener: India v Australia, Johannesburg",
+      "summary": "Six days in Johannesburg for the ICC Men's Cricket World Cup 2027 tournament opener, India v Australia at The Wanderers, with Soweto heritage and the Cradle of Humankind woven around match day.",
+      "destinations": [
+        "johannesburg"
+      ],
+      "themes": [
+        "cricket",
+        "cwc2027",
+        "first-timers",
+        "city"
+      ],
+      "duration": {
+        "days": 6,
+        "nights": 5
+      },
+      "tier": "signature",
+      "basePrice": {
+        "amount": 1896,
+        "currency": "GBP",
+        "basis": "per-person"
+      },
+      "inclusions": [
+        "Nonstop Air India flights Delhi/Mumbai-Johannesburg",
+        "5 nights 5-star Johannesburg hotel",
+        "Category 2 match ticket - Tournament Opener, The Wanderers Stadium",
+        "Daily breakfast",
+        "Soweto & Apartheid Museum guided tour",
+        "Cradle of Humankind day trip",
+        "Private airport transfers"
+      ],
+      "exclusions": [
+        "Lunches and dinners except where noted",
+        "Travel insurance",
+        "South African visa/entry fees if applicable",
+        "Tips and gratuities",
+        "Optional excursions"
+      ],
+      "images": [
+        {
+          "url": "images/wanderers-stadium-johannesburg.jpg",
+          "alt": "The Wanderers Stadium, Johannesburg, on match day"
+        }
+      ],
+      "easygds": {
+        "packageId": null,
+        "placeId": null,
+        "hotelId": null,
+        "flightConfigId": null,
+        "productCode": "pkg-cwc-opener-ind-aus-jnb"
+      },
+      "seasonality": {
+        "peakMonths": [
+          10,
+          11
+        ],
+        "rainyMonths": [],
+        "notes": "ICC Men's Cricket World Cup 2027 window (Oct-Nov); South African spring — book early, fixtures and venues indicative pending the official ICC schedule."
+      },
+      "compatibility": [
+        "cwc2027",
+        "cricket",
+        "south-africa",
+        "johannesburg"
+      ],
+      "sourceRefs": [
+        "synthetic-baseline-v1"
+      ],
+      "confidence": "high",
+      "availabilityMode": "indicative",
+      "inclusionCompleteness": "complete",
+      "exclusionCompleteness": "complete",
+      "status": "active",
+      "blockers": [],
+      "route": [
+        {
+          "sequence": 1,
+          "destinationId": "johannesburg",
+          "nights": 5,
+          "transportToNext": null
+        }
+      ],
+      "relatedIds": [
+        "xfer-jnb-airport",
+        "exp-wanderers-stadium-tour"
+      ],
+      "relationships": [
+        {
+          "type": "optional-addon",
+          "productId": "xfer-jnb-airport"
+        },
+        {
+          "type": "optional-addon",
+          "productId": "exp-wanderers-stadium-tour"
+        },
+        {
+          "type": "alternative",
+          "productId": "pkg-cwc-semifinal-jnb",
+          "note": "Same venue, semi-final fixture"
+        },
+        {
+          "type": "extension",
+          "productId": "pkg-cwc-ind-pak-cpt",
+          "note": "Combine with the Cape Town leg for a two-city World Cup trip"
+        }
+      ],
+      "travellerFit": [
+        "cricket-fans",
+        "first-timers",
+        "groups"
+      ],
+      "pace": "moderate",
+      "minDurationDays": 6,
+      "maxDurationDays": 10,
+      "permittedExtraNights": 4,
+      "combinableDestinations": [
+        "johannesburg",
+        "cape-town",
+        "centurion"
+      ],
+      "accessibilityNotes": "Stadium has wheelchair-accessible seating on request at booking; guided tours use standard coaches.",
+      "priceProvenance": {
+        "sourceAmount": 2400,
+        "sourceCurrency": "USD",
+        "sourceBasis": "per-person",
+        "fxRateToGbp": 0.79,
+        "fxDate": "2026-08-20",
+        "convertedAmount": 1896,
+        "convertedCurrency": "GBP",
+        "notes": "USD price as commercially quoted for this build (package); converted to GBP for catalog schema/runtime compliance."
+      }
+    },
+    {
+      "id": "pkg-cwc-ind-pak-cpt",
+      "type": "package",
+      "name": "CWC 2027: India v Pakistan, Cape Town",
+      "summary": "The tournament's marquee group-stage blockbuster - India v Pakistan at Newlands - anchored by six days in Cape Town with Table Mountain and the Cape Peninsula.",
+      "destinations": [
+        "cape-town"
+      ],
+      "themes": [
+        "cricket",
+        "cwc2027",
+        "marquee",
+        "scenery"
+      ],
+      "duration": {
+        "days": 6,
+        "nights": 5
+      },
+      "tier": "signature",
+      "basePrice": {
+        "amount": 3002,
+        "currency": "GBP",
+        "basis": "per-person"
+      },
+      "inclusions": [
+        "Air India flights Delhi/Mumbai-Johannesburg with onward connection to Cape Town",
+        "5 nights 5-star Cape Town hotel",
+        "Category 1 match ticket - India v Pakistan, Newlands Cricket Ground",
+        "Daily breakfast",
+        "Table Mountain cableway ticket",
+        "Cape Peninsula & Boulders Beach guided tour",
+        "Private airport transfers"
+      ],
+      "exclusions": [
+        "Lunches and dinners except where noted",
+        "Travel insurance",
+        "South African visa/entry fees if applicable",
+        "Tips and gratuities",
+        "Optional excursions"
+      ],
+      "images": [
+        {
+          "url": "images/newlands-cricket-ground-cape-town.jpg",
+          "alt": "Newlands Cricket Ground, Cape Town, on match day"
+        }
+      ],
+      "easygds": {
+        "packageId": null,
+        "placeId": null,
+        "hotelId": null,
+        "flightConfigId": null,
+        "productCode": "pkg-cwc-ind-pak-cpt"
+      },
+      "seasonality": {
+        "peakMonths": [
+          10,
+          11
+        ],
+        "rainyMonths": [],
+        "notes": "ICC Men's Cricket World Cup 2027 window (Oct-Nov); South African spring — book early, fixtures and venues indicative pending the official ICC schedule."
+      },
+      "compatibility": [
+        "cwc2027",
+        "cricket",
+        "south-africa",
+        "cape-town"
+      ],
+      "sourceRefs": [
+        "synthetic-baseline-v1"
+      ],
+      "confidence": "high",
+      "availabilityMode": "indicative",
+      "inclusionCompleteness": "complete",
+      "exclusionCompleteness": "complete",
+      "status": "active",
+      "blockers": [],
+      "route": [
+        {
+          "sequence": 1,
+          "destinationId": "cape-town",
+          "nights": 5,
+          "transportToNext": null
+        }
+      ],
+      "relatedIds": [
+        "exp-newlands-stadium-tour"
+      ],
+      "relationships": [
+        {
+          "type": "optional-addon",
+          "productId": "exp-newlands-stadium-tour"
+        },
+        {
+          "type": "alternative",
+          "productId": "pkg-cwc-final-cpt",
+          "note": "Same venue, final fixture"
+        },
+        {
+          "type": "extension",
+          "productId": "pkg-cwc-opener-ind-aus-jnb",
+          "note": "Combine with the Johannesburg opener"
+        }
+      ],
+      "travellerFit": [
+        "cricket-fans",
+        "rivalry-match",
+        "groups"
+      ],
+      "pace": "moderate",
+      "minDurationDays": 6,
+      "maxDurationDays": 11,
+      "permittedExtraNights": 5,
+      "combinableDestinations": [
+        "cape-town",
+        "johannesburg"
+      ],
+      "accessibilityNotes": "Newlands has designated accessible viewing platforms bookable in advance; confirm mobility needs at booking.",
+      "priceProvenance": {
+        "sourceAmount": 3800,
+        "sourceCurrency": "USD",
+        "sourceBasis": "per-person",
+        "fxRateToGbp": 0.79,
+        "fxDate": "2026-08-20",
+        "convertedAmount": 3002,
+        "convertedCurrency": "GBP",
+        "notes": "USD price as commercially quoted for this build (package); converted to GBP for catalog schema/runtime compliance."
+      }
+    },
+    {
+      "id": "pkg-cwc-ind-rsa-durban",
+      "type": "package",
+      "name": "CWC 2027: India v South Africa, Durban",
+      "summary": "Five days on the Durban beachfront for a Group-stage India v South Africa fixture at Kingsmead, with uShaka Marine World and the city's historic Indian quarter.",
+      "destinations": [
+        "durban"
+      ],
+      "themes": [
+        "cricket",
+        "cwc2027",
+        "beach",
+        "city"
+      ],
+      "duration": {
+        "days": 5,
+        "nights": 4
+      },
+      "tier": "comfort",
+      "basePrice": {
+        "amount": 1738,
+        "currency": "GBP",
+        "basis": "per-person"
+      },
+      "inclusions": [
+        "Air India flights Delhi/Mumbai-Johannesburg with onward connection to Durban",
+        "4 nights 4-star Durban hotel",
+        "Category 2 match ticket - India v South Africa, Kingsmead",
+        "Daily breakfast",
+        "uShaka Marine World & Golden Mile tour",
+        "Durban Indian quarter & Victoria Street Market tour",
+        "Private airport transfers"
+      ],
+      "exclusions": [
+        "Lunches and dinners except where noted",
+        "Travel insurance",
+        "South African visa/entry fees if applicable",
+        "Tips and gratuities",
+        "Optional excursions"
+      ],
+      "images": [
+        {
+          "url": "images/kingsmead-stadium-durban.jpg",
+          "alt": "Kingsmead Stadium, Durban, on match day"
+        }
+      ],
+      "easygds": {
+        "packageId": null,
+        "placeId": null,
+        "hotelId": null,
+        "flightConfigId": null,
+        "productCode": "pkg-cwc-ind-rsa-durban"
+      },
+      "seasonality": {
+        "peakMonths": [
+          10,
+          11
+        ],
+        "rainyMonths": [],
+        "notes": "ICC Men's Cricket World Cup 2027 window (Oct-Nov); South African spring — book early, fixtures and venues indicative pending the official ICC schedule."
+      },
+      "compatibility": [
+        "cwc2027",
+        "cricket",
+        "south-africa",
+        "durban"
+      ],
+      "sourceRefs": [
+        "synthetic-baseline-v1"
+      ],
+      "confidence": "high",
+      "availabilityMode": "indicative",
+      "inclusionCompleteness": "complete",
+      "exclusionCompleteness": "complete",
+      "status": "active",
+      "blockers": [],
+      "route": [
+        {
+          "sequence": 1,
+          "destinationId": "durban",
+          "nights": 4,
+          "transportToNext": null
+        }
+      ],
+      "relatedIds": [],
+      "relationships": [
+        {
+          "type": "extension",
+          "productId": "pkg-cwc-opener-ind-aus-jnb",
+          "note": "Combine with the Johannesburg opener via the JNB hub"
+        }
+      ],
+      "travellerFit": [
+        "cricket-fans",
+        "families",
+        "beach-lovers"
+      ],
+      "pace": "moderate",
+      "minDurationDays": 5,
+      "maxDurationDays": 9,
+      "permittedExtraNights": 4,
+      "combinableDestinations": [
+        "durban",
+        "johannesburg"
+      ],
+      "priceProvenance": {
+        "sourceAmount": 2200,
+        "sourceCurrency": "USD",
+        "sourceBasis": "per-person",
+        "fxRateToGbp": 0.79,
+        "fxDate": "2026-08-20",
+        "convertedAmount": 1738,
+        "convertedCurrency": "GBP",
+        "notes": "USD price as commercially quoted for this build (package); converted to GBP for catalog schema/runtime compliance."
+      }
+    },
+    {
+      "id": "pkg-cwc-aus-eng-centurion",
+      "type": "package",
+      "name": "CWC 2027: Australia v England, Centurion",
+      "summary": "A Group-stage Ashes-flavoured fixture at SuperSport Park, paired with Pretoria heritage sites and the Cullinan Diamond Mine, a short road transfer from Johannesburg.",
+      "destinations": [
+        "centurion"
+      ],
+      "themes": [
+        "cricket",
+        "cwc2027",
+        "history"
+      ],
+      "duration": {
+        "days": 5,
+        "nights": 4
+      },
+      "tier": "comfort",
+      "basePrice": {
+        "amount": 1501,
+        "currency": "GBP",
+        "basis": "per-person"
+      },
+      "inclusions": [
+        "Air India flights Delhi/Mumbai-Johannesburg with road transfer to Centurion",
+        "4 nights 4-star Centurion hotel",
+        "Category 2 match ticket - Australia v England, SuperSport Park",
+        "Daily breakfast",
+        "Pretoria Union Buildings & Voortrekker Monument tour",
+        "Cullinan Diamond Mine day trip",
+        "Private airport and ground transfers"
+      ],
+      "exclusions": [
+        "Lunches and dinners except where noted",
+        "Travel insurance",
+        "South African visa/entry fees if applicable",
+        "Tips and gratuities",
+        "Optional excursions"
+      ],
+      "images": [
+        {
+          "url": "images/supersport-park-centurion.jpg",
+          "alt": "SuperSport Park, Centurion, on match day"
+        }
+      ],
+      "easygds": {
+        "packageId": null,
+        "placeId": null,
+        "hotelId": null,
+        "flightConfigId": null,
+        "productCode": "pkg-cwc-aus-eng-centurion"
+      },
+      "seasonality": {
+        "peakMonths": [
+          10,
+          11
+        ],
+        "rainyMonths": [],
+        "notes": "ICC Men's Cricket World Cup 2027 window (Oct-Nov); South African spring — book early, fixtures and venues indicative pending the official ICC schedule."
+      },
+      "compatibility": [
+        "cwc2027",
+        "cricket",
+        "south-africa",
+        "centurion",
+        "pretoria"
+      ],
+      "sourceRefs": [
+        "synthetic-baseline-v1"
+      ],
+      "confidence": "high",
+      "availabilityMode": "indicative",
+      "inclusionCompleteness": "complete",
+      "exclusionCompleteness": "complete",
+      "status": "active",
+      "blockers": [],
+      "route": [
+        {
+          "sequence": 1,
+          "destinationId": "centurion",
+          "nights": 4,
+          "transportToNext": null
+        }
+      ],
+      "relatedIds": [],
+      "relationships": [
+        {
+          "type": "extension",
+          "productId": "pkg-cwc-opener-ind-aus-jnb",
+          "note": "Easily combined with Johannesburg fixtures by road"
+        }
+      ],
+      "travellerFit": [
+        "cricket-fans",
+        "history"
+      ],
+      "pace": "moderate",
+      "minDurationDays": 5,
+      "maxDurationDays": 9,
+      "permittedExtraNights": 4,
+      "combinableDestinations": [
+        "centurion",
+        "johannesburg"
+      ],
+      "priceProvenance": {
+        "sourceAmount": 1900,
+        "sourceCurrency": "USD",
+        "sourceBasis": "per-person",
+        "fxRateToGbp": 0.79,
+        "fxDate": "2026-08-20",
+        "convertedAmount": 1501,
+        "convertedCurrency": "GBP",
+        "notes": "USD price as commercially quoted for this build (package); converted to GBP for catalog schema/runtime compliance."
+      }
+    },
+    {
+      "id": "pkg-cwc-sl-ban-gqeberha",
+      "type": "package",
+      "name": "CWC 2027: Sri Lanka v Bangladesh, Gqeberha",
+      "summary": "A Group-stage fixture at St George's Park - the world's second-oldest Test ground - combined with an Addo Elephant National Park safari on the Eastern Cape.",
+      "destinations": [
+        "gqeberha"
+      ],
+      "themes": [
+        "cricket",
+        "cwc2027",
+        "wildlife",
+        "beach"
+      ],
+      "duration": {
+        "days": 5,
+        "nights": 4
+      },
+      "tier": "classic",
+      "basePrice": {
+        "amount": 1422,
+        "currency": "GBP",
+        "basis": "per-person"
+      },
+      "inclusions": [
+        "Air India flights Delhi/Mumbai-Johannesburg with onward connection to Gqeberha",
+        "4 nights 4-star Gqeberha hotel",
+        "Category 3 match ticket - Sri Lanka v Bangladesh, St George's Park",
+        "Daily breakfast",
+        "Addo Elephant National Park game drive",
+        "City heritage & Donkin Reserve tour",
+        "Private airport transfers"
+      ],
+      "exclusions": [
+        "Lunches and dinners except where noted",
+        "Travel insurance",
+        "South African visa/entry fees if applicable",
+        "Tips and gratuities",
+        "Optional excursions"
+      ],
+      "images": [
+        {
+          "url": "images/st-georges-park-gqeberha.jpg",
+          "alt": "St George's Park, Gqeberha, on match day"
+        }
+      ],
+      "easygds": {
+        "packageId": null,
+        "placeId": null,
+        "hotelId": null,
+        "flightConfigId": null,
+        "productCode": "pkg-cwc-sl-ban-gqeberha"
+      },
+      "seasonality": {
+        "peakMonths": [
+          10,
+          11
+        ],
+        "rainyMonths": [],
+        "notes": "ICC Men's Cricket World Cup 2027 window (Oct-Nov); South African spring — book early, fixtures and venues indicative pending the official ICC schedule."
+      },
+      "compatibility": [
+        "cwc2027",
+        "cricket",
+        "south-africa",
+        "gqeberha",
+        "safari"
+      ],
+      "sourceRefs": [
+        "synthetic-baseline-v1"
+      ],
+      "confidence": "high",
+      "availabilityMode": "indicative",
+      "inclusionCompleteness": "complete",
+      "exclusionCompleteness": "complete",
+      "status": "active",
+      "blockers": [],
+      "route": [
+        {
+          "sequence": 1,
+          "destinationId": "gqeberha",
+          "nights": 4,
+          "transportToNext": null
+        }
+      ],
+      "relatedIds": [],
+      "relationships": [],
+      "travellerFit": [
+        "cricket-fans",
+        "wildlife",
+        "value"
+      ],
+      "pace": "moderate",
+      "minDurationDays": 5,
+      "maxDurationDays": 8,
+      "permittedExtraNights": 3,
+      "combinableDestinations": [
+        "gqeberha",
+        "johannesburg"
+      ],
+      "priceProvenance": {
+        "sourceAmount": 1800,
+        "sourceCurrency": "USD",
+        "sourceBasis": "per-person",
+        "fxRateToGbp": 0.79,
+        "fxDate": "2026-08-20",
+        "convertedAmount": 1422,
+        "convertedCurrency": "GBP",
+        "notes": "USD price as commercially quoted for this build (package); converted to GBP for catalog schema/runtime compliance."
+      }
+    },
+    {
+      "id": "pkg-cwc-semifinal-jnb",
+      "type": "package",
+      "name": "CWC 2027 Semi-Final, Johannesburg",
+      "summary": "Six days in Johannesburg built around a Cricket World Cup 2027 semi-final at The Wanderers, with Soweto heritage and the Cradle of Humankind either side of match day.",
+      "destinations": [
+        "johannesburg"
+      ],
+      "themes": [
+        "cricket",
+        "cwc2027",
+        "knockout",
+        "city"
+      ],
+      "duration": {
+        "days": 6,
+        "nights": 5
+      },
+      "tier": "signature",
+      "basePrice": {
+        "amount": 3160,
+        "currency": "GBP",
+        "basis": "per-person"
+      },
+      "inclusions": [
+        "Nonstop Air India flights Delhi/Mumbai-Johannesburg",
+        "5 nights 5-star Johannesburg hotel",
+        "Category 1 match ticket - Semi-Final, The Wanderers Stadium",
+        "Daily breakfast",
+        "Soweto & Apartheid Museum guided tour",
+        "Cradle of Humankind day trip",
+        "Private airport transfers"
+      ],
+      "exclusions": [
+        "Lunches and dinners except where noted",
+        "Travel insurance",
+        "South African visa/entry fees if applicable",
+        "Tips and gratuities",
+        "Optional excursions"
+      ],
+      "images": [
+        {
+          "url": "images/wanderers-stadium-johannesburg.jpg",
+          "alt": "The Wanderers Stadium, Johannesburg, on match day"
+        }
+      ],
+      "easygds": {
+        "packageId": null,
+        "placeId": null,
+        "hotelId": null,
+        "flightConfigId": null,
+        "productCode": "pkg-cwc-semifinal-jnb"
+      },
+      "seasonality": {
+        "peakMonths": [
+          10,
+          11
+        ],
+        "rainyMonths": [],
+        "notes": "ICC Men's Cricket World Cup 2027 window (Oct-Nov); South African spring — book early, fixtures and venues indicative pending the official ICC schedule."
+      },
+      "compatibility": [
+        "cwc2027",
+        "cricket",
+        "south-africa",
+        "johannesburg",
+        "knockout"
+      ],
+      "sourceRefs": [
+        "synthetic-baseline-v1"
+      ],
+      "confidence": "high",
+      "availabilityMode": "indicative",
+      "inclusionCompleteness": "complete",
+      "exclusionCompleteness": "complete",
+      "status": "active",
+      "blockers": [],
+      "route": [
+        {
+          "sequence": 1,
+          "destinationId": "johannesburg",
+          "nights": 5,
+          "transportToNext": null
+        }
+      ],
+      "relatedIds": [
+        "xfer-jnb-airport",
+        "exp-wanderers-stadium-tour"
+      ],
+      "relationships": [
+        {
+          "type": "optional-addon",
+          "productId": "xfer-jnb-airport"
+        },
+        {
+          "type": "optional-addon",
+          "productId": "exp-wanderers-stadium-tour"
+        },
+        {
+          "type": "alternative",
+          "productId": "pkg-cwc-opener-ind-aus-jnb",
+          "note": "Same venue, tournament opener fixture"
+        },
+        {
+          "type": "extension",
+          "productId": "pkg-cwc-final-cpt",
+          "note": "Follow the tournament through to the Cape Town final"
+        }
+      ],
+      "travellerFit": [
+        "cricket-fans",
+        "knockout-stage",
+        "groups"
+      ],
+      "pace": "moderate",
+      "minDurationDays": 6,
+      "maxDurationDays": 10,
+      "permittedExtraNights": 4,
+      "combinableDestinations": [
+        "johannesburg",
+        "cape-town",
+        "centurion"
+      ],
+      "priceProvenance": {
+        "sourceAmount": 4000,
+        "sourceCurrency": "USD",
+        "sourceBasis": "per-person",
+        "fxRateToGbp": 0.79,
+        "fxDate": "2026-08-20",
+        "convertedAmount": 3160,
+        "convertedCurrency": "GBP",
+        "notes": "USD price as commercially quoted for this build (package); converted to GBP for catalog schema/runtime compliance."
+      }
+    },
+    {
+      "id": "pkg-cwc-final-cpt",
+      "type": "package",
+      "name": "CWC 2027 Final, Cape Town",
+      "summary": "Seven days in Cape Town culminating in the ICC Men's Cricket World Cup 2027 final at Newlands, with Table Mountain, the Cape Peninsula, and a Robben Island history tour.",
+      "destinations": [
+        "cape-town"
+      ],
+      "themes": [
+        "cricket",
+        "cwc2027",
+        "final",
+        "scenery"
+      ],
+      "duration": {
+        "days": 7,
+        "nights": 6
+      },
+      "tier": "signature",
+      "basePrice": {
+        "amount": 3555,
+        "currency": "GBP",
+        "basis": "per-person"
+      },
+      "inclusions": [
+        "Air India flights Delhi/Mumbai-Johannesburg with onward connection to Cape Town",
+        "6 nights 5-star Cape Town hotel",
+        "Category 1 match ticket - CWC 2027 Final, Newlands Cricket Ground",
+        "Daily breakfast",
+        "Table Mountain cableway ticket",
+        "Cape Peninsula & Boulders Beach guided tour",
+        "Robben Island guided tour",
+        "Private airport transfers"
+      ],
+      "exclusions": [
+        "Lunches and dinners except where noted",
+        "Travel insurance",
+        "South African visa/entry fees if applicable",
+        "Tips and gratuities",
+        "Optional excursions"
+      ],
+      "images": [
+        {
+          "url": "images/newlands-cricket-ground-cape-town.jpg",
+          "alt": "Newlands Cricket Ground, Cape Town, on match day"
+        }
+      ],
+      "easygds": {
+        "packageId": null,
+        "placeId": null,
+        "hotelId": null,
+        "flightConfigId": null,
+        "productCode": "pkg-cwc-final-cpt"
+      },
+      "seasonality": {
+        "peakMonths": [
+          10,
+          11
+        ],
+        "rainyMonths": [],
+        "notes": "ICC Men's Cricket World Cup 2027 window (Oct-Nov); South African spring — book early, fixtures and venues indicative pending the official ICC schedule."
+      },
+      "compatibility": [
+        "cwc2027",
+        "cricket",
+        "south-africa",
+        "cape-town",
+        "final"
+      ],
+      "sourceRefs": [
+        "synthetic-baseline-v1"
+      ],
+      "confidence": "high",
+      "availabilityMode": "indicative",
+      "inclusionCompleteness": "complete",
+      "exclusionCompleteness": "complete",
+      "status": "active",
+      "blockers": [],
+      "route": [
+        {
+          "sequence": 1,
+          "destinationId": "cape-town",
+          "nights": 6,
+          "transportToNext": null
+        }
+      ],
+      "relatedIds": [
+        "exp-newlands-stadium-tour"
+      ],
+      "relationships": [
+        {
+          "type": "optional-addon",
+          "productId": "exp-newlands-stadium-tour"
+        },
+        {
+          "type": "alternative",
+          "productId": "pkg-cwc-ind-pak-cpt",
+          "note": "Same venue, group-stage fixture"
+        },
+        {
+          "type": "extension",
+          "productId": "pkg-cwc-semifinal-jnb",
+          "note": "Follow the tournament from the Johannesburg semi-final"
+        }
+      ],
+      "travellerFit": [
+        "cricket-fans",
+        "final-stage",
+        "once-in-a-lifetime"
+      ],
+      "pace": "moderate",
+      "minDurationDays": 7,
+      "maxDurationDays": 12,
+      "permittedExtraNights": 5,
+      "combinableDestinations": [
+        "cape-town",
+        "johannesburg"
+      ],
+      "accessibilityNotes": "Newlands has designated accessible viewing platforms bookable in advance; confirm mobility needs at booking.",
+      "priceProvenance": {
+        "sourceAmount": 4500,
+        "sourceCurrency": "USD",
+        "sourceBasis": "per-person",
+        "fxRateToGbp": 0.79,
+        "fxDate": "2026-08-20",
+        "convertedAmount": 3555,
+        "convertedCurrency": "GBP",
+        "notes": "USD price as commercially quoted for this build (package); converted to GBP for catalog schema/runtime compliance."
+      }
+    },
+    {
+      "id": "pkg-taj-udaipur-lake-palace",
+      "type": "package",
+      "name": "Taj Holidays: Udaipur & the Lake Palace",
+      "summary": "Three nights afloat at the Taj Lake Palace on Lake Pichola, with the City Palace, a sunset lake cruise, and the Monsoon Palace above the City of Lakes.",
+      "destinations": [
+        "udaipur"
+      ],
+      "themes": [
+        "taj",
+        "luxury",
+        "romance",
+        "heritage"
+      ],
+      "duration": {
+        "days": 4,
+        "nights": 3
+      },
+      "tier": "signature",
+      "basePrice": {
+        "amount": 1896,
+        "currency": "GBP",
+        "basis": "per-person"
+      },
+      "inclusions": [
+        "Air India flights Delhi/Mumbai-Udaipur",
+        "3 nights at the Taj Lake Palace (lake-view room)",
+        "Daily breakfast",
+        "Private boat transfer to and from the palace",
+        "City Palace guided tour",
+        "Lake Pichola sunset cruise",
+        "Airport transfers"
+      ],
+      "exclusions": [
+        "Lunches and dinners except where noted",
+        "Travel insurance",
+        "Tips and gratuities",
+        "Spa treatments"
+      ],
+      "images": [
+        {
+          "url": "images/taj-lake-palace-udaipur.jpg",
+          "alt": "Taj Lake Palace floating on Lake Pichola, Udaipur"
+        }
+      ],
+      "easygds": {
+        "packageId": null,
+        "placeId": null,
+        "hotelId": null,
+        "flightConfigId": null,
+        "productCode": "pkg-taj-udaipur-lake-palace"
+      },
+      "seasonality": {
+        "peakMonths": [
+          10,
+          11,
+          12,
+          1,
+          2,
+          3
+        ],
+        "rainyMonths": [
+          7,
+          8,
+          9
+        ],
+        "notes": "Best Oct-Mar (cool, dry); monsoon Jul-Sep; avoid Apr-Jun extreme heat."
+      },
+      "compatibility": [
+        "taj",
+        "luxury",
+        "india",
+        "udaipur",
+        "rajasthan"
+      ],
+      "sourceRefs": [
+        "synthetic-baseline-v1"
+      ],
+      "confidence": "high",
+      "availabilityMode": "indicative",
+      "inclusionCompleteness": "complete",
+      "exclusionCompleteness": "complete",
+      "status": "active",
+      "blockers": [],
+      "stars": 5,
+      "route": [
+        {
+          "sequence": 1,
+          "destinationId": "udaipur",
+          "nights": 3,
+          "transportToNext": null
+        }
+      ],
+      "relatedIds": [
+        "acc-taj-lake-palace-udaipur"
+      ],
+      "relationships": [
+        {
+          "type": "optional-addon",
+          "productId": "acc-taj-lake-palace-udaipur",
+          "note": "Extend the stay with extra nights at the same rate basis"
+        },
+        {
+          "type": "extension",
+          "productId": "pkg-taj-jaipur-rambagh-palace",
+          "note": "Classic Rajasthan pairing with Jaipur"
+        }
+      ],
+      "travellerFit": [
+        "couples",
+        "honeymoon",
+        "heritage"
+      ],
+      "pace": "relaxed",
+      "minDurationDays": 4,
+      "maxDurationDays": 8,
+      "permittedExtraNights": 4,
+      "combinableDestinations": [
+        "udaipur",
+        "jaipur",
+        "delhi"
+      ],
+      "priceProvenance": {
+        "sourceAmount": 2400,
+        "sourceCurrency": "USD",
+        "sourceBasis": "per-person",
+        "fxRateToGbp": 0.79,
+        "fxDate": "2026-08-20",
+        "convertedAmount": 1896,
+        "convertedCurrency": "GBP",
+        "notes": "USD price as commercially quoted for this build (package); converted to GBP for catalog schema/runtime compliance."
+      }
+    },
+    {
+      "id": "pkg-taj-jaipur-rambagh-palace",
+      "type": "package",
+      "name": "Taj Holidays: Jaipur & the Rambagh Palace",
+      "summary": "Three nights at the Taj Rambagh Palace, former residence of the Maharajas of Jaipur, with Amber Fort, the City Palace, and a Nahargarh Fort sundowner over the Pink City.",
+      "destinations": [
+        "jaipur"
+      ],
+      "themes": [
+        "taj",
+        "luxury",
+        "heritage"
+      ],
+      "duration": {
+        "days": 4,
+        "nights": 3
+      },
+      "tier": "signature",
+      "basePrice": {
+        "amount": 1580,
+        "currency": "GBP",
+        "basis": "per-person"
+      },
+      "inclusions": [
+        "Air India flights Delhi/Mumbai-Jaipur",
+        "3 nights at the Taj Rambagh Palace",
+        "Daily breakfast",
+        "Amber Fort guided tour",
+        "City Palace & Hawa Mahal tour",
+        "Airport transfers"
+      ],
+      "exclusions": [
+        "Lunches and dinners except where noted",
+        "Travel insurance",
+        "Tips and gratuities",
+        "Polo lessons and spa treatments"
+      ],
+      "images": [
+        {
+          "url": "images/taj-rambagh-palace-jaipur.jpg",
+          "alt": "Taj Rambagh Palace in Jaipur"
+        }
+      ],
+      "easygds": {
+        "packageId": null,
+        "placeId": null,
+        "hotelId": null,
+        "flightConfigId": null,
+        "productCode": "pkg-taj-jaipur-rambagh-palace"
+      },
+      "seasonality": {
+        "peakMonths": [
+          10,
+          11,
+          12,
+          1,
+          2,
+          3
+        ],
+        "rainyMonths": [
+          7,
+          8,
+          9
+        ],
+        "notes": "Best Oct-Mar (cool, dry); monsoon Jul-Sep; avoid Apr-Jun extreme heat."
+      },
+      "compatibility": [
+        "taj",
+        "luxury",
+        "india",
+        "jaipur",
+        "rajasthan"
+      ],
+      "sourceRefs": [
+        "synthetic-baseline-v1"
+      ],
+      "confidence": "high",
+      "availabilityMode": "indicative",
+      "inclusionCompleteness": "complete",
+      "exclusionCompleteness": "complete",
+      "status": "active",
+      "blockers": [],
+      "stars": 5,
+      "route": [
+        {
+          "sequence": 1,
+          "destinationId": "jaipur",
+          "nights": 3,
+          "transportToNext": null
+        }
+      ],
+      "relatedIds": [
+        "exp-amber-fort-jaipur"
+      ],
+      "relationships": [
+        {
+          "type": "optional-addon",
+          "productId": "exp-amber-fort-jaipur"
+        },
+        {
+          "type": "extension",
+          "productId": "pkg-taj-udaipur-lake-palace",
+          "note": "Classic Rajasthan pairing with Udaipur"
+        }
+      ],
+      "travellerFit": [
+        "couples",
+        "families",
+        "heritage"
+      ],
+      "pace": "relaxed",
+      "minDurationDays": 4,
+      "maxDurationDays": 8,
+      "permittedExtraNights": 4,
+      "combinableDestinations": [
+        "jaipur",
+        "udaipur",
+        "delhi",
+        "agra"
+      ],
+      "priceProvenance": {
+        "sourceAmount": 2000,
+        "sourceCurrency": "USD",
+        "sourceBasis": "per-person",
+        "fxRateToGbp": 0.79,
+        "fxDate": "2026-08-20",
+        "convertedAmount": 1580,
+        "convertedCurrency": "GBP",
+        "notes": "USD price as commercially quoted for this build (package); converted to GBP for catalog schema/runtime compliance."
+      }
+    },
+    {
+      "id": "pkg-taj-hyderabad-falaknuma",
+      "type": "package",
+      "name": "Taj Holidays: Hyderabad & the Falaknuma Palace",
+      "summary": "Two nights at the Taj Falaknuma Palace, the former guesthouse of the Nizams above Hyderabad, with Charminar, Golconda Fort, and a farewell high tea on the palace terrace.",
+      "destinations": [
+        "hyderabad"
+      ],
+      "themes": [
+        "taj",
+        "luxury",
+        "heritage"
+      ],
+      "duration": {
+        "days": 3,
+        "nights": 2
+      },
+      "tier": "signature",
+      "basePrice": {
+        "amount": 1264,
+        "currency": "GBP",
+        "basis": "per-person"
+      },
+      "inclusions": [
+        "Air India flights Delhi/Mumbai-Hyderabad",
+        "2 nights at the Taj Falaknuma Palace",
+        "Daily breakfast",
+        "Charminar & Old City guided tour",
+        "Golconda Fort sound-and-light show",
+        "Airport transfers"
+      ],
+      "exclusions": [
+        "Lunches and dinners except where noted",
+        "Travel insurance",
+        "Tips and gratuities",
+        "Ramoji Film City excursion"
+      ],
+      "images": [
+        {
+          "url": "images/taj-falaknuma-palace-hyderabad.jpg",
+          "alt": "Taj Falaknuma Palace overlooking Hyderabad"
+        }
+      ],
+      "easygds": {
+        "packageId": null,
+        "placeId": null,
+        "hotelId": null,
+        "flightConfigId": null,
+        "productCode": "pkg-taj-hyderabad-falaknuma"
+      },
+      "seasonality": {
+        "peakMonths": [
+          10,
+          11,
+          12,
+          1,
+          2
+        ],
+        "rainyMonths": [
+          6,
+          7,
+          8,
+          9
+        ],
+        "notes": "Best Oct-Feb (pleasant, dry); southwest monsoon Jun-Sep; hot Mar-May."
+      },
+      "compatibility": [
+        "taj",
+        "luxury",
+        "india",
+        "hyderabad"
+      ],
+      "sourceRefs": [
+        "synthetic-baseline-v1"
+      ],
+      "confidence": "high",
+      "availabilityMode": "indicative",
+      "inclusionCompleteness": "complete",
+      "exclusionCompleteness": "complete",
+      "status": "active",
+      "blockers": [],
+      "stars": 5,
+      "route": [
+        {
+          "sequence": 1,
+          "destinationId": "hyderabad",
+          "nights": 2,
+          "transportToNext": null
+        }
+      ],
+      "relatedIds": [
+        "acc-taj-falaknuma-hyderabad"
+      ],
+      "relationships": [
+        {
+          "type": "optional-addon",
+          "productId": "acc-taj-falaknuma-hyderabad",
+          "note": "Extend the stay with extra nights at the same rate basis"
+        }
+      ],
+      "travellerFit": [
+        "couples",
+        "heritage",
+        "short-break"
+      ],
+      "pace": "relaxed",
+      "minDurationDays": 3,
+      "maxDurationDays": 6,
+      "permittedExtraNights": 3,
+      "combinableDestinations": [
+        "hyderabad"
+      ],
+      "priceProvenance": {
+        "sourceAmount": 1600,
+        "sourceCurrency": "USD",
+        "sourceBasis": "per-person",
+        "fxRateToGbp": 0.79,
+        "fxDate": "2026-08-20",
+        "convertedAmount": 1264,
+        "convertedCurrency": "GBP",
+        "notes": "USD price as commercially quoted for this build (package); converted to GBP for catalog schema/runtime compliance."
+      }
+    },
+    {
+      "id": "pkg-taj-kerala-kochi-backwaters",
+      "type": "package",
+      "name": "Taj Holidays: Kochi & Alleppey Backwaters",
+      "summary": "Two nights at the Taj Malabar in Fort Kochi followed by two nights on a private Kerala houseboat through the Alleppey backwaters.",
+      "destinations": [
+        "kochi",
+        "alleppey"
+      ],
+      "themes": [
+        "taj",
+        "luxury",
+        "backwaters",
+        "nature"
+      ],
+      "duration": {
+        "days": 5,
+        "nights": 4
+      },
+      "tier": "comfort",
+      "basePrice": {
+        "amount": 1106,
+        "currency": "GBP",
+        "basis": "per-person"
+      },
+      "inclusions": [
+        "Air India flights Delhi/Mumbai-Kochi",
+        "2 nights at the Taj Malabar, Kochi",
+        "Road transfer from Kochi to Alleppey",
+        "2 nights on a private backwater houseboat, all meals included on board",
+        "Fort Kochi heritage walking tour",
+        "Backwater village walk and canoe ride",
+        "Airport transfers"
+      ],
+      "exclusions": [
+        "Lunches and dinners in Kochi except where noted",
+        "Travel insurance",
+        "Tips and gratuities",
+        "Ayurvedic spa treatments"
+      ],
+      "images": [
+        {
+          "url": "images/kerala-backwaters-houseboat-alleppey.jpg",
+          "alt": "Traditional houseboat on the Alleppey backwaters"
+        }
+      ],
+      "easygds": {
+        "packageId": null,
+        "placeId": null,
+        "hotelId": null,
+        "flightConfigId": null,
+        "productCode": "pkg-taj-kerala-kochi-backwaters"
+      },
+      "seasonality": {
+        "peakMonths": [
+          11,
+          12,
+          1,
+          2,
+          3
+        ],
+        "rainyMonths": [
+          6,
+          7,
+          8,
+          9
+        ],
+        "notes": "Best Nov-Mar (dry, warm); southwest monsoon Jun-Sep brings heavy rain."
+      },
+      "compatibility": [
+        "taj",
+        "luxury",
+        "india",
+        "kerala",
+        "backwaters"
+      ],
+      "sourceRefs": [
+        "synthetic-baseline-v1"
+      ],
+      "confidence": "high",
+      "availabilityMode": "indicative",
+      "inclusionCompleteness": "complete",
+      "exclusionCompleteness": "complete",
+      "status": "active",
+      "blockers": [],
+      "stars": 5,
+      "route": [
+        {
+          "sequence": 1,
+          "destinationId": "kochi",
+          "nights": 2,
+          "transportToNext": "road"
+        },
+        {
+          "sequence": 2,
+          "destinationId": "alleppey",
+          "nights": 2,
+          "transportToNext": null
+        }
+      ],
+      "relatedIds": [
+        "exp-kerala-backwater-houseboat"
+      ],
+      "relationships": [
+        {
+          "type": "optional-addon",
+          "productId": "exp-kerala-backwater-houseboat"
+        }
+      ],
+      "travellerFit": [
+        "couples",
+        "honeymoon",
+        "nature"
+      ],
+      "pace": "relaxed",
+      "minDurationDays": 5,
+      "maxDurationDays": 9,
+      "permittedExtraNights": 4,
+      "combinableDestinations": [
+        "kochi",
+        "alleppey",
+        "maldives"
+      ],
+      "priceProvenance": {
+        "sourceAmount": 1400,
+        "sourceCurrency": "USD",
+        "sourceBasis": "per-person",
+        "fxRateToGbp": 0.79,
+        "fxDate": "2026-08-20",
+        "convertedAmount": 1106,
+        "convertedCurrency": "GBP",
+        "notes": "USD price as commercially quoted for this build (package); converted to GBP for catalog schema/runtime compliance."
+      }
+    },
+    {
+      "id": "pkg-taj-goa-fort-aguada",
+      "type": "package",
+      "name": "Taj Holidays: Goa & the Fort Aguada",
+      "summary": "Four nights at the Taj Fort Aguada, built within a 16th-century Portuguese sea fort, with Old Goa's UNESCO churches and the Baga-Calangute beach strip.",
+      "destinations": [
+        "goa"
+      ],
+      "themes": [
+        "taj",
+        "beach",
+        "heritage"
+      ],
+      "duration": {
+        "days": 5,
+        "nights": 4
+      },
+      "tier": "comfort",
+      "basePrice": {
+        "amount": 869,
+        "currency": "GBP",
+        "basis": "per-person"
+      },
+      "inclusions": [
+        "Air India flights Delhi/Mumbai-Goa",
+        "4 nights at the Taj Fort Aguada",
+        "Daily breakfast",
+        "Old Goa churches & Panaji heritage tour",
+        "Baga & Calangute beach day",
+        "Airport transfers"
+      ],
+      "exclusions": [
+        "Lunches and dinners except where noted",
+        "Travel insurance",
+        "Tips and gratuities",
+        "Water sports and dolphin-spotting cruise"
+      ],
+      "images": [
+        {
+          "url": "images/taj-fort-aguada-goa.jpg",
+          "alt": "Taj Fort Aguada on the Goa coastline"
+        }
+      ],
+      "easygds": {
+        "packageId": null,
+        "placeId": null,
+        "hotelId": null,
+        "flightConfigId": null,
+        "productCode": "pkg-taj-goa-fort-aguada"
+      },
+      "seasonality": {
+        "peakMonths": [
+          11,
+          12,
+          1,
+          2
+        ],
+        "rainyMonths": [
+          6,
+          7,
+          8,
+          9
+        ],
+        "notes": "Peak Nov-Feb (cool, dry beach weather); monsoon Jun-Sep closes many beach shacks."
+      },
+      "compatibility": [
+        "taj",
+        "luxury",
+        "india",
+        "goa",
+        "beach"
+      ],
+      "sourceRefs": [
+        "synthetic-baseline-v1"
+      ],
+      "confidence": "high",
+      "availabilityMode": "indicative",
+      "inclusionCompleteness": "complete",
+      "exclusionCompleteness": "complete",
+      "status": "active",
+      "blockers": [],
+      "stars": 5,
+      "route": [
+        {
+          "sequence": 1,
+          "destinationId": "goa",
+          "nights": 4,
+          "transportToNext": null
+        }
+      ],
+      "relatedIds": [
+        "acc-taj-fort-aguada-goa"
+      ],
+      "relationships": [
+        {
+          "type": "optional-addon",
+          "productId": "acc-taj-fort-aguada-goa",
+          "note": "Extend the stay with extra nights at the same rate basis"
+        }
+      ],
+      "travellerFit": [
+        "couples",
+        "families",
+        "beach-lovers"
+      ],
+      "pace": "relaxed",
+      "minDurationDays": 5,
+      "maxDurationDays": 9,
+      "permittedExtraNights": 5,
+      "combinableDestinations": [
+        "goa"
+      ],
+      "priceProvenance": {
+        "sourceAmount": 1100,
+        "sourceCurrency": "USD",
+        "sourceBasis": "per-person",
+        "fxRateToGbp": 0.79,
+        "fxDate": "2026-08-20",
+        "convertedAmount": 869,
+        "convertedCurrency": "GBP",
+        "notes": "USD price as commercially quoted for this build (package); converted to GBP for catalog schema/runtime compliance."
+      }
+    },
+    {
+      "id": "pkg-taj-agra-taj-view",
+      "type": "package",
+      "name": "Taj Holidays: Agra & the Taj Mahal",
+      "summary": "Two nights at a Taj Hotels property with views of the Taj Mahal itself, including a sunrise visit to the monument and a day trip to Agra Fort and Fatehpur Sikri.",
+      "destinations": [
+        "agra"
+      ],
+      "themes": [
+        "taj",
+        "unesco",
+        "heritage",
+        "icon"
+      ],
+      "duration": {
+        "days": 3,
+        "nights": 2
+      },
+      "tier": "comfort",
+      "basePrice": {
+        "amount": 553,
+        "currency": "GBP",
+        "basis": "per-person"
+      },
+      "inclusions": [
+        "Private road transfers Delhi-Agra-Delhi via the Yamuna Expressway",
+        "2 nights at a Taj-view hotel",
+        "Daily breakfast",
+        "Sunrise Taj Mahal skip-the-line tour",
+        "Agra Fort & Fatehpur Sikri day trip"
+      ],
+      "exclusions": [
+        "Lunches and dinners except where noted",
+        "Travel insurance",
+        "Tips and gratuities",
+        "Marble inlay workshop purchases"
+      ],
+      "images": [
+        {
+          "url": "images/taj-mahal-sunrise-agra.jpg",
+          "alt": "Taj Mahal at sunrise in Agra"
+        }
+      ],
+      "easygds": {
+        "packageId": null,
+        "placeId": null,
+        "hotelId": null,
+        "flightConfigId": null,
+        "productCode": "pkg-taj-agra-taj-view"
+      },
+      "seasonality": {
+        "peakMonths": [
+          10,
+          11,
+          12,
+          1,
+          2,
+          3
+        ],
+        "rainyMonths": [
+          7,
+          8,
+          9
+        ],
+        "notes": "Best Oct-Mar (cool, dry); monsoon Jul-Sep; avoid Apr-Jun extreme heat."
+      },
+      "compatibility": [
+        "taj",
+        "luxury",
+        "india",
+        "agra",
+        "unesco"
+      ],
+      "sourceRefs": [
+        "synthetic-baseline-v1"
+      ],
+      "confidence": "high",
+      "availabilityMode": "indicative",
+      "inclusionCompleteness": "complete",
+      "exclusionCompleteness": "complete",
+      "status": "active",
+      "blockers": [],
+      "stars": 5,
+      "route": [
+        {
+          "sequence": 1,
+          "destinationId": "agra",
+          "nights": 2,
+          "transportToNext": null
+        }
+      ],
+      "relatedIds": [
+        "exp-taj-mahal-sunrise"
+      ],
+      "relationships": [
+        {
+          "type": "optional-addon",
+          "productId": "exp-taj-mahal-sunrise"
+        },
+        {
+          "type": "extension",
+          "productId": "pkg-taj-jaipur-rambagh-palace",
+          "note": "Classic Golden Triangle pairing with Jaipur"
+        }
+      ],
+      "travellerFit": [
+        "couples",
+        "families",
+        "first-timers"
+      ],
+      "pace": "relaxed",
+      "minDurationDays": 3,
+      "maxDurationDays": 5,
+      "permittedExtraNights": 2,
+      "combinableDestinations": [
+        "agra",
+        "delhi",
+        "jaipur"
+      ],
+      "priceProvenance": {
+        "sourceAmount": 700,
+        "sourceCurrency": "USD",
+        "sourceBasis": "per-person",
+        "fxRateToGbp": 0.79,
+        "fxDate": "2026-08-20",
+        "convertedAmount": 553,
+        "convertedCurrency": "GBP",
+        "notes": "USD price as commercially quoted for this build (package); converted to GBP for catalog schema/runtime compliance."
+      }
+    },
+    {
+      "id": "pkg-taj-maldives-exotica",
+      "type": "package",
+      "name": "Taj Holidays: Maldives at the Taj Exotica",
+      "summary": "Five nights in an overwater villa at the Taj Exotica Resort & Spa on the Emboodhoo Lagoon, reached via a connecting Air India Express hop through Kochi and a scenic speedboat transfer.",
+      "destinations": [
+        "maldives"
+      ],
+      "themes": [
+        "taj",
+        "luxury",
+        "beach",
+        "honeymoon"
+      ],
+      "duration": {
+        "days": 6,
+        "nights": 5
+      },
+      "tier": "signature",
+      "basePrice": {
+        "amount": 2765,
+        "currency": "GBP",
+        "basis": "per-person"
+      },
+      "inclusions": [
+        "Air India flights Delhi/Mumbai-Kochi with onward Air India Express connection to Male",
+        "Speedboat transfer to the resort",
+        "5 nights in an overwater villa",
+        "Daily breakfast",
+        "Guided house-reef snorkelling excursion",
+        "Sunset dolphin cruise",
+        "Resort transfers"
+      ],
+      "exclusions": [
+        "Lunches and dinners except where noted",
+        "Travel insurance",
+        "Spa treatments",
+        "Motorised water sports"
+      ],
+      "images": [
+        {
+          "url": "images/taj-exotica-overwater-villa-maldives.jpg",
+          "alt": "Overwater villas at the Taj Exotica Resort, Maldives"
+        }
+      ],
+      "easygds": {
+        "packageId": null,
+        "placeId": null,
+        "hotelId": null,
+        "flightConfigId": null,
+        "productCode": "pkg-taj-maldives-exotica"
+      },
+      "seasonality": {
+        "peakMonths": [
+          12,
+          1,
+          2,
+          3
+        ],
+        "rainyMonths": [
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "notes": "Dry NE monsoon Dec-Apr is peak season; wetter, windier SW monsoon May-Oct brings more showers."
+      },
+      "compatibility": [
+        "taj",
+        "luxury",
+        "maldives",
+        "honeymoon",
+        "indian-ocean"
+      ],
+      "sourceRefs": [
+        "synthetic-baseline-v1"
+      ],
+      "confidence": "high",
+      "availabilityMode": "indicative",
+      "inclusionCompleteness": "complete",
+      "exclusionCompleteness": "complete",
+      "status": "active",
+      "blockers": [],
+      "stars": 5,
+      "route": [
+        {
+          "sequence": 1,
+          "destinationId": "maldives",
+          "nights": 5,
+          "transportToNext": null
+        }
+      ],
+      "relatedIds": [
+        "acc-taj-exotica-maldives"
+      ],
+      "relationships": [
+        {
+          "type": "optional-addon",
+          "productId": "acc-taj-exotica-maldives",
+          "note": "Extend the stay with extra nights at the same rate basis"
+        },
+        {
+          "type": "extension",
+          "productId": "pkg-taj-kerala-kochi-backwaters",
+          "note": "Stop over in Kerala on the way to or from the Maldives"
+        }
+      ],
+      "travellerFit": [
+        "couples",
+        "honeymoon",
+        "luxury"
+      ],
+      "pace": "relaxed",
+      "minDurationDays": 6,
+      "maxDurationDays": 10,
+      "permittedExtraNights": 5,
+      "combinableDestinations": [
+        "maldives",
+        "kochi"
+      ],
+      "priceProvenance": {
+        "sourceAmount": 3500,
+        "sourceCurrency": "USD",
+        "sourceBasis": "per-person",
+        "fxRateToGbp": 0.79,
+        "fxDate": "2026-08-20",
+        "convertedAmount": 2765,
+        "convertedCurrency": "GBP",
+        "notes": "USD price as commercially quoted for this build (package); converted to GBP for catalog schema/runtime compliance."
+      }
+    },
+    {
+      "id": "acc-taj-lake-palace-udaipur",
+      "type": "accommodation",
+      "name": "Taj Lake Palace, Udaipur",
+      "summary": "The white-marble palace hotel floating on Lake Pichola, reached only by private boat.",
+      "destinations": [
+        "udaipur"
+      ],
+      "themes": [
+        "stay",
+        "udaipur",
+        "taj"
+      ],
+      "duration": {
+        "days": 1,
+        "nights": 1
+      },
+      "tier": "signature",
+      "basePrice": {
+        "amount": 672,
+        "currency": "GBP",
+        "basis": "per-night"
+      },
+      "inclusions": [
+        "Breakfast",
+        "Wi-Fi",
+        "Private boat transfer"
+      ],
+      "exclusions": [
+        "Lunch",
+        "Dinner",
+        "Spa treatments"
+      ],
+      "images": [
+        {
+          "url": "images/taj-lake-palace-udaipur.jpg",
+          "alt": "Taj Lake Palace floating on Lake Pichola, Udaipur"
+        }
+      ],
+      "easygds": {
+        "packageId": null,
+        "placeId": null,
+        "hotelId": null,
+        "flightConfigId": null,
+        "productCode": "acc-taj-lake-palace-udaipur"
+      },
+      "seasonality": {
+        "peakMonths": [
+          10,
+          11,
+          12,
+          1,
+          2,
+          3
+        ],
+        "rainyMonths": [
+          7,
+          8,
+          9
+        ],
+        "notes": "Best Oct-Mar (cool, dry); monsoon Jul-Sep; avoid Apr-Jun extreme heat."
+      },
+      "compatibility": [
+        "udaipur",
+        "taj",
+        "luxury"
+      ],
+      "sourceRefs": [
+        "synthetic-baseline-v1"
+      ],
+      "confidence": "high",
+      "availabilityMode": "indicative",
+      "inclusionCompleteness": "complete",
+      "exclusionCompleteness": "complete",
+      "status": "active",
+      "blockers": [],
+      "stars": 5,
+      "priceProvenance": {
+        "sourceAmount": 850,
+        "sourceCurrency": "USD",
+        "sourceBasis": "per-night",
+        "fxRateToGbp": 0.79,
+        "fxDate": "2026-08-20",
+        "convertedAmount": 672,
+        "convertedCurrency": "GBP",
+        "notes": "guzo-enrichment-return 2026-08-20; illustrative rack rate for a lake-view luxury room, one night, two adults."
+      }
+    },
+    {
+      "id": "acc-taj-falaknuma-hyderabad",
+      "type": "accommodation",
+      "name": "Taj Falaknuma Palace, Hyderabad",
+      "summary": "The former guesthouse of the Nizams of Hyderabad, perched on a hill above the city.",
+      "destinations": [
+        "hyderabad"
+      ],
+      "themes": [
+        "stay",
+        "hyderabad",
+        "taj"
+      ],
+      "duration": {
+        "days": 1,
+        "nights": 1
+      },
+      "tier": "signature",
+      "basePrice": {
+        "amount": 514,
+        "currency": "GBP",
+        "basis": "per-night"
+      },
+      "inclusions": [
+        "Breakfast",
+        "Wi-Fi",
+        "Palace tour on arrival"
+      ],
+      "exclusions": [
+        "Lunch",
+        "Dinner",
+        "Spa treatments"
+      ],
+      "images": [
+        {
+          "url": "images/taj-falaknuma-palace-hyderabad.jpg",
+          "alt": "Taj Falaknuma Palace overlooking Hyderabad"
+        }
+      ],
+      "easygds": {
+        "packageId": null,
+        "placeId": null,
+        "hotelId": null,
+        "flightConfigId": null,
+        "productCode": "acc-taj-falaknuma-hyderabad"
+      },
+      "seasonality": {
+        "peakMonths": [
+          10,
+          11,
+          12,
+          1,
+          2
+        ],
+        "rainyMonths": [
+          6,
+          7,
+          8,
+          9
+        ],
+        "notes": "Best Oct-Feb (pleasant, dry); southwest monsoon Jun-Sep; hot Mar-May."
+      },
+      "compatibility": [
+        "hyderabad",
+        "taj",
+        "luxury"
+      ],
+      "sourceRefs": [
+        "synthetic-baseline-v1"
+      ],
+      "confidence": "high",
+      "availabilityMode": "indicative",
+      "inclusionCompleteness": "complete",
+      "exclusionCompleteness": "complete",
+      "status": "active",
+      "blockers": [],
+      "stars": 5,
+      "priceProvenance": {
+        "sourceAmount": 650,
+        "sourceCurrency": "USD",
+        "sourceBasis": "per-night",
+        "fxRateToGbp": 0.79,
+        "fxDate": "2026-08-20",
+        "convertedAmount": 514,
+        "convertedCurrency": "GBP",
+        "notes": "guzo-enrichment-return 2026-08-20; illustrative rack rate for a heritage room, one night, two adults."
+      }
+    },
+    {
+      "id": "acc-taj-fort-aguada-goa",
+      "type": "accommodation",
+      "name": "Taj Fort Aguada Resort & Spa, Goa",
+      "summary": "A beachfront resort built within the walls of a 16th-century Portuguese sea fort on the Sinquerim headland.",
+      "destinations": [
+        "goa"
+      ],
+      "themes": [
+        "stay",
+        "goa",
+        "taj"
+      ],
+      "duration": {
+        "days": 1,
+        "nights": 1
+      },
+      "tier": "comfort",
+      "basePrice": {
+        "amount": 277,
+        "currency": "GBP",
+        "basis": "per-night"
+      },
+      "inclusions": [
+        "Breakfast",
+        "Wi-Fi",
+        "Beach access"
+      ],
+      "exclusions": [
+        "Lunch",
+        "Dinner",
+        "Water sports"
+      ],
+      "images": [
+        {
+          "url": "images/taj-fort-aguada-goa.jpg",
+          "alt": "Taj Fort Aguada on the Goa coastline"
+        }
+      ],
+      "easygds": {
+        "packageId": null,
+        "placeId": null,
+        "hotelId": null,
+        "flightConfigId": null,
+        "productCode": "acc-taj-fort-aguada-goa"
+      },
+      "seasonality": {
+        "peakMonths": [
+          11,
+          12,
+          1,
+          2
+        ],
+        "rainyMonths": [
+          6,
+          7,
+          8,
+          9
+        ],
+        "notes": "Peak Nov-Feb (cool, dry beach weather); monsoon Jun-Sep closes many beach shacks."
+      },
+      "compatibility": [
+        "goa",
+        "taj",
+        "beach"
+      ],
+      "sourceRefs": [
+        "synthetic-baseline-v1"
+      ],
+      "confidence": "high",
+      "availabilityMode": "indicative",
+      "inclusionCompleteness": "complete",
+      "exclusionCompleteness": "complete",
+      "status": "active",
+      "blockers": [],
+      "stars": 5,
+      "priceProvenance": {
+        "sourceAmount": 350,
+        "sourceCurrency": "USD",
+        "sourceBasis": "per-night",
+        "fxRateToGbp": 0.79,
+        "fxDate": "2026-08-20",
+        "convertedAmount": 277,
+        "convertedCurrency": "GBP",
+        "notes": "guzo-enrichment-return 2026-08-20; illustrative rack rate for a sea-view room, one night, two adults."
+      }
+    },
+    {
+      "id": "acc-taj-exotica-maldives",
+      "type": "accommodation",
+      "name": "Taj Exotica Resort & Spa, Maldives",
+      "summary": "Overwater and beach villas on the private Emboodhoo Lagoon, a 20-minute speedboat ride from Male.",
+      "destinations": [
+        "maldives"
+      ],
+      "themes": [
+        "stay",
+        "maldives",
+        "taj"
+      ],
+      "duration": {
+        "days": 1,
+        "nights": 1
+      },
+      "tier": "signature",
+      "basePrice": {
+        "amount": 1106,
+        "currency": "GBP",
+        "basis": "per-night"
+      },
+      "inclusions": [
+        "Breakfast",
+        "Wi-Fi",
+        "Speedboat transfers"
+      ],
+      "exclusions": [
+        "Lunch",
+        "Dinner",
+        "Motorised water sports",
+        "Spa treatments"
+      ],
+      "images": [
+        {
+          "url": "images/taj-exotica-overwater-villa-maldives.jpg",
+          "alt": "Overwater villas at the Taj Exotica Resort, Maldives"
+        }
+      ],
+      "easygds": {
+        "packageId": null,
+        "placeId": null,
+        "hotelId": null,
+        "flightConfigId": null,
+        "productCode": "acc-taj-exotica-maldives"
+      },
+      "seasonality": {
+        "peakMonths": [
+          12,
+          1,
+          2,
+          3
+        ],
+        "rainyMonths": [
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "notes": "Dry NE monsoon Dec-Apr is peak season; wetter, windier SW monsoon May-Oct brings more showers."
+      },
+      "compatibility": [
+        "maldives",
+        "taj",
+        "luxury"
+      ],
+      "sourceRefs": [
+        "synthetic-baseline-v1"
+      ],
+      "confidence": "high",
+      "availabilityMode": "indicative",
+      "inclusionCompleteness": "complete",
+      "exclusionCompleteness": "complete",
+      "status": "active",
+      "blockers": [],
+      "stars": 5,
+      "priceProvenance": {
+        "sourceAmount": 1400,
+        "sourceCurrency": "USD",
+        "sourceBasis": "per-night",
+        "fxRateToGbp": 0.79,
+        "fxDate": "2026-08-20",
+        "convertedAmount": 1106,
+        "convertedCurrency": "GBP",
+        "notes": "guzo-enrichment-return 2026-08-20; illustrative rack rate for an overwater villa, one night, two adults."
+      }
+    },
+    {
+      "id": "exp-newlands-stadium-tour",
+      "type": "experience",
+      "name": "Newlands Cricket Ground Heritage Tour",
+      "summary": "A non-match-day behind-the-scenes tour of Newlands, including the players' viewing area and cricket museum.",
+      "destinations": [
+        "cape-town"
+      ],
+      "themes": [
+        "cricket",
+        "heritage"
+      ],
+      "duration": {
+        "days": 0,
+        "nights": 0,
+        "hours": 2
+      },
+      "tier": "classic",
+      "basePrice": {
+        "amount": 47,
+        "currency": "GBP",
+        "basis": "per-person"
+      },
+      "inclusions": [
+        "Guided stadium tour",
+        "Cricket museum entry"
+      ],
+      "exclusions": [
+        "Match tickets",
+        "Transport to the ground"
+      ],
+      "images": [
+        {
+          "url": "images/newlands-cricket-ground-cape-town.jpg",
+          "alt": "Newlands Cricket Ground, Cape Town"
+        }
+      ],
+      "easygds": {
+        "packageId": null,
+        "placeId": null,
+        "hotelId": null,
+        "flightConfigId": null,
+        "productCode": "exp-newlands-stadium-tour"
+      },
+      "seasonality": {
+        "peakMonths": [
+          10,
+          11
+        ],
+        "rainyMonths": [],
+        "notes": "ICC Men's Cricket World Cup 2027 window (Oct-Nov); South African spring — book early, fixtures and venues indicative pending the official ICC schedule."
+      },
+      "compatibility": [
+        "cape-town",
+        "cricket",
+        "cwc2027"
+      ],
+      "sourceRefs": [
+        "synthetic-baseline-v1"
+      ],
+      "confidence": "high",
+      "availabilityMode": "indicative",
+      "inclusionCompleteness": "complete",
+      "exclusionCompleteness": "complete",
+      "status": "active",
+      "blockers": [],
+      "priceProvenance": {
+        "sourceAmount": 60,
+        "sourceCurrency": "USD",
+        "sourceBasis": "per-person",
+        "fxRateToGbp": 0.79,
+        "fxDate": "2026-08-20",
+        "convertedAmount": 47,
+        "convertedCurrency": "GBP",
+        "notes": "USD price as commercially quoted for this build (experience); converted to GBP for catalog schema/runtime compliance."
+      }
+    },
+    {
+      "id": "exp-wanderers-stadium-tour",
+      "type": "experience",
+      "name": "The Wanderers Stadium Heritage Tour",
+      "summary": "A non-match-day tour of 'The Bullring', including the changing rooms and the Bidvest Wanderers Club museum.",
+      "destinations": [
+        "johannesburg"
+      ],
+      "themes": [
+        "cricket",
+        "heritage"
+      ],
+      "duration": {
+        "days": 0,
+        "nights": 0,
+        "hours": 2
+      },
+      "tier": "classic",
+      "basePrice": {
+        "amount": 40,
+        "currency": "GBP",
+        "basis": "per-person"
+      },
+      "inclusions": [
+        "Guided stadium tour",
+        "Club museum entry"
+      ],
+      "exclusions": [
+        "Match tickets",
+        "Transport to the ground"
+      ],
+      "images": [
+        {
+          "url": "images/wanderers-stadium-johannesburg.jpg",
+          "alt": "The Wanderers Stadium, Johannesburg"
+        }
+      ],
+      "easygds": {
+        "packageId": null,
+        "placeId": null,
+        "hotelId": null,
+        "flightConfigId": null,
+        "productCode": "exp-wanderers-stadium-tour"
+      },
+      "seasonality": {
+        "peakMonths": [
+          10,
+          11
+        ],
+        "rainyMonths": [],
+        "notes": "ICC Men's Cricket World Cup 2027 window (Oct-Nov); South African spring — book early, fixtures and venues indicative pending the official ICC schedule."
+      },
+      "compatibility": [
+        "johannesburg",
+        "cricket",
+        "cwc2027"
+      ],
+      "sourceRefs": [
+        "synthetic-baseline-v1"
+      ],
+      "confidence": "high",
+      "availabilityMode": "indicative",
+      "inclusionCompleteness": "complete",
+      "exclusionCompleteness": "complete",
+      "status": "active",
+      "blockers": [],
+      "priceProvenance": {
+        "sourceAmount": 50,
+        "sourceCurrency": "USD",
+        "sourceBasis": "per-person",
+        "fxRateToGbp": 0.79,
+        "fxDate": "2026-08-20",
+        "convertedAmount": 40,
+        "convertedCurrency": "GBP",
+        "notes": "USD price as commercially quoted for this build (experience); converted to GBP for catalog schema/runtime compliance."
+      }
+    },
+    {
+      "id": "exp-taj-mahal-sunrise",
+      "type": "experience",
+      "name": "Taj Mahal Sunrise Skip-the-Line Tour",
+      "summary": "An early skip-the-line entry to the Taj Mahal at sunrise with a certified heritage guide, followed by Mehtab Bagh across the river.",
+      "destinations": [
+        "agra"
+      ],
+      "themes": [
+        "unesco",
+        "heritage",
+        "photography"
+      ],
+      "duration": {
+        "days": 0,
+        "nights": 0,
+        "hours": 4
+      },
+      "tier": "classic",
+      "basePrice": {
+        "amount": 55,
+        "currency": "GBP",
+        "basis": "per-person"
+      },
+      "inclusions": [
+        "Skip-the-line entry ticket",
+        "Certified guide",
+        "Mehtab Bagh entry"
+      ],
+      "exclusions": [
+        "Hotel transfers",
+        "Gratuities"
+      ],
+      "images": [
+        {
+          "url": "images/taj-mahal-sunrise-agra.jpg",
+          "alt": "Taj Mahal at sunrise in Agra"
+        }
+      ],
+      "easygds": {
+        "packageId": null,
+        "placeId": null,
+        "hotelId": null,
+        "flightConfigId": null,
+        "productCode": "exp-taj-mahal-sunrise"
+      },
+      "seasonality": {
+        "peakMonths": [
+          10,
+          11,
+          12,
+          1,
+          2,
+          3
+        ],
+        "rainyMonths": [
+          7,
+          8,
+          9
+        ],
+        "notes": "Best Oct-Mar (cool, dry); monsoon Jul-Sep; avoid Apr-Jun extreme heat."
+      },
+      "compatibility": [
+        "agra",
+        "taj",
+        "unesco"
+      ],
+      "sourceRefs": [
+        "synthetic-baseline-v1"
+      ],
+      "confidence": "high",
+      "availabilityMode": "indicative",
+      "inclusionCompleteness": "complete",
+      "exclusionCompleteness": "complete",
+      "status": "active",
+      "blockers": [],
+      "priceProvenance": {
+        "sourceAmount": 70,
+        "sourceCurrency": "USD",
+        "sourceBasis": "per-person",
+        "fxRateToGbp": 0.79,
+        "fxDate": "2026-08-20",
+        "convertedAmount": 55,
+        "convertedCurrency": "GBP",
+        "notes": "USD price as commercially quoted for this build (experience); converted to GBP for catalog schema/runtime compliance."
+      }
+    },
+    {
+      "id": "exp-amber-fort-jaipur",
+      "type": "experience",
+      "name": "Amber Fort Heritage Tour",
+      "summary": "A guided morning at Amber Fort with a jeep ascent to the ramparts, the Sheesh Mahal mirror palace, and Jaigarh Fort.",
+      "destinations": [
+        "jaipur"
+      ],
+      "themes": [
+        "heritage",
+        "history"
+      ],
+      "duration": {
+        "days": 0,
+        "nights": 0,
+        "hours": 4
+      },
+      "tier": "classic",
+      "basePrice": {
+        "amount": 43,
+        "currency": "GBP",
+        "basis": "per-person"
+      },
+      "inclusions": [
+        "Jeep ascent to the fort",
+        "Certified guide",
+        "Jaigarh Fort entry"
+      ],
+      "exclusions": [
+        "Hotel transfers",
+        "Gratuities"
+      ],
+      "images": [
+        {
+          "url": "images/amber-fort-jaipur.jpg",
+          "alt": "Amber Fort near Jaipur"
+        }
+      ],
+      "easygds": {
+        "packageId": null,
+        "placeId": null,
+        "hotelId": null,
+        "flightConfigId": null,
+        "productCode": "exp-amber-fort-jaipur"
+      },
+      "seasonality": {
+        "peakMonths": [
+          10,
+          11,
+          12,
+          1,
+          2,
+          3
+        ],
+        "rainyMonths": [
+          7,
+          8,
+          9
+        ],
+        "notes": "Best Oct-Mar (cool, dry); monsoon Jul-Sep; avoid Apr-Jun extreme heat."
+      },
+      "compatibility": [
+        "jaipur",
+        "taj",
+        "heritage"
+      ],
+      "sourceRefs": [
+        "synthetic-baseline-v1"
+      ],
+      "confidence": "high",
+      "availabilityMode": "indicative",
+      "inclusionCompleteness": "complete",
+      "exclusionCompleteness": "complete",
+      "status": "active",
+      "blockers": [],
+      "priceProvenance": {
+        "sourceAmount": 55,
+        "sourceCurrency": "USD",
+        "sourceBasis": "per-person",
+        "fxRateToGbp": 0.79,
+        "fxDate": "2026-08-20",
+        "convertedAmount": 43,
+        "convertedCurrency": "GBP",
+        "notes": "USD price as commercially quoted for this build (experience); converted to GBP for catalog schema/runtime compliance."
+      }
+    },
+    {
+      "id": "exp-kerala-backwater-houseboat",
+      "type": "experience",
+      "name": "Kerala Backwater Houseboat Cruise",
+      "summary": "A full-day private houseboat cruise through the Alleppey backwaters with an on-board Kerala lunch.",
+      "destinations": [
+        "alleppey"
+      ],
+      "themes": [
+        "backwaters",
+        "nature"
+      ],
+      "duration": {
+        "days": 0,
+        "nights": 0,
+        "hours": 6
+      },
+      "tier": "comfort",
+      "basePrice": {
+        "amount": 71,
+        "currency": "GBP",
+        "basis": "per-person"
+      },
+      "inclusions": [
+        "Private houseboat charter",
+        "On-board Kerala lunch",
+        "Crew and captain"
+      ],
+      "exclusions": [
+        "Hotel transfers",
+        "Alcoholic beverages"
+      ],
+      "images": [
+        {
+          "url": "images/kerala-backwaters-houseboat-alleppey.jpg",
+          "alt": "Traditional houseboat on the Alleppey backwaters"
+        }
+      ],
+      "easygds": {
+        "packageId": null,
+        "placeId": null,
+        "hotelId": null,
+        "flightConfigId": null,
+        "productCode": "exp-kerala-backwater-houseboat"
+      },
+      "seasonality": {
+        "peakMonths": [
+          11,
+          12,
+          1,
+          2,
+          3
+        ],
+        "rainyMonths": [
+          6,
+          7,
+          8,
+          9
+        ],
+        "notes": "Best Nov-Mar (dry, warm); southwest monsoon Jun-Sep brings heavy rain."
+      },
+      "compatibility": [
+        "alleppey",
+        "kochi",
+        "taj",
+        "backwaters"
+      ],
+      "sourceRefs": [
+        "synthetic-baseline-v1"
+      ],
+      "confidence": "high",
+      "availabilityMode": "indicative",
+      "inclusionCompleteness": "complete",
+      "exclusionCompleteness": "complete",
+      "status": "active",
+      "blockers": [],
+      "priceProvenance": {
+        "sourceAmount": 90,
+        "sourceCurrency": "USD",
+        "sourceBasis": "per-person",
+        "fxRateToGbp": 0.79,
+        "fxDate": "2026-08-20",
+        "convertedAmount": 71,
+        "convertedCurrency": "GBP",
+        "notes": "USD price as commercially quoted for this build (experience); converted to GBP for catalog schema/runtime compliance."
+      }
+    },
+    {
+      "id": "xfer-jnb-airport",
+      "type": "transfer",
+      "name": "OR Tambo Airport Private Transfer, Johannesburg",
+      "summary": "Private OR Tambo International Airport to hotel transfer in Johannesburg.",
+      "destinations": [
+        "johannesburg"
+      ],
+      "themes": [
+        "transfer",
+        "ground"
+      ],
+      "duration": {
+        "days": 0,
+        "nights": 0,
+        "hours": 1
+      },
+      "tier": "classic",
+      "basePrice": {
+        "amount": 32,
+        "currency": "GBP",
+        "basis": "per-vehicle"
+      },
+      "inclusions": [
+        "Private vehicle",
+        "Driver"
+      ],
+      "exclusions": [
+        "Guide",
+        "Meals"
+      ],
+      "images": [
+        {
+          "url": "images/johannesburg-skyline.jpg",
+          "alt": "Johannesburg city skyline at dusk"
+        }
+      ],
+      "easygds": {
+        "packageId": null,
+        "placeId": null,
+        "hotelId": null,
+        "flightConfigId": null,
+        "productCode": "xfer-jnb-airport"
+      },
+      "seasonality": {
+        "peakMonths": [
+          10,
+          11
+        ],
+        "rainyMonths": [],
+        "notes": "ICC Men's Cricket World Cup 2027 window (Oct-Nov); South African spring — book early, fixtures and venues indicative pending the official ICC schedule."
+      },
+      "compatibility": [
+        "johannesburg",
+        "cwc2027"
+      ],
+      "sourceRefs": [
+        "synthetic-baseline-v1"
+      ],
+      "confidence": "high",
+      "availabilityMode": "indicative",
+      "inclusionCompleteness": "complete",
+      "exclusionCompleteness": "complete",
+      "status": "active",
+      "blockers": [],
+      "priceProvenance": {
+        "sourceAmount": 40,
+        "sourceCurrency": "USD",
+        "sourceBasis": "per-vehicle",
+        "fxRateToGbp": 0.79,
+        "fxDate": "2026-08-20",
+        "convertedAmount": 32,
+        "convertedCurrency": "GBP",
+        "notes": "USD price as commercially quoted for this build (transfer); converted to GBP for catalog schema/runtime compliance."
+      }
+    },
+    {
+      "id": "xfer-del-airport",
+      "type": "transfer",
+      "name": "Indira Gandhi Airport Private Transfer, Delhi",
+      "summary": "Private Indira Gandhi International Airport to hotel transfer in Delhi.",
+      "destinations": [
+        "delhi"
+      ],
+      "themes": [
+        "transfer",
+        "ground"
+      ],
+      "duration": {
+        "days": 0,
+        "nights": 0,
+        "hours": 1
+      },
+      "tier": "classic",
+      "basePrice": {
+        "amount": 28,
+        "currency": "GBP",
+        "basis": "per-vehicle"
+      },
+      "inclusions": [
+        "Private vehicle",
+        "Driver"
+      ],
+      "exclusions": [
+        "Guide",
+        "Meals"
+      ],
+      "images": [
+        {
+          "url": "images/india-gate-delhi.jpg",
+          "alt": "India Gate illuminated at dusk in New Delhi"
+        }
+      ],
+      "easygds": {
+        "packageId": null,
+        "placeId": null,
+        "hotelId": null,
+        "flightConfigId": null,
+        "productCode": "xfer-del-airport"
+      },
+      "seasonality": {
+        "peakMonths": [
+          10,
+          11,
+          12,
+          1,
+          2,
+          3
+        ],
+        "rainyMonths": [
+          7,
+          8,
+          9
+        ],
+        "notes": "Best Oct-Mar (cool, dry); monsoon Jul-Sep; avoid Apr-Jun extreme heat."
+      },
+      "compatibility": [
+        "delhi",
+        "india-gateway"
+      ],
+      "sourceRefs": [
+        "synthetic-baseline-v1"
+      ],
+      "confidence": "high",
+      "availabilityMode": "indicative",
+      "inclusionCompleteness": "complete",
+      "exclusionCompleteness": "complete",
+      "status": "active",
+      "blockers": [],
+      "priceProvenance": {
+        "sourceAmount": 35,
+        "sourceCurrency": "USD",
+        "sourceBasis": "per-vehicle",
+        "fxRateToGbp": 0.79,
+        "fxDate": "2026-08-20",
+        "convertedAmount": 28,
+        "convertedCurrency": "GBP",
+        "notes": "USD price as commercially quoted for this build (transfer); converted to GBP for catalog schema/runtime compliance."
+      }
+    }
+  ]
+}

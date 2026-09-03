@@ -1,0 +1,420 @@
+{
+  "schemaVersion": "1.0.0",
+  "version": "v1",
+  "defaultGatewayId": "delhi",
+  "notes": "Door-to-door journey graph for the Air India CWC 2027 and Taj Holidays catalog. Delhi is the default Indian gateway (Mumbai secondary); Johannesburg is the African sub-hub for all South African World Cup venues; Kochi is the Kerala/Maldives sub-hub. Airborne time lives in flights.json — hours here include airport/transfer overhead. Route-planner pathfinding chains these edges automatically (e.g. Delhi -> Johannesburg -> Cape Town), so most single-destination packages only need one route stop.",
+  "connections": [
+    {
+      "id": "conn-delhi-johannesburg-flight",
+      "from": "delhi",
+      "to": "johannesburg",
+      "mode": "flight",
+      "hours": 12.5,
+      "load": "full-day",
+      "reciprocalId": "conn-johannesburg-delhi-flight",
+      "flightRouteId": "flt-del-jnb",
+      "notes": "Nonstop Air India service; door-to-door includes check-in and immigration."
+    },
+    {
+      "id": "conn-johannesburg-delhi-flight",
+      "from": "johannesburg",
+      "to": "delhi",
+      "mode": "flight",
+      "hours": 12.5,
+      "load": "full-day",
+      "reciprocalId": "conn-delhi-johannesburg-flight",
+      "flightRouteId": "flt-jnb-del",
+      "notes": "Nonstop Air India service; door-to-door includes check-in and immigration."
+    },
+    {
+      "id": "conn-mumbai-johannesburg-flight",
+      "from": "mumbai",
+      "to": "johannesburg",
+      "mode": "flight",
+      "hours": 11,
+      "load": "full-day",
+      "reciprocalId": "conn-johannesburg-mumbai-flight",
+      "flightRouteId": "flt-bom-jnb",
+      "notes": "Nonstop Air India service; door-to-door includes check-in and immigration."
+    },
+    {
+      "id": "conn-johannesburg-mumbai-flight",
+      "from": "johannesburg",
+      "to": "mumbai",
+      "mode": "flight",
+      "hours": 11,
+      "load": "full-day",
+      "reciprocalId": "conn-mumbai-johannesburg-flight",
+      "flightRouteId": "flt-jnb-bom",
+      "notes": "Nonstop Air India service; door-to-door includes check-in and immigration."
+    },
+    {
+      "id": "conn-johannesburg-cape-town-flight",
+      "from": "johannesburg",
+      "to": "cape-town",
+      "mode": "flight",
+      "hours": 4.5,
+      "load": "half-day",
+      "reciprocalId": "conn-cape-town-johannesburg-flight",
+      "flightRouteId": "flt-jnb-cpt",
+      "notes": "Domestic connecting service from OR Tambo."
+    },
+    {
+      "id": "conn-cape-town-johannesburg-flight",
+      "from": "cape-town",
+      "to": "johannesburg",
+      "mode": "flight",
+      "hours": 4.5,
+      "load": "half-day",
+      "reciprocalId": "conn-johannesburg-cape-town-flight",
+      "flightRouteId": "flt-cpt-jnb",
+      "notes": "Domestic connecting service into OR Tambo."
+    },
+    {
+      "id": "conn-johannesburg-durban-flight",
+      "from": "johannesburg",
+      "to": "durban",
+      "mode": "flight",
+      "hours": 3.8,
+      "load": "half-day",
+      "reciprocalId": "conn-durban-johannesburg-flight",
+      "flightRouteId": "flt-jnb-dur",
+      "notes": "Domestic connecting service from OR Tambo."
+    },
+    {
+      "id": "conn-durban-johannesburg-flight",
+      "from": "durban",
+      "to": "johannesburg",
+      "mode": "flight",
+      "hours": 3.8,
+      "load": "half-day",
+      "reciprocalId": "conn-johannesburg-durban-flight",
+      "flightRouteId": "flt-dur-jnb",
+      "notes": "Domestic connecting service into OR Tambo."
+    },
+    {
+      "id": "conn-johannesburg-gqeberha-flight",
+      "from": "johannesburg",
+      "to": "gqeberha",
+      "mode": "flight",
+      "hours": 4,
+      "load": "half-day",
+      "reciprocalId": "conn-gqeberha-johannesburg-flight",
+      "flightRouteId": "flt-jnb-plz",
+      "notes": "Domestic connecting service from OR Tambo."
+    },
+    {
+      "id": "conn-gqeberha-johannesburg-flight",
+      "from": "gqeberha",
+      "to": "johannesburg",
+      "mode": "flight",
+      "hours": 4,
+      "load": "half-day",
+      "reciprocalId": "conn-johannesburg-gqeberha-flight",
+      "flightRouteId": "flt-plz-jnb",
+      "notes": "Domestic connecting service into OR Tambo."
+    },
+    {
+      "id": "conn-johannesburg-centurion-road",
+      "from": "johannesburg",
+      "to": "centurion",
+      "mode": "road",
+      "hours": 1,
+      "load": "short",
+      "reciprocalId": "conn-centurion-johannesburg-road",
+      "notes": "Short road transfer between OR Tambo and Centurion."
+    },
+    {
+      "id": "conn-centurion-johannesburg-road",
+      "from": "centurion",
+      "to": "johannesburg",
+      "mode": "road",
+      "hours": 1,
+      "load": "short",
+      "reciprocalId": "conn-johannesburg-centurion-road",
+      "notes": "Short road transfer between Centurion and OR Tambo."
+    },
+    {
+      "id": "conn-delhi-udaipur-flight",
+      "from": "delhi",
+      "to": "udaipur",
+      "mode": "flight",
+      "hours": 4,
+      "load": "half-day",
+      "reciprocalId": "conn-udaipur-delhi-flight",
+      "flightRouteId": "flt-del-udr"
+    },
+    {
+      "id": "conn-udaipur-delhi-flight",
+      "from": "udaipur",
+      "to": "delhi",
+      "mode": "flight",
+      "hours": 4,
+      "load": "half-day",
+      "reciprocalId": "conn-delhi-udaipur-flight",
+      "flightRouteId": "flt-udr-del"
+    },
+    {
+      "id": "conn-delhi-jaipur-flight",
+      "from": "delhi",
+      "to": "jaipur",
+      "mode": "flight",
+      "hours": 3.5,
+      "load": "half-day",
+      "reciprocalId": "conn-jaipur-delhi-flight",
+      "flightRouteId": "flt-del-jai"
+    },
+    {
+      "id": "conn-jaipur-delhi-flight",
+      "from": "jaipur",
+      "to": "delhi",
+      "mode": "flight",
+      "hours": 3.5,
+      "load": "half-day",
+      "reciprocalId": "conn-delhi-jaipur-flight",
+      "flightRouteId": "flt-jai-del"
+    },
+    {
+      "id": "conn-delhi-agra-road",
+      "from": "delhi",
+      "to": "agra",
+      "mode": "road",
+      "hours": 4,
+      "load": "half-day",
+      "reciprocalId": "conn-agra-delhi-road",
+      "notes": "Yamuna Expressway road transfer, roughly 3.5 hours driving."
+    },
+    {
+      "id": "conn-agra-delhi-road",
+      "from": "agra",
+      "to": "delhi",
+      "mode": "road",
+      "hours": 4,
+      "load": "half-day",
+      "reciprocalId": "conn-delhi-agra-road",
+      "notes": "Yamuna Expressway road transfer, roughly 3.5 hours driving."
+    },
+    {
+      "id": "conn-delhi-hyderabad-flight",
+      "from": "delhi",
+      "to": "hyderabad",
+      "mode": "flight",
+      "hours": 4.7,
+      "load": "half-day",
+      "reciprocalId": "conn-hyderabad-delhi-flight",
+      "flightRouteId": "flt-del-hyd"
+    },
+    {
+      "id": "conn-hyderabad-delhi-flight",
+      "from": "hyderabad",
+      "to": "delhi",
+      "mode": "flight",
+      "hours": 4.7,
+      "load": "half-day",
+      "reciprocalId": "conn-delhi-hyderabad-flight",
+      "flightRouteId": "flt-hyd-del"
+    },
+    {
+      "id": "conn-delhi-goa-flight",
+      "from": "delhi",
+      "to": "goa",
+      "mode": "flight",
+      "hours": 5,
+      "load": "half-day",
+      "reciprocalId": "conn-goa-delhi-flight",
+      "flightRouteId": "flt-del-goi"
+    },
+    {
+      "id": "conn-goa-delhi-flight",
+      "from": "goa",
+      "to": "delhi",
+      "mode": "flight",
+      "hours": 5,
+      "load": "half-day",
+      "reciprocalId": "conn-delhi-goa-flight",
+      "flightRouteId": "flt-goi-del"
+    },
+    {
+      "id": "conn-delhi-kochi-flight",
+      "from": "delhi",
+      "to": "kochi",
+      "mode": "flight",
+      "hours": 5.8,
+      "load": "half-day",
+      "reciprocalId": "conn-kochi-delhi-flight",
+      "flightRouteId": "flt-del-cok"
+    },
+    {
+      "id": "conn-kochi-delhi-flight",
+      "from": "kochi",
+      "to": "delhi",
+      "mode": "flight",
+      "hours": 5.8,
+      "load": "half-day",
+      "reciprocalId": "conn-delhi-kochi-flight",
+      "flightRouteId": "flt-cok-del"
+    },
+    {
+      "id": "conn-delhi-mumbai-flight",
+      "from": "delhi",
+      "to": "mumbai",
+      "mode": "flight",
+      "hours": 4.5,
+      "load": "half-day",
+      "reciprocalId": "conn-mumbai-delhi-flight",
+      "flightRouteId": "flt-del-bom"
+    },
+    {
+      "id": "conn-mumbai-delhi-flight",
+      "from": "mumbai",
+      "to": "delhi",
+      "mode": "flight",
+      "hours": 4.5,
+      "load": "half-day",
+      "reciprocalId": "conn-delhi-mumbai-flight",
+      "flightRouteId": "flt-bom-del"
+    },
+    {
+      "id": "conn-mumbai-udaipur-flight",
+      "from": "mumbai",
+      "to": "udaipur",
+      "mode": "flight",
+      "hours": 3.7,
+      "load": "half-day",
+      "reciprocalId": "conn-udaipur-mumbai-flight",
+      "flightRouteId": "flt-bom-udr"
+    },
+    {
+      "id": "conn-udaipur-mumbai-flight",
+      "from": "udaipur",
+      "to": "mumbai",
+      "mode": "flight",
+      "hours": 3.7,
+      "load": "half-day",
+      "reciprocalId": "conn-mumbai-udaipur-flight",
+      "flightRouteId": "flt-udr-bom"
+    },
+    {
+      "id": "conn-mumbai-jaipur-flight",
+      "from": "mumbai",
+      "to": "jaipur",
+      "mode": "flight",
+      "hours": 3.8,
+      "load": "half-day",
+      "reciprocalId": "conn-jaipur-mumbai-flight",
+      "flightRouteId": "flt-bom-jai"
+    },
+    {
+      "id": "conn-jaipur-mumbai-flight",
+      "from": "jaipur",
+      "to": "mumbai",
+      "mode": "flight",
+      "hours": 3.8,
+      "load": "half-day",
+      "reciprocalId": "conn-mumbai-jaipur-flight",
+      "flightRouteId": "flt-jai-bom"
+    },
+    {
+      "id": "conn-mumbai-hyderabad-flight",
+      "from": "mumbai",
+      "to": "hyderabad",
+      "mode": "flight",
+      "hours": 3.8,
+      "load": "half-day",
+      "reciprocalId": "conn-hyderabad-mumbai-flight",
+      "flightRouteId": "flt-bom-hyd"
+    },
+    {
+      "id": "conn-hyderabad-mumbai-flight",
+      "from": "hyderabad",
+      "to": "mumbai",
+      "mode": "flight",
+      "hours": 3.8,
+      "load": "half-day",
+      "reciprocalId": "conn-mumbai-hyderabad-flight",
+      "flightRouteId": "flt-hyd-bom"
+    },
+    {
+      "id": "conn-mumbai-goa-flight",
+      "from": "mumbai",
+      "to": "goa",
+      "mode": "flight",
+      "hours": 3.5,
+      "load": "half-day",
+      "reciprocalId": "conn-goa-mumbai-flight",
+      "flightRouteId": "flt-bom-goi"
+    },
+    {
+      "id": "conn-goa-mumbai-flight",
+      "from": "goa",
+      "to": "mumbai",
+      "mode": "flight",
+      "hours": 3.5,
+      "load": "half-day",
+      "reciprocalId": "conn-mumbai-goa-flight",
+      "flightRouteId": "flt-goi-bom"
+    },
+    {
+      "id": "conn-mumbai-kochi-flight",
+      "from": "mumbai",
+      "to": "kochi",
+      "mode": "flight",
+      "hours": 4.2,
+      "load": "half-day",
+      "reciprocalId": "conn-kochi-mumbai-flight",
+      "flightRouteId": "flt-bom-cok"
+    },
+    {
+      "id": "conn-kochi-mumbai-flight",
+      "from": "kochi",
+      "to": "mumbai",
+      "mode": "flight",
+      "hours": 4.2,
+      "load": "half-day",
+      "reciprocalId": "conn-mumbai-kochi-flight",
+      "flightRouteId": "flt-cok-bom"
+    },
+    {
+      "id": "conn-kochi-alleppey-road",
+      "from": "kochi",
+      "to": "alleppey",
+      "mode": "road",
+      "hours": 2,
+      "load": "short",
+      "reciprocalId": "conn-alleppey-kochi-road",
+      "notes": "Road transfer of about 1.5 hours from Kochi to the Alleppey backwaters."
+    },
+    {
+      "id": "conn-alleppey-kochi-road",
+      "from": "alleppey",
+      "to": "kochi",
+      "mode": "road",
+      "hours": 2,
+      "load": "short",
+      "reciprocalId": "conn-kochi-alleppey-road",
+      "notes": "Road transfer of about 1.5 hours from the Alleppey backwaters to Kochi."
+    },
+    {
+      "id": "conn-kochi-maldives-flight",
+      "from": "kochi",
+      "to": "maldives",
+      "mode": "flight",
+      "hours": 4.5,
+      "load": "half-day",
+      "reciprocalId": "conn-maldives-kochi-flight",
+      "flightRouteId": "flt-cok-mle",
+      "notes": "Air India Express connecting service via Kochi, plus speedboat transfer to the resort."
+    },
+    {
+      "id": "conn-maldives-kochi-flight",
+      "from": "maldives",
+      "to": "kochi",
+      "mode": "flight",
+      "hours": 4.5,
+      "load": "half-day",
+      "reciprocalId": "conn-kochi-maldives-flight",
+      "flightRouteId": "flt-mle-cok",
+      "notes": "Air India Express connecting service via Kochi."
+    }
+  ]
+}

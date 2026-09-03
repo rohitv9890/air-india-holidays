@@ -1,0 +1,321 @@
+{
+  "schemaVersion": "1.0.0",
+  "version": "v1",
+  "destinations": [
+    {
+      "id": "delhi",
+      "name": "Delhi",
+      "iata": "DEL",
+      "cluster": "india-gateway",
+      "region": "Delhi NCR",
+      "themes": [
+        "city",
+        "gateway",
+        "culture",
+        "heritage"
+      ],
+      "summary": "India's capital and the primary Air India gateway — Mughal monuments, colonial-era boulevards, and the launch point for both the Cricket World Cup and Taj Holidays journeys.",
+      "aliases": [
+        "new delhi",
+        "ncr"
+      ],
+      "stayGuidance": {
+        "minDays": 1,
+        "recommendedDays": 2
+      },
+      "lat": 28.6139,
+      "lng": 77.209
+    },
+    {
+      "id": "mumbai",
+      "name": "Mumbai",
+      "iata": "BOM",
+      "cluster": "india-gateway",
+      "region": "Maharashtra",
+      "themes": [
+        "city",
+        "gateway",
+        "culture"
+      ],
+      "summary": "India's financial capital and secondary Air India gateway on the Arabian Sea, anchored by the Gateway of India and Marine Drive.",
+      "stayGuidance": {
+        "minDays": 1,
+        "recommendedDays": 2
+      },
+      "lat": 19.076,
+      "lng": 72.8777
+    },
+    {
+      "id": "johannesburg",
+      "name": "Johannesburg",
+      "iata": "JNB",
+      "cluster": "cwc2027",
+      "region": "Gauteng, South Africa",
+      "themes": [
+        "cricket",
+        "cwc2027",
+        "city",
+        "history"
+      ],
+      "summary": "Gauteng's commercial hub and the Cricket World Cup 2027's African gateway — home to the Wanderers Stadium and Soweto's living history.",
+      "aliases": [
+        "joburg",
+        "jozi"
+      ],
+      "stayGuidance": {
+        "minDays": 2,
+        "recommendedDays": 3
+      },
+      "lat": -26.2041,
+      "lng": 28.0473
+    },
+    {
+      "id": "cape-town",
+      "name": "Cape Town",
+      "iata": "CPT",
+      "cluster": "cwc2027",
+      "region": "Western Cape, South Africa",
+      "themes": [
+        "cricket",
+        "cwc2027",
+        "scenery",
+        "wine"
+      ],
+      "summary": "Table Mountain, the Cape Peninsula, and Newlands Cricket Ground — host of marquee Cricket World Cup 2027 fixtures including the final.",
+      "stayGuidance": {
+        "minDays": 2,
+        "recommendedDays": 4
+      },
+      "lat": -33.9249,
+      "lng": 18.4241
+    },
+    {
+      "id": "durban",
+      "name": "Durban",
+      "iata": "DUR",
+      "cluster": "cwc2027",
+      "region": "KwaZulu-Natal, South Africa",
+      "themes": [
+        "cricket",
+        "cwc2027",
+        "beach",
+        "city"
+      ],
+      "summary": "Subtropical Indian Ocean city with the Golden Mile beachfront and Kingsmead Stadium, one of world cricket's most storied grounds.",
+      "stayGuidance": {
+        "minDays": 2,
+        "recommendedDays": 3
+      },
+      "lat": -29.8587,
+      "lng": 31.0218
+    },
+    {
+      "id": "centurion",
+      "name": "Centurion",
+      "iata": "JNB",
+      "cluster": "cwc2027",
+      "region": "Gauteng, South Africa",
+      "themes": [
+        "cricket",
+        "cwc2027",
+        "history"
+      ],
+      "summary": "Home of SuperSport Park and a short drive from Pretoria's Union Buildings, within easy road reach of Johannesburg's OR Tambo hub.",
+      "aliases": [
+        "pretoria",
+        "supersport park"
+      ],
+      "stayGuidance": {
+        "minDays": 1,
+        "recommendedDays": 2
+      },
+      "lat": -25.8601,
+      "lng": 28.1894
+    },
+    {
+      "id": "gqeberha",
+      "name": "Gqeberha",
+      "iata": "PLZ",
+      "cluster": "cwc2027",
+      "region": "Eastern Cape, South Africa",
+      "themes": [
+        "cricket",
+        "cwc2027",
+        "wildlife",
+        "beach"
+      ],
+      "summary": "Formerly Port Elizabeth — Algoa Bay beaches, St George's Park (the world's second-oldest Test venue), and gateway to Addo Elephant National Park.",
+      "aliases": [
+        "port elizabeth",
+        "pe"
+      ],
+      "stayGuidance": {
+        "minDays": 1,
+        "recommendedDays": 2
+      },
+      "lat": -33.9608,
+      "lng": 25.6022
+    },
+    {
+      "id": "udaipur",
+      "name": "Udaipur",
+      "iata": "UDR",
+      "cluster": "taj-india",
+      "region": "Rajasthan",
+      "themes": [
+        "taj",
+        "luxury",
+        "heritage",
+        "romance"
+      ],
+      "summary": "The City of Lakes, where the Taj Lake Palace floats on Lake Pichola beneath the City Palace ramparts.",
+      "stayGuidance": {
+        "minDays": 2,
+        "recommendedDays": 3
+      },
+      "lat": 24.5854,
+      "lng": 73.7125
+    },
+    {
+      "id": "jaipur",
+      "name": "Jaipur",
+      "iata": "JAI",
+      "cluster": "taj-india",
+      "region": "Rajasthan",
+      "themes": [
+        "taj",
+        "luxury",
+        "heritage"
+      ],
+      "summary": "The Pink City — Amber Fort, Hawa Mahal, and the Taj Rambagh Palace, once the residence of the Maharajas of Jaipur.",
+      "stayGuidance": {
+        "minDays": 2,
+        "recommendedDays": 3
+      },
+      "lat": 26.9124,
+      "lng": 75.7873
+    },
+    {
+      "id": "hyderabad",
+      "name": "Hyderabad",
+      "iata": "HYD",
+      "cluster": "taj-india",
+      "region": "Telangana",
+      "themes": [
+        "taj",
+        "luxury",
+        "heritage"
+      ],
+      "summary": "City of Nizams and pearls, crowned by the Taj Falaknuma Palace above Charminar and Golconda Fort.",
+      "stayGuidance": {
+        "minDays": 2,
+        "recommendedDays": 2
+      },
+      "lat": 17.385,
+      "lng": 78.4867
+    },
+    {
+      "id": "kochi",
+      "name": "Kochi",
+      "iata": "COK",
+      "cluster": "taj-india",
+      "region": "Kerala",
+      "themes": [
+        "taj",
+        "luxury",
+        "backwaters",
+        "heritage"
+      ],
+      "summary": "Fort Kochi's Chinese fishing nets and colonial harbour, with the Taj Malabar overlooking the confluence of sea and backwaters.",
+      "stayGuidance": {
+        "minDays": 2,
+        "recommendedDays": 2
+      },
+      "lat": 9.9312,
+      "lng": 76.2673
+    },
+    {
+      "id": "alleppey",
+      "name": "Alleppey",
+      "iata": "COK",
+      "cluster": "taj-india",
+      "region": "Kerala",
+      "themes": [
+        "taj",
+        "backwaters",
+        "nature",
+        "romance"
+      ],
+      "summary": "Alappuzha's palm-fringed backwaters — the classic Kerala houseboat cruise through coconut-lined canals and paddy fields.",
+      "aliases": [
+        "alappuzha",
+        "kerala backwaters"
+      ],
+      "stayGuidance": {
+        "minDays": 1,
+        "recommendedDays": 2
+      },
+      "lat": 9.4981,
+      "lng": 76.3388
+    },
+    {
+      "id": "goa",
+      "name": "Goa",
+      "iata": "GOI",
+      "cluster": "taj-india",
+      "region": "Goa",
+      "themes": [
+        "taj",
+        "beach",
+        "heritage"
+      ],
+      "summary": "Portuguese-era forts and palm-backed beaches, anchored by the Taj Fort Aguada on a 16th-century headland fortress.",
+      "stayGuidance": {
+        "minDays": 3,
+        "recommendedDays": 4
+      },
+      "lat": 15.2993,
+      "lng": 74.124
+    },
+    {
+      "id": "agra",
+      "name": "Agra",
+      "iata": "AGR",
+      "cluster": "taj-india",
+      "region": "Uttar Pradesh",
+      "themes": [
+        "taj",
+        "unesco",
+        "heritage",
+        "icon"
+      ],
+      "summary": "Home to the Taj Mahal itself — with a Taj Hotels property offering some of the closest sunrise views of the monument in the world.",
+      "stayGuidance": {
+        "minDays": 1,
+        "recommendedDays": 2
+      },
+      "lat": 27.1767,
+      "lng": 78.0081
+    },
+    {
+      "id": "maldives",
+      "name": "Maldives",
+      "iata": "MLE",
+      "cluster": "taj-maldives",
+      "region": "Indian Ocean",
+      "themes": [
+        "taj",
+        "luxury",
+        "beach",
+        "honeymoon"
+      ],
+      "summary": "Overwater villas on the Emboodhoo Lagoon at the Taj Exotica Resort & Spa, reached via a scenic speedboat transfer from Malé.",
+      "stayGuidance": {
+        "minDays": 3,
+        "recommendedDays": 5
+      },
+      "lat": 4.1755,
+      "lng": 73.5093
+    }
+  ]
+}

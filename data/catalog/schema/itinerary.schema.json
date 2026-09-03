@@ -1,0 +1,244 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ethiopianholidays.example/schemas/itinerary.schema.json",
+  "title": "Guzo Composed Itinerary",
+  "type": "object",
+  "required": [
+    "id",
+    "title",
+    "origin",
+    "dates",
+    "travelers",
+    "cabin",
+    "tier",
+    "days",
+    "flights",
+    "stays",
+    "quote",
+    "milesEstimate",
+    "easygds"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "id": { "type": "string" },
+    "packageId": { "type": ["string", "null"] },
+    "sourcePackageId": { "type": ["string", "null"] },
+    "bespoke": { "type": "boolean" },
+    "title": { "type": "string" },
+    "summary": { "type": "string" },
+    "heroImage": { "type": "string" },
+    "origin": { "type": "string", "minLength": 3, "maxLength": 3 },
+    "originIata": { "type": "string", "minLength": 3, "maxLength": 3 },
+    "startDate": { "type": "string", "format": "date" },
+    "adults": { "type": "integer", "minimum": 1 },
+    "children": { "type": "integer", "minimum": 0 },
+    "dates": {
+      "type": "object",
+      "required": ["start", "end"],
+      "additionalProperties": false,
+      "properties": {
+        "start": { "type": "string", "format": "date" },
+        "end": { "type": "string", "format": "date" }
+      }
+    },
+    "travelers": {
+      "type": "object",
+      "required": ["adults", "children"],
+      "additionalProperties": false,
+      "properties": {
+        "adults": { "type": "integer", "minimum": 1 },
+        "children": { "type": "integer", "minimum": 0 },
+        "childAges": {
+          "type": "array",
+          "items": { "type": "integer", "minimum": 0, "maximum": 17 }
+        }
+      }
+    },
+    "cabin": {
+      "type": "string",
+      "enum": ["Economy", "Business", "First"]
+    },
+    "tier": {
+      "type": "string",
+      "enum": ["classic", "comfort", "signature"]
+    },
+    "destinations": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "themes": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "duration": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "days": { "type": "integer", "minimum": 1 },
+        "nights": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "route": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["sequence", "destinationId"],
+        "additionalProperties": false,
+        "properties": {
+          "sequence": { "type": "integer", "minimum": 1 },
+          "destinationId": { "type": "string" },
+          "days": { "type": "integer", "minimum": 0 },
+          "nights": { "type": "integer", "minimum": 0 },
+          "transportToNext": { "type": ["string", "null"] }
+        }
+      }
+    },
+    "days": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["day", "date", "title", "destinationId"],
+        "additionalProperties": false,
+        "properties": {
+          "day": { "type": "integer", "minimum": 1 },
+          "date": { "type": "string", "format": "date" },
+          "title": { "type": "string" },
+          "destinationId": { "type": "string" },
+          "summary": { "type": "string" },
+          "description": { "type": "string" },
+          "highlights": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "image": { "type": "string" },
+          "imageAlt": { "type": "string" },
+          "moduleId": { "type": ["string", "null"] },
+          "journey": {
+            "type": ["object", "null"],
+            "additionalProperties": false,
+            "properties": {
+              "connectionId": { "type": "string" },
+              "from": { "type": "string" },
+              "to": { "type": "string" },
+              "mode": { "type": "string" },
+              "hours": { "type": ["number", "null"] },
+              "load": {
+                "type": "string",
+                "enum": ["short", "half-day", "full-day"]
+              },
+              "kind": { "type": "string" },
+              "flightRouteId": { "type": ["string", "null"] },
+              "transferId": { "type": ["string", "null"] },
+              "via": {
+                "type": "array",
+                "items": { "type": "string" }
+              },
+              "notes": { "type": "string" }
+            }
+          },
+          "experienceIds": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "accommodationId": { "type": ["string", "null"] },
+          "transferIds": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        }
+      }
+    },
+    "flights": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "origin", "destination", "date", "carrier"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "type": "string" },
+          "routeId": { "type": "string" },
+          "origin": { "type": "string" },
+          "destination": { "type": "string" },
+          "date": { "type": "string", "format": "date" },
+          "carrier": { "type": "string" },
+          "cabin": { "type": "string" },
+          "direction": {
+            "type": "string",
+            "enum": ["outbound", "return", "domestic"]
+          },
+          "durationHours": { "type": "number" },
+          "baseFareGbp": { "type": "number" }
+        }
+      }
+    },
+    "stays": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["accommodationId", "destinationId", "checkIn", "checkOut", "nights"],
+        "additionalProperties": false,
+        "properties": {
+          "accommodationId": { "type": "string" },
+          "name": { "type": "string" },
+          "destinationId": { "type": "string" },
+          "checkIn": { "type": "string", "format": "date" },
+          "checkOut": { "type": "string", "format": "date" },
+          "nights": { "type": "integer", "minimum": 1 },
+          "tier": { "type": "string" }
+        }
+      }
+    },
+    "quote": {
+      "type": "object",
+      "required": ["gbp", "eur", "breakdown"],
+      "additionalProperties": false,
+      "properties": {
+        "gbp": { "type": "number" },
+        "eur": { "type": "number" },
+        "zar": { "type": "number" },
+        "currency": { "type": "string" },
+        "displayCurrency": { "type": "string" },
+        "totalAmount": { "type": ["number", "string"] },
+        "breakdown": {
+          "type": "object",
+          "additionalProperties": true
+        },
+        "available": { "type": "boolean" },
+        "availabilityNote": { "type": "string" }
+      }
+    },
+    "milesEstimate": {
+      "type": "object",
+      "required": ["shebaMiles", "cabin", "notes"],
+      "additionalProperties": false,
+      "properties": {
+        "shebaMiles": { "type": "integer" },
+        "miles": { "type": "integer" },
+        "cabin": { "type": "string" },
+        "tierBonusNote": { "type": "string" },
+        "notes": { "type": "string" }
+      }
+    },
+    "easygds": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "packageId": { "type": ["string", "null"] },
+        "placeId": { "type": ["string", "null"] },
+        "hotelIds": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "flightConfigId": { "type": ["string", "null"] },
+        "handoff": {
+          "type": "object",
+          "additionalProperties": true
+        }
+      }
+    },
+    "availability": {
+      "type": "object",
+      "additionalProperties": true
+    }
+  }
+}

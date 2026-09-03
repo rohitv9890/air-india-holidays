@@ -1,0 +1,237 @@
+{
+  "generatedAt": "2026-08-09T23:51:29.861Z",
+  "dryRun": true,
+  "added": [],
+  "drafted": [],
+  "rejected": [
+    {
+      "id": "acc-skylight-addis",
+      "reasons": [
+        "PRICE_UNKNOWN",
+        "OPERATING_STATUS_UNVERIFIED",
+        "DUPLICATE_UNRESOLVED"
+      ]
+    },
+    {
+      "id": "acc-sheraton-addis",
+      "reasons": [
+        "PRICE_UNKNOWN",
+        "DUPLICATE_UNRESOLVED"
+      ]
+    },
+    {
+      "id": "acc-paradise-lodge",
+      "reasons": [
+        "PRICE_UNKNOWN",
+        "DUPLICATE_UNRESOLVED"
+      ]
+    },
+    {
+      "id": "acc-kuriftu-bahir-dar",
+      "reasons": [
+        "PRICE_UNKNOWN",
+        "DUPLICATE_UNRESOLVED"
+      ]
+    },
+    {
+      "id": "acc-gondar-lodge",
+      "reasons": [
+        "PRICE_UNKNOWN",
+        "DUPLICATE_UNRESOLVED"
+      ]
+    },
+    {
+      "id": "acc-harar-ras",
+      "reasons": [
+        "PRICE_UNKNOWN",
+        "OPERATING_STATUS_UNVERIFIED",
+        "DUPLICATE_UNRESOLVED"
+      ]
+    },
+    {
+      "id": "acc-maribela-lalibela",
+      "reasons": [
+        "PRICE_UNKNOWN",
+        "DUPLICATE_UNRESOLVED"
+      ]
+    },
+    {
+      "id": "flt-add-bjr",
+      "reasons": [
+        "SCHEDULE_UNVERIFIED",
+        "PRICE_UNKNOWN",
+        "REQUIRED_FIELD_MISSING",
+        "DUPLICATE_UNRESOLVED"
+      ]
+    },
+    {
+      "id": "flt-add-lli",
+      "reasons": [
+        "SCHEDULE_UNVERIFIED",
+        "PRICE_UNKNOWN",
+        "REQUIRED_FIELD_MISSING",
+        "DUPLICATE_UNRESOLVED"
+      ]
+    },
+    {
+      "id": "flt-lhr-add",
+      "reasons": [
+        "SCHEDULE_UNVERIFIED",
+        "PRICE_UNKNOWN",
+        "REQUIRED_FIELD_MISSING",
+        "DUPLICATE_UNRESOLVED"
+      ]
+    },
+    {
+      "id": "pkg-lungo-6-day-danakil-erta-ale",
+      "reasons": [
+        "PRICE_UNKNOWN",
+        "SAFETY_REVIEW_REQUIRED"
+      ]
+    },
+    {
+      "id": "acc-bale-mountain-lodge",
+      "reasons": [
+        "PRICE_UNKNOWN",
+        "DUPLICATE_UNRESOLVED"
+      ]
+    }
+  ],
+  "skipped": [
+    {
+      "id": "pkg-classic-ethiopia-highlights-10d-set",
+      "reason": "duplicate-catalog-id"
+    },
+    {
+      "id": "pkg-historical-highlights-11d-set",
+      "reason": "duplicate-catalog-id"
+    },
+    {
+      "id": "pkg-be-4-day-simien-trek",
+      "reason": "duplicate-catalog-id"
+    },
+    {
+      "id": "pkg-be-best-of-southern-ethiopia-13d",
+      "reason": "duplicate-catalog-id"
+    },
+    {
+      "id": "pkg-be-cultural-and-natural-south-13d",
+      "reason": "duplicate-catalog-id"
+    },
+    {
+      "id": "pkg-be-highlights-north-and-south-20d",
+      "reason": "duplicate-catalog-id"
+    },
+    {
+      "id": "pkg-be-historic-north-christmas-lalibela-11d",
+      "reason": "duplicate-catalog-id"
+    },
+    {
+      "id": "pkg-be-historic-north-circuit-community-trekking-12d",
+      "reason": "duplicate-catalog-id"
+    },
+    {
+      "id": "pkg-be-peaks-and-plateaus-12d",
+      "reason": "duplicate-catalog-id"
+    },
+    {
+      "id": "pkg-be-simien-mountains-northern-history-7d",
+      "reason": "duplicate-catalog-id"
+    },
+    {
+      "id": "pkg-ee-around-rift-valley-lakes-11d",
+      "reason": "duplicate-catalog-id"
+    },
+    {
+      "id": "pkg-venture-rift-valley-lakes-3d",
+      "reason": "duplicate-catalog-id"
+    },
+    {
+      "id": "dest-adama",
+      "reason": "duplicate-catalog-id"
+    },
+    {
+      "id": "dest-bishoftu",
+      "reason": "duplicate-catalog-id"
+    },
+    {
+      "id": "dest-dire-dawa",
+      "reason": "duplicate-catalog-id"
+    },
+    {
+      "id": "dest-hawassa",
+      "reason": "duplicate-catalog-id"
+    },
+    {
+      "id": "dest-jimma",
+      "reason": "duplicate-catalog-id"
+    },
+    {
+      "id": "dest-mekelle",
+      "reason": "duplicate-catalog-id"
+    },
+    {
+      "id": "dest-rift-valley-lakes",
+      "reason": "duplicate-catalog-id"
+    },
+    {
+      "id": "dest-tigray-heritage",
+      "reason": "duplicate-catalog-id"
+    },
+    {
+      "id": "acc-addis-ababa-haile-grand",
+      "reason": "duplicate-catalog-id"
+    },
+    {
+      "id": "acc-addis-ababa-hotel-lobelia",
+      "reason": "duplicate-catalog-id"
+    },
+    {
+      "id": "acc-addis-ababa-skylight-in-terminal-hotel",
+      "reason": "duplicate-catalog-id"
+    },
+    {
+      "id": "acc-addis-ababa-sunland-international-hotel",
+      "reason": "duplicate-catalog-id"
+    },
+    {
+      "id": "adama",
+      "reason": "duplicate-destination-index-id"
+    },
+    {
+      "id": "bishoftu",
+      "reason": "duplicate-destination-index-id"
+    },
+    {
+      "id": "dire-dawa",
+      "reason": "duplicate-destination-index-id"
+    },
+    {
+      "id": "hawassa",
+      "reason": "duplicate-destination-index-id"
+    },
+    {
+      "id": "jimma",
+      "reason": "duplicate-destination-index-id"
+    },
+    {
+      "id": "mekelle",
+      "reason": "duplicate-destination-index-id"
+    },
+    {
+      "id": "rift-valley-lakes",
+      "reason": "duplicate-destination-index-id"
+    },
+    {
+      "id": "tigray-heritage",
+      "reason": "duplicate-destination-index-id"
+    }
+  ],
+  "hotelsPromoted": 0,
+  "destinationIndexAdded": [],
+  "nextSteps": [
+    "node scripts/remediate-catalog-inventory.mjs",
+    "node scripts/validate-catalog.mjs",
+    "node scripts/sync-catalog-to-lambda.mjs"
+  ]
+}

@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /
+
+# This site is a private proposal and is not intended for public indexing.

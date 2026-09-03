@@ -1,0 +1,1670 @@
+{
+  "schemaVersion": "1.0.0",
+  "version": "v1",
+  "overflowPolicy": "append-unused-then-leisure",
+  "notes": "Reusable destination-day modules for the Air India CWC 2027 and Taj Holidays verticals. Plans 1-5 are ordered module ID lists; stays beyond five nights append any unused modules (e.g. Cape Town's Robben Island day) before repeating the leisure module.",
+  "destinations": {
+    "delhi": {
+      "modules": [
+        {
+          "id": "delhi-arrival",
+          "title": "Namaste, Delhi",
+          "summary": "Land in the capital and settle in with an evening at India Gate and a stroll around Connaught Place before your onward Air India connection.",
+          "highlights": [
+            "India Gate at dusk",
+            "Connaught Place",
+            "Welcome chai"
+          ],
+          "image": "images/india-gate-delhi.jpg",
+          "imageAlt": "India Gate illuminated at dusk in New Delhi",
+          "expectedActivityHours": 3,
+          "intensity": "easy",
+          "kind": "arrival-light"
+        },
+        {
+          "id": "delhi-old-delhi",
+          "title": "Old Delhi heritage",
+          "summary": "Explore the Mughal capital — Red Fort ramparts, Jama Masjid, and a cycle-rickshaw ride through the spice lanes and street food of Chandni Chowk.",
+          "highlights": [
+            "Red Fort",
+            "Jama Masjid",
+            "Chandni Chowk rickshaw ride"
+          ],
+          "image": "images/red-fort-chandni-chowk-delhi.jpg",
+          "imageAlt": "Red Fort and the lanes of Chandni Chowk, Old Delhi",
+          "expectedActivityHours": 6,
+          "intensity": "moderate",
+          "kind": "full-day"
+        },
+        {
+          "id": "delhi-new-delhi",
+          "title": "Imperial New Delhi",
+          "summary": "Humayun's Tomb, the Qutub Minar complex, and a drive past Rashtrapati Bhavan and Rajpath — the ceremonial heart of the capital.",
+          "highlights": [
+            "Humayun's Tomb",
+            "Qutub Minar",
+            "Rajpath drive-by"
+          ],
+          "image": "images/humayuns-tomb-delhi.jpg",
+          "imageAlt": "Humayun's Tomb gardens in New Delhi",
+          "expectedActivityHours": 6,
+          "intensity": "moderate",
+          "kind": "full-day"
+        },
+        {
+          "id": "delhi-leisure",
+          "title": "Delhi at leisure",
+          "summary": "A clearly marked free day — boutique shopping at Khan Market or Dilli Haat, or simply rest before the next leg of your journey.",
+          "highlights": [
+            "At leisure",
+            "Khan Market",
+            "Dilli Haat crafts"
+          ],
+          "image": "images/india-gate-delhi.jpg",
+          "imageAlt": "India Gate illuminated at dusk in New Delhi",
+          "expectedActivityHours": 2,
+          "intensity": "easy",
+          "kind": "leisure"
+        },
+        {
+          "id": "delhi-onward",
+          "title": "Onward connection",
+          "summary": "A relaxed half-day before your Air India connecting flight, with time for the Lotus Temple or Akshardham if your schedule allows.",
+          "highlights": [
+            "Lotus Temple option",
+            "Akshardham option",
+            "Airport transfer"
+          ],
+          "image": "images/india-gate-delhi.jpg",
+          "imageAlt": "India Gate illuminated at dusk in New Delhi",
+          "expectedActivityHours": 3,
+          "intensity": "easy",
+          "kind": "half-day"
+        }
+      ],
+      "plans": {
+        "1": [
+          "delhi-arrival"
+        ],
+        "2": [
+          "delhi-arrival",
+          "delhi-old-delhi"
+        ],
+        "3": [
+          "delhi-arrival",
+          "delhi-old-delhi",
+          "delhi-new-delhi"
+        ],
+        "4": [
+          "delhi-arrival",
+          "delhi-old-delhi",
+          "delhi-new-delhi",
+          "delhi-leisure"
+        ],
+        "5": [
+          "delhi-arrival",
+          "delhi-old-delhi",
+          "delhi-new-delhi",
+          "delhi-leisure",
+          "delhi-onward"
+        ]
+      },
+      "arrivalModuleId": "delhi-arrival",
+      "departureModuleId": "delhi-onward",
+      "leisureModuleId": "delhi-leisure"
+    },
+    "mumbai": {
+      "modules": [
+        {
+          "id": "mumbai-arrival",
+          "title": "Welcome to Mumbai",
+          "summary": "Arrive on the Arabian Sea — a sunset walk along Marine Drive and your first view of the Gateway of India lit up over the harbour.",
+          "highlights": [
+            "Marine Drive sunset",
+            "Gateway of India",
+            "Welcome dinner"
+          ],
+          "image": "images/gateway-of-india-mumbai.jpg",
+          "imageAlt": "Gateway of India monument in Mumbai at dusk",
+          "expectedActivityHours": 3,
+          "intensity": "easy",
+          "kind": "arrival-light"
+        },
+        {
+          "id": "mumbai-colonial-city",
+          "title": "Colonial Mumbai & Elephanta",
+          "summary": "Gateway of India, the Chhatrapati Shivaji Maharaj Terminus, and a ferry across the harbour to the rock-cut Elephanta Caves.",
+          "highlights": [
+            "Gateway of India",
+            "CSMT heritage station",
+            "Elephanta Caves ferry"
+          ],
+          "image": "images/marine-drive-mumbai.jpg",
+          "imageAlt": "Marine Drive promenade in Mumbai",
+          "expectedActivityHours": 6,
+          "intensity": "moderate",
+          "kind": "full-day"
+        },
+        {
+          "id": "mumbai-bandra-bazaars",
+          "title": "Sea Link & bazaars",
+          "summary": "A drive across the Bandra-Worli Sea Link, then browse Crawford Market and the Colaba Causeway for souvenirs and street food.",
+          "highlights": [
+            "Bandra-Worli Sea Link",
+            "Crawford Market",
+            "Colaba Causeway"
+          ],
+          "image": "images/bandra-worli-sea-link-mumbai.jpg",
+          "imageAlt": "Bandra-Worli Sea Link bridge in Mumbai",
+          "expectedActivityHours": 5,
+          "intensity": "easy",
+          "kind": "full-day"
+        },
+        {
+          "id": "mumbai-leisure",
+          "title": "Mumbai at leisure",
+          "summary": "A clearly marked free day in the city — rest, optional shopping, or a Bollywood studio visit rather than a scheduled touring circuit.",
+          "highlights": [
+            "At leisure",
+            "Optional Bollywood studio tour",
+            "Cafe hopping"
+          ],
+          "image": "images/gateway-of-india-mumbai.jpg",
+          "imageAlt": "Gateway of India monument in Mumbai at dusk",
+          "expectedActivityHours": 2,
+          "intensity": "easy",
+          "kind": "leisure"
+        },
+        {
+          "id": "mumbai-onward",
+          "title": "Onward connection",
+          "summary": "A relaxed half-day ahead of your Air India connecting flight, with time for a last coastal walk near the Gateway of India.",
+          "highlights": [
+            "Final coastal walk",
+            "Souvenir shopping",
+            "Airport transfer"
+          ],
+          "image": "images/gateway-of-india-mumbai.jpg",
+          "imageAlt": "Gateway of India monument in Mumbai at dusk",
+          "expectedActivityHours": 3,
+          "intensity": "easy",
+          "kind": "half-day"
+        }
+      ],
+      "plans": {
+        "1": [
+          "mumbai-arrival"
+        ],
+        "2": [
+          "mumbai-arrival",
+          "mumbai-colonial-city"
+        ],
+        "3": [
+          "mumbai-arrival",
+          "mumbai-colonial-city",
+          "mumbai-bandra-bazaars"
+        ],
+        "4": [
+          "mumbai-arrival",
+          "mumbai-colonial-city",
+          "mumbai-bandra-bazaars",
+          "mumbai-leisure"
+        ],
+        "5": [
+          "mumbai-arrival",
+          "mumbai-colonial-city",
+          "mumbai-bandra-bazaars",
+          "mumbai-leisure",
+          "mumbai-onward"
+        ]
+      },
+      "arrivalModuleId": "mumbai-arrival",
+      "departureModuleId": "mumbai-onward",
+      "leisureModuleId": "mumbai-leisure"
+    },
+    "johannesburg": {
+      "modules": [
+        {
+          "id": "johannesburg-arrival",
+          "title": "Touch down in Johannesburg",
+          "summary": "Land in Gauteng and settle in with an evening at Nelson Mandela Square in Sandton — restaurants, city lights, and first World Cup buzz.",
+          "highlights": [
+            "Sandton City",
+            "Nelson Mandela Square",
+            "Welcome dinner"
+          ],
+          "image": "images/johannesburg-skyline.jpg",
+          "imageAlt": "Johannesburg city skyline at dusk",
+          "expectedActivityHours": 3,
+          "intensity": "easy",
+          "kind": "arrival-light"
+        },
+        {
+          "id": "johannesburg-soweto-apartheid",
+          "title": "Soweto & Apartheid Museum",
+          "summary": "A moving day through the Apartheid Museum, then Soweto's Vilakazi Street — the only street to have housed two Nobel laureates — and the Hector Pieterson Memorial.",
+          "highlights": [
+            "Apartheid Museum",
+            "Vilakazi Street",
+            "Hector Pieterson Memorial"
+          ],
+          "image": "images/soweto-vilakazi-street-johannesburg.jpg",
+          "imageAlt": "Vilakazi Street in Soweto, Johannesburg",
+          "expectedActivityHours": 6,
+          "intensity": "moderate",
+          "kind": "full-day"
+        },
+        {
+          "id": "johannesburg-cradle-humankind",
+          "title": "Cradle of Humankind",
+          "summary": "A day trip to the Cradle of Humankind UNESCO World Heritage Site — Sterkfontein Caves and the Maropeng visitor centre tracing 3.5 million years of human origins.",
+          "highlights": [
+            "Sterkfontein Caves",
+            "Maropeng centre",
+            "Fossil discoveries"
+          ],
+          "image": "images/cradle-of-humankind-sterkfontein.jpg",
+          "imageAlt": "Sterkfontein Caves at the Cradle of Humankind",
+          "expectedActivityHours": 6,
+          "intensity": "moderate",
+          "kind": "full-day"
+        },
+        {
+          "id": "johannesburg-matchday-wanderers",
+          "title": "Match day at the Wanderers",
+          "summary": "Cricket World Cup 2027 fixture day at The Wanderers Stadium — known to every touring team as 'The Bullring' for its raucous atmosphere.",
+          "highlights": [
+            "The Wanderers Stadium",
+            "Match-day atmosphere",
+            "Fan zone"
+          ],
+          "image": "images/wanderers-stadium-johannesburg.jpg",
+          "imageAlt": "The Wanderers Stadium, Johannesburg, on match day",
+          "expectedActivityHours": 7,
+          "intensity": "active",
+          "kind": "full-day"
+        },
+        {
+          "id": "johannesburg-leisure",
+          "title": "Johannesburg at leisure",
+          "summary": "A free day for Sandton shopping, a spa afternoon, or an optional visit to Gold Reef City theme park.",
+          "highlights": [
+            "At leisure",
+            "Sandton shopping",
+            "Gold Reef City option"
+          ],
+          "image": "images/johannesburg-skyline.jpg",
+          "imageAlt": "Johannesburg city skyline at dusk",
+          "expectedActivityHours": 2,
+          "intensity": "easy",
+          "kind": "leisure"
+        }
+      ],
+      "plans": {
+        "1": [
+          "johannesburg-arrival"
+        ],
+        "2": [
+          "johannesburg-arrival",
+          "johannesburg-soweto-apartheid"
+        ],
+        "3": [
+          "johannesburg-arrival",
+          "johannesburg-soweto-apartheid",
+          "johannesburg-cradle-humankind"
+        ],
+        "4": [
+          "johannesburg-arrival",
+          "johannesburg-soweto-apartheid",
+          "johannesburg-cradle-humankind",
+          "johannesburg-matchday-wanderers"
+        ],
+        "5": [
+          "johannesburg-arrival",
+          "johannesburg-soweto-apartheid",
+          "johannesburg-cradle-humankind",
+          "johannesburg-matchday-wanderers",
+          "johannesburg-leisure"
+        ]
+      },
+      "arrivalModuleId": "johannesburg-arrival",
+      "departureModuleId": "johannesburg-leisure",
+      "leisureModuleId": "johannesburg-leisure"
+    },
+    "cape-town": {
+      "modules": [
+        {
+          "id": "cape-town-arrival",
+          "title": "Arrive in Cape Town",
+          "summary": "Land beneath Table Mountain and take an evening stroll around the V&A Waterfront — harbour lights, street performers, and your first Cape sunset.",
+          "highlights": [
+            "V&A Waterfront",
+            "Table Mountain silhouette",
+            "Welcome dinner"
+          ],
+          "image": "images/table-mountain-cape-town.jpg",
+          "imageAlt": "Table Mountain over Cape Town at sunset",
+          "expectedActivityHours": 3,
+          "intensity": "easy",
+          "kind": "arrival-light"
+        },
+        {
+          "id": "cape-town-table-mountain",
+          "title": "Table Mountain & the City Bowl",
+          "summary": "Cable car to the top of Table Mountain for panoramic views, then explore the colourful houses of Bo-Kaap and the Company's Garden.",
+          "highlights": [
+            "Table Mountain cableway",
+            "Bo-Kaap",
+            "Company's Garden"
+          ],
+          "image": "images/table-mountain-cape-town.jpg",
+          "imageAlt": "Table Mountain over Cape Town at sunset",
+          "expectedActivityHours": 6,
+          "intensity": "moderate",
+          "kind": "full-day"
+        },
+        {
+          "id": "cape-town-peninsula",
+          "title": "Cape Point & penguins",
+          "summary": "A full day down the Cape Peninsula via Chapman's Peak Drive to Cape Point and the Cape of Good Hope, with African penguins at Boulders Beach.",
+          "highlights": [
+            "Chapman's Peak Drive",
+            "Cape Point",
+            "Boulders Beach penguins"
+          ],
+          "image": "images/cape-point-boulders-beach.jpg",
+          "imageAlt": "Cape Point and the Cape of Good Hope",
+          "expectedActivityHours": 7,
+          "intensity": "moderate",
+          "kind": "full-day"
+        },
+        {
+          "id": "cape-town-leisure",
+          "title": "Cape Town at leisure",
+          "summary": "A free day at the V&A Waterfront — harbour cruise, shopping, or an optional trip into the Stellenbosch and Franschhoek Winelands.",
+          "highlights": [
+            "At leisure",
+            "Harbour cruise option",
+            "Winelands option"
+          ],
+          "image": "images/va-waterfront-cape-town.jpg",
+          "imageAlt": "V&A Waterfront harbour in Cape Town",
+          "expectedActivityHours": 3,
+          "intensity": "easy",
+          "kind": "leisure"
+        },
+        {
+          "id": "cape-town-matchday-newlands",
+          "title": "Match day at Newlands",
+          "summary": "Cricket World Cup 2027 fixture day at Newlands Cricket Ground, beneath Devil's Peak — one of the most scenic Test grounds in the world.",
+          "highlights": [
+            "Newlands Cricket Ground",
+            "Devil's Peak backdrop",
+            "Match-day atmosphere"
+          ],
+          "image": "images/newlands-cricket-ground-cape-town.jpg",
+          "imageAlt": "Newlands Cricket Ground, Cape Town, on match day",
+          "expectedActivityHours": 7,
+          "intensity": "active",
+          "kind": "full-day",
+          "experienceIds": [
+            "exp-newlands-stadium-tour"
+          ]
+        },
+        {
+          "id": "cape-town-robben-island",
+          "title": "Robben Island",
+          "summary": "A ferry crossing to Robben Island, where Nelson Mandela was imprisoned for 18 years — a powerful, guided history of South Africa's road to democracy.",
+          "highlights": [
+            "Robben Island ferry",
+            "Mandela's cell",
+            "Guided history tour"
+          ],
+          "image": "images/robben-island-cape-town.jpg",
+          "imageAlt": "Robben Island viewed from Table Bay",
+          "expectedActivityHours": 6,
+          "intensity": "moderate",
+          "kind": "full-day"
+        }
+      ],
+      "plans": {
+        "1": [
+          "cape-town-arrival"
+        ],
+        "2": [
+          "cape-town-arrival",
+          "cape-town-table-mountain"
+        ],
+        "3": [
+          "cape-town-arrival",
+          "cape-town-table-mountain",
+          "cape-town-peninsula"
+        ],
+        "4": [
+          "cape-town-arrival",
+          "cape-town-table-mountain",
+          "cape-town-peninsula",
+          "cape-town-leisure"
+        ],
+        "5": [
+          "cape-town-arrival",
+          "cape-town-table-mountain",
+          "cape-town-peninsula",
+          "cape-town-leisure",
+          "cape-town-matchday-newlands"
+        ]
+      },
+      "arrivalModuleId": "cape-town-arrival",
+      "departureModuleId": "cape-town-leisure",
+      "leisureModuleId": "cape-town-leisure"
+    },
+    "durban": {
+      "modules": [
+        {
+          "id": "durban-arrival",
+          "title": "Arrive in Durban",
+          "summary": "Settle in on the subtropical Indian Ocean coast with a welcome walk along the Golden Mile promenade.",
+          "highlights": [
+            "Golden Mile promenade",
+            "Beachfront welcome",
+            "Welcome dinner"
+          ],
+          "image": "images/golden-mile-durban.jpg",
+          "imageAlt": "Golden Mile beachfront promenade in Durban",
+          "expectedActivityHours": 3,
+          "intensity": "easy",
+          "kind": "arrival-light"
+        },
+        {
+          "id": "durban-ushaka-golden-mile",
+          "title": "uShaka & the Golden Mile",
+          "summary": "uShaka Marine World, a ride on the Moses Mabhida Stadium SkyCar, and an afternoon on the Golden Mile's surf beaches.",
+          "highlights": [
+            "uShaka Marine World",
+            "Moses Mabhida SkyCar",
+            "Golden Mile beaches"
+          ],
+          "image": "images/ushaka-marine-world-durban.jpg",
+          "imageAlt": "uShaka Marine World in Durban",
+          "expectedActivityHours": 6,
+          "intensity": "moderate",
+          "kind": "full-day"
+        },
+        {
+          "id": "durban-indian-quarter",
+          "title": "Durban's Indian quarter",
+          "summary": "Victoria Street Market and the Grey Street precinct — home to the largest Indian community outside India, with spice traders, the Juma Masjid, and Bunny Chow lunch.",
+          "highlights": [
+            "Victoria Street Market",
+            "Grey Street precinct",
+            "Bunny Chow lunch"
+          ],
+          "image": "images/victoria-street-market-durban.jpg",
+          "imageAlt": "Victoria Street Market in Durban",
+          "expectedActivityHours": 5,
+          "intensity": "easy",
+          "kind": "full-day"
+        },
+        {
+          "id": "durban-matchday-kingsmead",
+          "title": "Match day at Kingsmead",
+          "summary": "Cricket World Cup 2027 fixture day at Kingsmead — one of the oldest and most atmospheric grounds in world cricket.",
+          "highlights": [
+            "Kingsmead Stadium",
+            "Match-day atmosphere",
+            "Fan zone"
+          ],
+          "image": "images/kingsmead-stadium-durban.jpg",
+          "imageAlt": "Kingsmead Stadium, Durban, on match day",
+          "expectedActivityHours": 7,
+          "intensity": "active",
+          "kind": "full-day"
+        },
+        {
+          "id": "durban-leisure",
+          "title": "Durban at leisure",
+          "summary": "A free beach day on the Golden Mile, with time for a spa treatment or a stroll through the Botanic Gardens.",
+          "highlights": [
+            "At leisure",
+            "Beach time",
+            "Botanic Gardens option"
+          ],
+          "image": "images/golden-mile-durban.jpg",
+          "imageAlt": "Golden Mile beachfront promenade in Durban",
+          "expectedActivityHours": 2,
+          "intensity": "easy",
+          "kind": "leisure"
+        }
+      ],
+      "plans": {
+        "1": [
+          "durban-arrival"
+        ],
+        "2": [
+          "durban-arrival",
+          "durban-ushaka-golden-mile"
+        ],
+        "3": [
+          "durban-arrival",
+          "durban-ushaka-golden-mile",
+          "durban-indian-quarter"
+        ],
+        "4": [
+          "durban-arrival",
+          "durban-ushaka-golden-mile",
+          "durban-indian-quarter",
+          "durban-matchday-kingsmead"
+        ],
+        "5": [
+          "durban-arrival",
+          "durban-ushaka-golden-mile",
+          "durban-indian-quarter",
+          "durban-matchday-kingsmead",
+          "durban-leisure"
+        ]
+      },
+      "arrivalModuleId": "durban-arrival",
+      "departureModuleId": "durban-leisure",
+      "leisureModuleId": "durban-leisure"
+    },
+    "centurion": {
+      "modules": [
+        {
+          "id": "centurion-arrival",
+          "title": "Arrive in Centurion",
+          "summary": "A short road transfer from OR Tambo to Centurion, with an easy welcome walk beside Centurion Lake.",
+          "highlights": [
+            "Centurion Lake",
+            "Short transfer from OR Tambo",
+            "Welcome dinner"
+          ],
+          "image": "images/centurion-lake.jpg",
+          "imageAlt": "Centurion Lake in Gauteng, South Africa",
+          "expectedActivityHours": 3,
+          "intensity": "easy",
+          "kind": "arrival-light"
+        },
+        {
+          "id": "centurion-pretoria-union-buildings",
+          "title": "Pretoria day trip",
+          "summary": "The Union Buildings and their terraced gardens, the Voortrekker Monument, and Church Square in South Africa's administrative capital.",
+          "highlights": [
+            "Union Buildings",
+            "Voortrekker Monument",
+            "Church Square"
+          ],
+          "image": "images/union-buildings-pretoria.jpg",
+          "imageAlt": "Union Buildings in Pretoria",
+          "expectedActivityHours": 6,
+          "intensity": "easy",
+          "kind": "full-day"
+        },
+        {
+          "id": "centurion-cullinan-diamond-mine",
+          "title": "Cullinan Diamond Mine",
+          "summary": "A guided tour of the Cullinan Diamond Mine, source of the largest gem-quality diamond ever found, with a look inside the historic mining town.",
+          "highlights": [
+            "Cullinan Diamond Mine tour",
+            "Historic mining town",
+            "Diamond exhibition"
+          ],
+          "image": "images/cullinan-diamond-mine.jpg",
+          "imageAlt": "Cullinan Diamond Mine near Centurion",
+          "expectedActivityHours": 5,
+          "intensity": "moderate",
+          "kind": "full-day"
+        },
+        {
+          "id": "centurion-matchday-supersport",
+          "title": "Match day at SuperSport Park",
+          "summary": "Cricket World Cup 2027 fixture day at SuperSport Park, known for its steep grass banks and fast, high-scoring pitch.",
+          "highlights": [
+            "SuperSport Park",
+            "Grass-bank atmosphere",
+            "Match-day fan zone"
+          ],
+          "image": "images/supersport-park-centurion.jpg",
+          "imageAlt": "SuperSport Park, Centurion, on match day",
+          "expectedActivityHours": 7,
+          "intensity": "active",
+          "kind": "full-day"
+        },
+        {
+          "id": "centurion-leisure",
+          "title": "Centurion at leisure",
+          "summary": "A free day for Centurion Mall or an optional excursion into Johannesburg for shopping and city sights.",
+          "highlights": [
+            "At leisure",
+            "Centurion Mall",
+            "Johannesburg option"
+          ],
+          "image": "images/centurion-lake.jpg",
+          "imageAlt": "Centurion Lake in Gauteng, South Africa",
+          "expectedActivityHours": 2,
+          "intensity": "easy",
+          "kind": "leisure"
+        }
+      ],
+      "plans": {
+        "1": [
+          "centurion-arrival"
+        ],
+        "2": [
+          "centurion-arrival",
+          "centurion-pretoria-union-buildings"
+        ],
+        "3": [
+          "centurion-arrival",
+          "centurion-pretoria-union-buildings",
+          "centurion-cullinan-diamond-mine"
+        ],
+        "4": [
+          "centurion-arrival",
+          "centurion-pretoria-union-buildings",
+          "centurion-cullinan-diamond-mine",
+          "centurion-matchday-supersport"
+        ],
+        "5": [
+          "centurion-arrival",
+          "centurion-pretoria-union-buildings",
+          "centurion-cullinan-diamond-mine",
+          "centurion-matchday-supersport",
+          "centurion-leisure"
+        ]
+      },
+      "arrivalModuleId": "centurion-arrival",
+      "departureModuleId": "centurion-leisure",
+      "leisureModuleId": "centurion-leisure"
+    },
+    "gqeberha": {
+      "modules": [
+        {
+          "id": "gqeberha-arrival",
+          "title": "Arrive in Gqeberha",
+          "summary": "Land in the Windy City with a welcome stroll along Humewood Beach on Algoa Bay.",
+          "highlights": [
+            "Humewood Beach",
+            "Algoa Bay",
+            "Welcome dinner"
+          ],
+          "image": "images/humewood-beach-gqeberha.jpg",
+          "imageAlt": "Humewood Beach on Algoa Bay, Gqeberha",
+          "expectedActivityHours": 3,
+          "intensity": "easy",
+          "kind": "arrival-light"
+        },
+        {
+          "id": "gqeberha-addo-elephant",
+          "title": "Addo Elephant National Park",
+          "summary": "A full-day game drive in Addo Elephant National Park, home to over 600 elephants as well as lion, buffalo, and rhino.",
+          "highlights": [
+            "Addo Elephant National Park",
+            "Game drive",
+            "Big Five spotting"
+          ],
+          "image": "images/addo-elephant-national-park.jpg",
+          "imageAlt": "Elephants at Addo Elephant National Park",
+          "expectedActivityHours": 7,
+          "intensity": "moderate",
+          "kind": "full-day"
+        },
+        {
+          "id": "gqeberha-st-georges-heritage",
+          "title": "City heritage & Donkin Reserve",
+          "summary": "St George's Park cricket heritage and museum, the Donkin Reserve, and the Route 67 public art trail telling the story of South Africa's democracy.",
+          "highlights": [
+            "St George's Park heritage",
+            "Donkin Reserve",
+            "Route 67 art trail"
+          ],
+          "image": "images/donkin-reserve-gqeberha.jpg",
+          "imageAlt": "Donkin Reserve in Gqeberha",
+          "expectedActivityHours": 5,
+          "intensity": "easy",
+          "kind": "full-day"
+        },
+        {
+          "id": "gqeberha-matchday-st-georges",
+          "title": "Match day at St George's Park",
+          "summary": "Cricket World Cup 2027 fixture day at St George's Park — the second-oldest Test ground in the world, first used in 1889.",
+          "highlights": [
+            "St George's Park",
+            "Match-day atmosphere",
+            "Fan zone"
+          ],
+          "image": "images/st-georges-park-gqeberha.jpg",
+          "imageAlt": "St George's Park, Gqeberha, on match day",
+          "expectedActivityHours": 7,
+          "intensity": "active",
+          "kind": "full-day"
+        },
+        {
+          "id": "gqeberha-leisure",
+          "title": "Gqeberha at leisure",
+          "summary": "A free beach day along Algoa Bay, with time for water sports or a relaxed boardwalk lunch.",
+          "highlights": [
+            "At leisure",
+            "Beach time",
+            "Boardwalk lunch"
+          ],
+          "image": "images/humewood-beach-gqeberha.jpg",
+          "imageAlt": "Humewood Beach on Algoa Bay, Gqeberha",
+          "expectedActivityHours": 2,
+          "intensity": "easy",
+          "kind": "leisure"
+        }
+      ],
+      "plans": {
+        "1": [
+          "gqeberha-arrival"
+        ],
+        "2": [
+          "gqeberha-arrival",
+          "gqeberha-addo-elephant"
+        ],
+        "3": [
+          "gqeberha-arrival",
+          "gqeberha-addo-elephant",
+          "gqeberha-st-georges-heritage"
+        ],
+        "4": [
+          "gqeberha-arrival",
+          "gqeberha-addo-elephant",
+          "gqeberha-st-georges-heritage",
+          "gqeberha-matchday-st-georges"
+        ],
+        "5": [
+          "gqeberha-arrival",
+          "gqeberha-addo-elephant",
+          "gqeberha-st-georges-heritage",
+          "gqeberha-matchday-st-georges",
+          "gqeberha-leisure"
+        ]
+      },
+      "arrivalModuleId": "gqeberha-arrival",
+      "departureModuleId": "gqeberha-leisure",
+      "leisureModuleId": "gqeberha-leisure"
+    },
+    "udaipur": {
+      "modules": [
+        {
+          "id": "udaipur-arrival",
+          "title": "Arrive at the Lake Palace",
+          "summary": "A private boat carries you across Lake Pichola to the Taj Lake Palace — check-in, then watch the City Palace light up at sunset from the jetty.",
+          "highlights": [
+            "Lake Pichola boat transfer",
+            "Taj Lake Palace check-in",
+            "Sunset over the City Palace"
+          ],
+          "image": "images/taj-lake-palace-udaipur.jpg",
+          "imageAlt": "Taj Lake Palace floating on Lake Pichola, Udaipur",
+          "expectedActivityHours": 3,
+          "intensity": "easy",
+          "kind": "arrival-light"
+        },
+        {
+          "id": "udaipur-city-palace",
+          "title": "City Palace & old town",
+          "summary": "Udaipur's City Palace complex, Jagdish Temple, and Bagore ki Haveli, ending with a traditional Rajasthani dance performance.",
+          "highlights": [
+            "City Palace complex",
+            "Jagdish Temple",
+            "Bagore ki Haveli dance show"
+          ],
+          "image": "images/city-palace-udaipur.jpg",
+          "imageAlt": "City Palace complex in Udaipur",
+          "expectedActivityHours": 6,
+          "intensity": "moderate",
+          "kind": "full-day"
+        },
+        {
+          "id": "udaipur-lake-pichola-cruise",
+          "title": "Lake Pichola cruise",
+          "summary": "A boat cruise to Jagmandir Island, followed by the Saheliyon ki Bari gardens and a browse through Udaipur's miniature-painting studios.",
+          "highlights": [
+            "Jagmandir Island",
+            "Saheliyon ki Bari gardens",
+            "Miniature painting studios"
+          ],
+          "image": "images/lake-pichola-boat-udaipur.jpg",
+          "imageAlt": "Boat on Lake Pichola near Jagmandir Island, Udaipur",
+          "expectedActivityHours": 5,
+          "intensity": "easy",
+          "kind": "full-day"
+        },
+        {
+          "id": "udaipur-sajjangarh-sunset",
+          "title": "Monsoon Palace sunset",
+          "summary": "A short drive up to Sajjangarh, the Monsoon Palace, for sweeping sunset views over Udaipur's lakes and the Aravalli hills.",
+          "highlights": [
+            "Sajjangarh Monsoon Palace",
+            "Aravalli sunset views",
+            "Photo stop"
+          ],
+          "image": "images/sajjangarh-monsoon-palace-udaipur.jpg",
+          "imageAlt": "Sajjangarh Monsoon Palace above Udaipur",
+          "expectedActivityHours": 3,
+          "intensity": "easy",
+          "kind": "half-day"
+        },
+        {
+          "id": "udaipur-leisure",
+          "title": "Udaipur at leisure",
+          "summary": "A free day for a spa treatment at the palace or optional shopping for Rajasthani miniature paintings and textiles.",
+          "highlights": [
+            "At leisure",
+            "Palace spa option",
+            "Miniature painting shopping"
+          ],
+          "image": "images/lake-pichola-boat-udaipur.jpg",
+          "imageAlt": "Boat on Lake Pichola near Jagmandir Island, Udaipur",
+          "expectedActivityHours": 2,
+          "intensity": "easy",
+          "kind": "leisure"
+        }
+      ],
+      "plans": {
+        "1": [
+          "udaipur-arrival"
+        ],
+        "2": [
+          "udaipur-arrival",
+          "udaipur-city-palace"
+        ],
+        "3": [
+          "udaipur-arrival",
+          "udaipur-city-palace",
+          "udaipur-lake-pichola-cruise"
+        ],
+        "4": [
+          "udaipur-arrival",
+          "udaipur-city-palace",
+          "udaipur-lake-pichola-cruise",
+          "udaipur-sajjangarh-sunset"
+        ],
+        "5": [
+          "udaipur-arrival",
+          "udaipur-city-palace",
+          "udaipur-lake-pichola-cruise",
+          "udaipur-sajjangarh-sunset",
+          "udaipur-leisure"
+        ]
+      },
+      "arrivalModuleId": "udaipur-arrival",
+      "departureModuleId": "udaipur-sajjangarh-sunset",
+      "leisureModuleId": "udaipur-leisure"
+    },
+    "jaipur": {
+      "modules": [
+        {
+          "id": "jaipur-arrival",
+          "title": "Arrive at the Rambagh Palace",
+          "summary": "Check into the Taj Rambagh Palace, once the residence of the Maharajas of Jaipur, with a garden stroll and a traditional Rajasthani thali dinner.",
+          "highlights": [
+            "Taj Rambagh Palace check-in",
+            "Palace gardens",
+            "Rajasthani thali dinner"
+          ],
+          "image": "images/taj-rambagh-palace-jaipur.jpg",
+          "imageAlt": "Taj Rambagh Palace in Jaipur",
+          "expectedActivityHours": 3,
+          "intensity": "easy",
+          "kind": "arrival-light"
+        },
+        {
+          "id": "jaipur-amber-fort",
+          "title": "Amber Fort",
+          "summary": "A morning at Amber Fort with its Sheesh Mahal mirror palace, then Jaigarh Fort and a photo stop at the floating Jal Mahal.",
+          "highlights": [
+            "Amber Fort",
+            "Sheesh Mahal",
+            "Jal Mahal photo stop"
+          ],
+          "image": "images/amber-fort-jaipur.jpg",
+          "imageAlt": "Amber Fort near Jaipur",
+          "expectedActivityHours": 6,
+          "intensity": "moderate",
+          "kind": "full-day",
+          "experienceIds": [
+            "exp-amber-fort-jaipur"
+          ]
+        },
+        {
+          "id": "jaipur-city-palace-hawa-mahal",
+          "title": "City Palace & Hawa Mahal",
+          "summary": "Jaipur's City Palace museum, the intricate facade of Hawa Mahal, the Jantar Mantar observatory, and bangle shopping in Johari Bazaar.",
+          "highlights": [
+            "City Palace museum",
+            "Hawa Mahal",
+            "Jantar Mantar"
+          ],
+          "image": "images/hawa-mahal-jaipur.jpg",
+          "imageAlt": "Hawa Mahal, the Palace of Winds, in Jaipur",
+          "expectedActivityHours": 6,
+          "intensity": "moderate",
+          "kind": "full-day"
+        },
+        {
+          "id": "jaipur-leisure",
+          "title": "Jaipur at leisure",
+          "summary": "A free day for a polo lesson or spa afternoon at the Rambagh Palace, or independent exploring of the Pink City bazaars.",
+          "highlights": [
+            "At leisure",
+            "Polo lesson option",
+            "Bazaar shopping"
+          ],
+          "image": "images/taj-rambagh-palace-jaipur.jpg",
+          "imageAlt": "Taj Rambagh Palace in Jaipur",
+          "expectedActivityHours": 2,
+          "intensity": "easy",
+          "kind": "leisure"
+        },
+        {
+          "id": "jaipur-nahargarh-sunset",
+          "title": "Nahargarh Fort sunset",
+          "summary": "A sundowner at Nahargarh Fort, perched on the Aravalli ridge with the best panoramic views over the Pink City.",
+          "highlights": [
+            "Nahargarh Fort",
+            "Sunset over the Pink City",
+            "Sundowner drinks"
+          ],
+          "image": "images/nahargarh-fort-jaipur.jpg",
+          "imageAlt": "Nahargarh Fort overlooking Jaipur at sunset",
+          "expectedActivityHours": 3,
+          "intensity": "easy",
+          "kind": "half-day"
+        }
+      ],
+      "plans": {
+        "1": [
+          "jaipur-arrival"
+        ],
+        "2": [
+          "jaipur-arrival",
+          "jaipur-amber-fort"
+        ],
+        "3": [
+          "jaipur-arrival",
+          "jaipur-amber-fort",
+          "jaipur-city-palace-hawa-mahal"
+        ],
+        "4": [
+          "jaipur-arrival",
+          "jaipur-amber-fort",
+          "jaipur-city-palace-hawa-mahal",
+          "jaipur-leisure"
+        ],
+        "5": [
+          "jaipur-arrival",
+          "jaipur-amber-fort",
+          "jaipur-city-palace-hawa-mahal",
+          "jaipur-leisure",
+          "jaipur-nahargarh-sunset"
+        ]
+      },
+      "arrivalModuleId": "jaipur-arrival",
+      "departureModuleId": "jaipur-nahargarh-sunset",
+      "leisureModuleId": "jaipur-leisure"
+    },
+    "hyderabad": {
+      "modules": [
+        {
+          "id": "hyderabad-arrival",
+          "title": "Arrive at the Falaknuma Palace",
+          "summary": "Wind up the hill to the Taj Falaknuma Palace, former guesthouse of the Nizams, for a champagne welcome and sunset views over Hyderabad.",
+          "highlights": [
+            "Taj Falaknuma Palace check-in",
+            "Champagne welcome",
+            "Sunset over Hyderabad"
+          ],
+          "image": "images/taj-falaknuma-palace-hyderabad.jpg",
+          "imageAlt": "Taj Falaknuma Palace overlooking Hyderabad",
+          "expectedActivityHours": 3,
+          "intensity": "easy",
+          "kind": "arrival-light"
+        },
+        {
+          "id": "hyderabad-charminar-old-city",
+          "title": "Charminar & the Old City",
+          "summary": "Charminar, the Mecca Masjid, bangle and pearl shopping in Laad Bazaar, and the Nizams' Chowmahalla Palace.",
+          "highlights": [
+            "Charminar",
+            "Laad Bazaar",
+            "Chowmahalla Palace"
+          ],
+          "image": "images/charminar-hyderabad.jpg",
+          "imageAlt": "Charminar monument in Hyderabad",
+          "expectedActivityHours": 6,
+          "intensity": "moderate",
+          "kind": "full-day"
+        },
+        {
+          "id": "hyderabad-golconda-fort",
+          "title": "Golconda Fort",
+          "summary": "Explore Golconda Fort, once the centre of the global diamond trade, then return for its atmospheric evening sound-and-light show.",
+          "highlights": [
+            "Golconda Fort",
+            "Qutb Shahi Tombs",
+            "Sound-and-light show"
+          ],
+          "image": "images/golconda-fort-hyderabad.jpg",
+          "imageAlt": "Golconda Fort in Hyderabad",
+          "expectedActivityHours": 6,
+          "intensity": "moderate",
+          "kind": "full-day"
+        },
+        {
+          "id": "hyderabad-leisure",
+          "title": "Hyderabad at leisure",
+          "summary": "A free day beside Hussain Sagar lake, with an optional excursion to Ramoji Film City.",
+          "highlights": [
+            "At leisure",
+            "Hussain Sagar lake",
+            "Ramoji Film City option"
+          ],
+          "image": "images/hussain-sagar-lake-hyderabad.jpg",
+          "imageAlt": "Hussain Sagar lake in Hyderabad",
+          "expectedActivityHours": 2,
+          "intensity": "easy",
+          "kind": "leisure"
+        },
+        {
+          "id": "hyderabad-pearls",
+          "title": "Pearls & farewell high tea",
+          "summary": "A visit to Hyderabad's famed pearl bazaars at Pathergatti, followed by a farewell high tea on the Falaknuma Palace terrace.",
+          "highlights": [
+            "Pathergatti pearl bazaar",
+            "Falaknuma high tea",
+            "Farewell views"
+          ],
+          "image": "images/taj-falaknuma-palace-hyderabad.jpg",
+          "imageAlt": "Taj Falaknuma Palace overlooking Hyderabad",
+          "expectedActivityHours": 3,
+          "intensity": "easy",
+          "kind": "half-day"
+        }
+      ],
+      "plans": {
+        "1": [
+          "hyderabad-arrival"
+        ],
+        "2": [
+          "hyderabad-arrival",
+          "hyderabad-charminar-old-city"
+        ],
+        "3": [
+          "hyderabad-arrival",
+          "hyderabad-charminar-old-city",
+          "hyderabad-golconda-fort"
+        ],
+        "4": [
+          "hyderabad-arrival",
+          "hyderabad-charminar-old-city",
+          "hyderabad-golconda-fort",
+          "hyderabad-leisure"
+        ],
+        "5": [
+          "hyderabad-arrival",
+          "hyderabad-charminar-old-city",
+          "hyderabad-golconda-fort",
+          "hyderabad-leisure",
+          "hyderabad-pearls"
+        ]
+      },
+      "arrivalModuleId": "hyderabad-arrival",
+      "departureModuleId": "hyderabad-pearls",
+      "leisureModuleId": "hyderabad-leisure"
+    },
+    "kochi": {
+      "modules": [
+        {
+          "id": "kochi-arrival",
+          "title": "Arrive at the Taj Malabar",
+          "summary": "Check into the Taj Malabar on Willingdon Island, where the harbour meets the backwaters, with sunset views over passing ships.",
+          "highlights": [
+            "Taj Malabar check-in",
+            "Harbour sunset",
+            "Welcome dinner"
+          ],
+          "image": "images/taj-malabar-kochi.jpg",
+          "imageAlt": "Taj Malabar hotel overlooking Kochi harbour",
+          "expectedActivityHours": 3,
+          "intensity": "easy",
+          "kind": "arrival-light"
+        },
+        {
+          "id": "kochi-fort-kochi",
+          "title": "Fort Kochi walking tour",
+          "summary": "The iconic Chinese fishing nets, Mattancherry Palace, the Paradesi Synagogue in Jew Town, and St Francis Church, one of the oldest European churches in India.",
+          "highlights": [
+            "Chinese fishing nets",
+            "Mattancherry Palace",
+            "Jew Town & synagogue"
+          ],
+          "image": "images/chinese-fishing-nets-fort-kochi.jpg",
+          "imageAlt": "Chinese fishing nets at Fort Kochi",
+          "expectedActivityHours": 6,
+          "intensity": "moderate",
+          "kind": "full-day"
+        },
+        {
+          "id": "kochi-kathakali-spice",
+          "title": "Kathakali & spice markets",
+          "summary": "An evening Kathakali dance performance with backstage make-up viewing, plus a walk through Kochi's historic spice markets.",
+          "highlights": [
+            "Kathakali performance",
+            "Spice market walk",
+            "Kerala cooking demo"
+          ],
+          "image": "images/kathakali-dance-kochi.jpg",
+          "imageAlt": "Kathakali dancer in traditional make-up, Kochi",
+          "expectedActivityHours": 5,
+          "intensity": "easy",
+          "kind": "full-day"
+        },
+        {
+          "id": "kochi-leisure",
+          "title": "Kochi at leisure",
+          "summary": "A free day for an Ayurvedic spa treatment or independent exploring of Willingdon Island.",
+          "highlights": [
+            "At leisure",
+            "Ayurvedic spa option",
+            "Independent exploring"
+          ],
+          "image": "images/taj-malabar-kochi.jpg",
+          "imageAlt": "Taj Malabar hotel overlooking Kochi harbour",
+          "expectedActivityHours": 2,
+          "intensity": "easy",
+          "kind": "leisure"
+        },
+        {
+          "id": "kochi-marine-drive",
+          "title": "Marine Drive sunset",
+          "summary": "A stroll along Kochi's Marine Drive promenade and a short sunset cruise on the harbour before your road transfer onward.",
+          "highlights": [
+            "Marine Drive promenade",
+            "Harbour sunset cruise",
+            "Onward transfer"
+          ],
+          "image": "images/marine-drive-kochi.jpg",
+          "imageAlt": "Marine Drive promenade in Kochi",
+          "expectedActivityHours": 3,
+          "intensity": "easy",
+          "kind": "half-day"
+        }
+      ],
+      "plans": {
+        "1": [
+          "kochi-arrival"
+        ],
+        "2": [
+          "kochi-arrival",
+          "kochi-fort-kochi"
+        ],
+        "3": [
+          "kochi-arrival",
+          "kochi-fort-kochi",
+          "kochi-kathakali-spice"
+        ],
+        "4": [
+          "kochi-arrival",
+          "kochi-fort-kochi",
+          "kochi-kathakali-spice",
+          "kochi-leisure"
+        ],
+        "5": [
+          "kochi-arrival",
+          "kochi-fort-kochi",
+          "kochi-kathakali-spice",
+          "kochi-leisure",
+          "kochi-marine-drive"
+        ]
+      },
+      "arrivalModuleId": "kochi-arrival",
+      "departureModuleId": "kochi-marine-drive",
+      "leisureModuleId": "kochi-leisure"
+    },
+    "alleppey": {
+      "modules": [
+        {
+          "id": "alleppey-arrival",
+          "title": "Board your houseboat",
+          "summary": "A road transfer from Kochi to Alleppey and a welcome coconut water as you board your private Kerala houseboat.",
+          "highlights": [
+            "Road transfer from Kochi",
+            "Houseboat boarding",
+            "Welcome coconut water"
+          ],
+          "image": "images/kerala-backwaters-houseboat-alleppey.jpg",
+          "imageAlt": "Traditional houseboat on the Alleppey backwaters",
+          "expectedActivityHours": 3,
+          "intensity": "easy",
+          "kind": "arrival-light"
+        },
+        {
+          "id": "alleppey-houseboat-cruise",
+          "title": "Backwater houseboat cruise",
+          "summary": "A full day cruising the palm-fringed canals and paddy fields of the Kerala backwaters, with a fresh Kerala lunch cooked on board.",
+          "highlights": [
+            "Backwater canals",
+            "Paddy field views",
+            "On-board Kerala lunch"
+          ],
+          "image": "images/kerala-backwaters-houseboat-alleppey.jpg",
+          "imageAlt": "Traditional houseboat on the Alleppey backwaters",
+          "expectedActivityHours": 6,
+          "intensity": "easy",
+          "kind": "full-day",
+          "experienceIds": [
+            "exp-kerala-backwater-houseboat"
+          ]
+        },
+        {
+          "id": "alleppey-village-walk",
+          "title": "Village life & canoe ride",
+          "summary": "A guided village walk with a toddy-tapping demonstration and coir-making visit, then a narrow canoe ride through channels too small for the houseboat.",
+          "highlights": [
+            "Toddy-tapping demonstration",
+            "Coir-making village",
+            "Narrow-canal canoe ride"
+          ],
+          "image": "images/alleppey-village-canals.jpg",
+          "imageAlt": "Narrow backwater canal near Alleppey",
+          "expectedActivityHours": 5,
+          "intensity": "easy",
+          "kind": "full-day"
+        },
+        {
+          "id": "alleppey-leisure",
+          "title": "Backwaters at leisure",
+          "summary": "A free day at a backwater resort — an Ayurvedic massage or simply hammock time on the water.",
+          "highlights": [
+            "At leisure",
+            "Ayurvedic massage option",
+            "Hammock time"
+          ],
+          "image": "images/kerala-backwaters-houseboat-alleppey.jpg",
+          "imageAlt": "Traditional houseboat on the Alleppey backwaters",
+          "expectedActivityHours": 2,
+          "intensity": "easy",
+          "kind": "leisure"
+        },
+        {
+          "id": "alleppey-beach",
+          "title": "Alleppey Beach sunset",
+          "summary": "A sunset walk on Alleppey Beach beside its century-old pier, before transferring back toward Kochi.",
+          "highlights": [
+            "Alleppey Beach",
+            "Historic pier",
+            "Sunset views"
+          ],
+          "image": "images/alleppey-beach.jpg",
+          "imageAlt": "Alleppey Beach and pier at sunset",
+          "expectedActivityHours": 3,
+          "intensity": "easy",
+          "kind": "half-day"
+        }
+      ],
+      "plans": {
+        "1": [
+          "alleppey-arrival"
+        ],
+        "2": [
+          "alleppey-arrival",
+          "alleppey-houseboat-cruise"
+        ],
+        "3": [
+          "alleppey-arrival",
+          "alleppey-houseboat-cruise",
+          "alleppey-village-walk"
+        ],
+        "4": [
+          "alleppey-arrival",
+          "alleppey-houseboat-cruise",
+          "alleppey-village-walk",
+          "alleppey-leisure"
+        ],
+        "5": [
+          "alleppey-arrival",
+          "alleppey-houseboat-cruise",
+          "alleppey-village-walk",
+          "alleppey-leisure",
+          "alleppey-beach"
+        ]
+      },
+      "arrivalModuleId": "alleppey-arrival",
+      "departureModuleId": "alleppey-beach",
+      "leisureModuleId": "alleppey-leisure"
+    },
+    "goa": {
+      "modules": [
+        {
+          "id": "goa-arrival",
+          "title": "Arrive at Fort Aguada",
+          "summary": "Check into the Taj Fort Aguada, built within a 16th-century Portuguese sea fort, with sunset over the Arabian Sea from the ramparts.",
+          "highlights": [
+            "Taj Fort Aguada check-in",
+            "Fort ramparts sunset",
+            "Welcome dinner"
+          ],
+          "image": "images/taj-fort-aguada-goa.jpg",
+          "imageAlt": "Taj Fort Aguada on the Goa coastline",
+          "expectedActivityHours": 3,
+          "intensity": "easy",
+          "kind": "arrival-light"
+        },
+        {
+          "id": "goa-old-goa-churches",
+          "title": "Old Goa & Panaji",
+          "summary": "The UNESCO-listed Basilica of Bom Jesus and Sé Cathedral in Old Goa, then the Latin Quarter of Fontainhas in Panaji.",
+          "highlights": [
+            "Basilica of Bom Jesus",
+            "Sé Cathedral",
+            "Fontainhas Latin Quarter"
+          ],
+          "image": "images/basilica-bom-jesus-old-goa.jpg",
+          "imageAlt": "Basilica of Bom Jesus in Old Goa",
+          "expectedActivityHours": 6,
+          "intensity": "moderate",
+          "kind": "full-day"
+        },
+        {
+          "id": "goa-beach-day",
+          "title": "Baga & Calangute beach day",
+          "summary": "A beach day at Baga and Calangute, with an optional dolphin-spotting boat trip and sunset at the Chapora Fort headland.",
+          "highlights": [
+            "Baga Beach",
+            "Dolphin-spotting cruise option",
+            "Chapora Fort sunset"
+          ],
+          "image": "images/baga-calangute-beach-goa.jpg",
+          "imageAlt": "Baga Beach in North Goa",
+          "expectedActivityHours": 6,
+          "intensity": "easy",
+          "kind": "full-day"
+        },
+        {
+          "id": "goa-leisure",
+          "title": "Goa at leisure",
+          "summary": "A free day at the resort — spa treatments, the pool, or an optional spice plantation tour inland.",
+          "highlights": [
+            "At leisure",
+            "Resort spa",
+            "Spice plantation option"
+          ],
+          "image": "images/taj-fort-aguada-goa.jpg",
+          "imageAlt": "Taj Fort Aguada on the Goa coastline",
+          "expectedActivityHours": 2,
+          "intensity": "easy",
+          "kind": "leisure"
+        },
+        {
+          "id": "goa-market",
+          "title": "Market & farewell seafood",
+          "summary": "A browse through Mapusa Market for spices and cashews, followed by a farewell Goan seafood dinner.",
+          "highlights": [
+            "Mapusa Market",
+            "Spices & cashews",
+            "Farewell seafood dinner"
+          ],
+          "image": "images/mapusa-market-goa.jpg",
+          "imageAlt": "Mapusa Market stalls in Goa",
+          "expectedActivityHours": 3,
+          "intensity": "easy",
+          "kind": "half-day"
+        }
+      ],
+      "plans": {
+        "1": [
+          "goa-arrival"
+        ],
+        "2": [
+          "goa-arrival",
+          "goa-old-goa-churches"
+        ],
+        "3": [
+          "goa-arrival",
+          "goa-old-goa-churches",
+          "goa-beach-day"
+        ],
+        "4": [
+          "goa-arrival",
+          "goa-old-goa-churches",
+          "goa-beach-day",
+          "goa-leisure"
+        ],
+        "5": [
+          "goa-arrival",
+          "goa-old-goa-churches",
+          "goa-beach-day",
+          "goa-leisure",
+          "goa-market"
+        ]
+      },
+      "arrivalModuleId": "goa-arrival",
+      "departureModuleId": "goa-market",
+      "leisureModuleId": "goa-leisure"
+    },
+    "agra": {
+      "modules": [
+        {
+          "id": "agra-arrival",
+          "title": "Road transfer to Agra",
+          "summary": "A comfortable road transfer from Delhi via the Yamuna Expressway, checking into a Taj-view hotel in time for your first glimpse of the monument.",
+          "highlights": [
+            "Yamuna Expressway transfer",
+            "First Taj Mahal view",
+            "Hotel check-in"
+          ],
+          "image": "images/taj-mahal-sunrise-agra.jpg",
+          "imageAlt": "Taj Mahal at sunrise in Agra",
+          "expectedActivityHours": 4,
+          "intensity": "easy",
+          "kind": "arrival-light"
+        },
+        {
+          "id": "agra-taj-mahal-sunrise",
+          "title": "Sunrise at the Taj Mahal",
+          "summary": "A sunrise visit to the Taj Mahal itself, when the marble glows pink and gold and the crowds are thinnest, followed by Mehtab Bagh across the river for the classic reverse view.",
+          "highlights": [
+            "Taj Mahal at sunrise",
+            "Mehtab Bagh viewpoint",
+            "Photography session"
+          ],
+          "image": "images/taj-mahal-sunrise-agra.jpg",
+          "imageAlt": "Taj Mahal at sunrise in Agra",
+          "expectedActivityHours": 5,
+          "intensity": "easy",
+          "kind": "full-day",
+          "experienceIds": [
+            "exp-taj-mahal-sunrise"
+          ]
+        },
+        {
+          "id": "agra-fort-fatehpur-sikri",
+          "title": "Agra Fort & Fatehpur Sikri",
+          "summary": "Agra Fort's red sandstone ramparts, then a day trip to Fatehpur Sikri, Emperor Akbar's abandoned Mughal capital.",
+          "highlights": [
+            "Agra Fort",
+            "Fatehpur Sikri",
+            "Buland Darwaza gateway"
+          ],
+          "image": "images/agra-fort.jpg",
+          "imageAlt": "Agra Fort ramparts",
+          "expectedActivityHours": 6,
+          "intensity": "moderate",
+          "kind": "full-day"
+        },
+        {
+          "id": "agra-leisure",
+          "title": "Agra at leisure",
+          "summary": "A relaxed morning with an optional visit to a marble inlay workshop, keeping alive the same pietra dura craft used on the Taj Mahal.",
+          "highlights": [
+            "At leisure",
+            "Marble inlay workshop",
+            "Local handicrafts"
+          ],
+          "image": "images/agra-marble-inlay-workshop.jpg",
+          "imageAlt": "Marble inlay artisan workshop in Agra",
+          "expectedActivityHours": 3,
+          "intensity": "easy",
+          "kind": "leisure"
+        },
+        {
+          "id": "agra-return-delhi",
+          "title": "Return road transfer to Delhi",
+          "summary": "A scenic road transfer back to Delhi along the Yamuna Expressway, with a stop at a roadside dhaba for a classic North Indian lunch.",
+          "highlights": [
+            "Yamuna Expressway drive",
+            "Roadside dhaba lunch",
+            "Delhi drop-off"
+          ],
+          "image": "images/taj-mahal-sunrise-agra.jpg",
+          "imageAlt": "Taj Mahal at sunrise in Agra",
+          "expectedActivityHours": 4,
+          "intensity": "easy",
+          "kind": "half-day"
+        }
+      ],
+      "plans": {
+        "1": [
+          "agra-arrival"
+        ],
+        "2": [
+          "agra-arrival",
+          "agra-taj-mahal-sunrise"
+        ],
+        "3": [
+          "agra-arrival",
+          "agra-taj-mahal-sunrise",
+          "agra-fort-fatehpur-sikri"
+        ],
+        "4": [
+          "agra-arrival",
+          "agra-taj-mahal-sunrise",
+          "agra-fort-fatehpur-sikri",
+          "agra-leisure"
+        ],
+        "5": [
+          "agra-arrival",
+          "agra-taj-mahal-sunrise",
+          "agra-fort-fatehpur-sikri",
+          "agra-leisure",
+          "agra-return-delhi"
+        ]
+      },
+      "arrivalModuleId": "agra-arrival",
+      "departureModuleId": "agra-return-delhi",
+      "leisureModuleId": "agra-leisure"
+    },
+    "maldives": {
+      "modules": [
+        {
+          "id": "maldives-arrival",
+          "title": "Speedboat to the Taj Exotica",
+          "summary": "A scenic speedboat transfer from Malé across the Emboodhoo Lagoon to the Taj Exotica Resort & Spa, checking into your overwater villa at sunset.",
+          "highlights": [
+            "Speedboat transfer",
+            "Overwater villa check-in",
+            "Sunset welcome drink"
+          ],
+          "image": "images/taj-exotica-overwater-villa-maldives.jpg",
+          "imageAlt": "Overwater villas at the Taj Exotica Resort, Maldives",
+          "expectedActivityHours": 3,
+          "intensity": "easy",
+          "kind": "arrival-light"
+        },
+        {
+          "id": "maldives-snorkel-house-reef",
+          "title": "House reef snorkelling",
+          "summary": "A guided snorkelling session on the resort's house reef, followed by a glass-bottom boat tour of the Emboodhoo Lagoon's coral gardens.",
+          "highlights": [
+            "House reef snorkelling",
+            "Glass-bottom boat tour",
+            "Coral gardens"
+          ],
+          "image": "images/maldives-house-reef-snorkeling.jpg",
+          "imageAlt": "Snorkelling on the house reef in the Maldives",
+          "expectedActivityHours": 5,
+          "intensity": "moderate",
+          "kind": "full-day"
+        },
+        {
+          "id": "maldives-sandbank-dolphin",
+          "title": "Sandbank picnic & dolphin cruise",
+          "summary": "A private picnic on a sandbank in the middle of the lagoon, then a sunset cruise to spot spinner dolphins.",
+          "highlights": [
+            "Private sandbank picnic",
+            "Sunset dolphin cruise",
+            "Spinner dolphins"
+          ],
+          "image": "images/maldives-sandbank-dolphin-cruise.jpg",
+          "imageAlt": "Sandbank picnic setup in the Maldives",
+          "expectedActivityHours": 5,
+          "intensity": "easy",
+          "kind": "full-day"
+        },
+        {
+          "id": "maldives-leisure",
+          "title": "Maldives at leisure",
+          "summary": "A free day for the overwater spa, the villa's private pool, or simply doing nothing at all above a turquoise lagoon.",
+          "highlights": [
+            "At leisure",
+            "Overwater spa option",
+            "Private pool"
+          ],
+          "image": "images/maldives-overwater-spa.jpg",
+          "imageAlt": "Overwater spa pavilion in the Maldives",
+          "expectedActivityHours": 2,
+          "intensity": "easy",
+          "kind": "leisure"
+        },
+        {
+          "id": "maldives-farewell",
+          "title": "Farewell swim",
+          "summary": "One last swim in the lagoon before your speedboat transfer back to Malé for your onward Air India connection.",
+          "highlights": [
+            "Final lagoon swim",
+            "Speedboat transfer",
+            "Malé connection"
+          ],
+          "image": "images/taj-exotica-overwater-villa-maldives.jpg",
+          "imageAlt": "Overwater villas at the Taj Exotica Resort, Maldives",
+          "expectedActivityHours": 3,
+          "intensity": "easy",
+          "kind": "half-day"
+        }
+      ],
+      "plans": {
+        "1": [
+          "maldives-arrival"
+        ],
+        "2": [
+          "maldives-arrival",
+          "maldives-snorkel-house-reef"
+        ],
+        "3": [
+          "maldives-arrival",
+          "maldives-snorkel-house-reef",
+          "maldives-sandbank-dolphin"
+        ],
+        "4": [
+          "maldives-arrival",
+          "maldives-snorkel-house-reef",
+          "maldives-sandbank-dolphin",
+          "maldives-leisure"
+        ],
+        "5": [
+          "maldives-arrival",
+          "maldives-snorkel-house-reef",
+          "maldives-sandbank-dolphin",
+          "maldives-leisure",
+          "maldives-farewell"
+        ]
+      },
+      "arrivalModuleId": "maldives-arrival",
+      "departureModuleId": "maldives-farewell",
+      "leisureModuleId": "maldives-leisure"
+    }
+  }
+}

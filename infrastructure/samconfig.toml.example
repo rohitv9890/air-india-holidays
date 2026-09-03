@@ -1,0 +1,10 @@
+version = 0.1
+
+[default.deploy.parameters]
+stack_name = "guzo-backend"
+resolve_s3 = true
+s3_prefix = "guzo-backend"
+region = "eu-west-1"
+confirm_changeset = true
+capabilities = "CAPABILITY_IAM"
+parameter_overrides = "Environment=dev GuzoModel=anthropic/claude-sonnet-4"

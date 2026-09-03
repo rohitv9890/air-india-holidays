@@ -1,0 +1,5 @@
+# Cloudflare Pages configuration.
+# For a Git-connected Pages project, also set the build command to
+# `node build.mjs` in the Pages dashboard (Framework preset: None).
+name = "air-india-holidays"
+pages_build_output_dir = "dist"

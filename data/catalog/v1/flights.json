@@ -1,0 +1,494 @@
+{
+  "schemaVersion": "1.0.0",
+  "version": "v1",
+  "carrier": "AI",
+  "carrierName": "Air India",
+  "notes": "Domestic South African hops (JNB-CPT/DUR/PLZ) are modelled as Star Alliance partner connecting services onward from the Air India JNB gateway; Air India does not operate South African domestic flights itself.",
+  "defaultCabinMultipliers": {
+    "Economy": 1,
+    "Business": 1.9,
+    "First": 2.8
+  },
+  "routes": [
+    {
+      "id": "flt-del-jnb",
+      "origin": "DEL",
+      "destination": "JNB",
+      "type": "international",
+      "durationHours": 9.4,
+      "baseFareGbp": 514,
+      "baseFareUsd": 650,
+      "cabinMultipliers": {
+        "Economy": 1,
+        "Business": 2.3,
+        "First": 3.1
+      },
+      "frequencyNote": "4x weekly Air India nonstop service"
+    },
+    {
+      "id": "flt-jnb-del",
+      "origin": "JNB",
+      "destination": "DEL",
+      "type": "international",
+      "durationHours": 9.4,
+      "baseFareGbp": 514,
+      "baseFareUsd": 650,
+      "cabinMultipliers": {
+        "Economy": 1,
+        "Business": 2.3,
+        "First": 3.1
+      },
+      "frequencyNote": "4x weekly Air India nonstop service"
+    },
+    {
+      "id": "flt-bom-jnb",
+      "origin": "BOM",
+      "destination": "JNB",
+      "type": "international",
+      "durationHours": 8.1,
+      "baseFareGbp": 474,
+      "baseFareUsd": 600,
+      "cabinMultipliers": {
+        "Economy": 1,
+        "Business": 2.3,
+        "First": 3.1
+      },
+      "frequencyNote": "3x weekly Air India nonstop service"
+    },
+    {
+      "id": "flt-jnb-bom",
+      "origin": "JNB",
+      "destination": "BOM",
+      "type": "international",
+      "durationHours": 8.1,
+      "baseFareGbp": 474,
+      "baseFareUsd": 600,
+      "cabinMultipliers": {
+        "Economy": 1,
+        "Business": 2.3,
+        "First": 3.1
+      },
+      "frequencyNote": "3x weekly Air India nonstop service"
+    },
+    {
+      "id": "flt-jnb-cpt",
+      "origin": "JNB",
+      "destination": "CPT",
+      "type": "domestic",
+      "durationHours": 2,
+      "baseFareGbp": 111,
+      "baseFareUsd": 140,
+      "cabinMultipliers": {
+        "Economy": 1,
+        "Business": 1.6
+      },
+      "frequencyNote": "Multiple daily connecting service from Johannesburg (Star Alliance partner)"
+    },
+    {
+      "id": "flt-cpt-jnb",
+      "origin": "CPT",
+      "destination": "JNB",
+      "type": "domestic",
+      "durationHours": 2,
+      "baseFareGbp": 111,
+      "baseFareUsd": 140,
+      "cabinMultipliers": {
+        "Economy": 1,
+        "Business": 1.6
+      },
+      "frequencyNote": "Multiple daily connecting service from Johannesburg (Star Alliance partner)"
+    },
+    {
+      "id": "flt-jnb-dur",
+      "origin": "JNB",
+      "destination": "DUR",
+      "type": "domestic",
+      "durationHours": 1.3,
+      "baseFareGbp": 87,
+      "baseFareUsd": 110,
+      "cabinMultipliers": {
+        "Economy": 1,
+        "Business": 1.6
+      },
+      "frequencyNote": "Multiple daily connecting service from Johannesburg (Star Alliance partner)"
+    },
+    {
+      "id": "flt-dur-jnb",
+      "origin": "DUR",
+      "destination": "JNB",
+      "type": "domestic",
+      "durationHours": 1.3,
+      "baseFareGbp": 87,
+      "baseFareUsd": 110,
+      "cabinMultipliers": {
+        "Economy": 1,
+        "Business": 1.6
+      },
+      "frequencyNote": "Multiple daily connecting service from Johannesburg (Star Alliance partner)"
+    },
+    {
+      "id": "flt-jnb-plz",
+      "origin": "JNB",
+      "destination": "PLZ",
+      "type": "domestic",
+      "durationHours": 1.5,
+      "baseFareGbp": 95,
+      "baseFareUsd": 120,
+      "cabinMultipliers": {
+        "Economy": 1,
+        "Business": 1.6
+      },
+      "frequencyNote": "Daily connecting service from Johannesburg (Star Alliance partner)"
+    },
+    {
+      "id": "flt-plz-jnb",
+      "origin": "PLZ",
+      "destination": "JNB",
+      "type": "domestic",
+      "durationHours": 1.5,
+      "baseFareGbp": 95,
+      "baseFareUsd": 120,
+      "cabinMultipliers": {
+        "Economy": 1,
+        "Business": 1.6
+      },
+      "frequencyNote": "Daily connecting service from Johannesburg (Star Alliance partner)"
+    },
+    {
+      "id": "flt-del-udr",
+      "origin": "DEL",
+      "destination": "UDR",
+      "type": "domestic",
+      "durationHours": 1.5,
+      "baseFareGbp": 87,
+      "baseFareUsd": 110,
+      "cabinMultipliers": {
+        "Economy": 1,
+        "Business": 1.7
+      },
+      "frequencyNote": "Daily Air India domestic service"
+    },
+    {
+      "id": "flt-udr-del",
+      "origin": "UDR",
+      "destination": "DEL",
+      "type": "domestic",
+      "durationHours": 1.5,
+      "baseFareGbp": 87,
+      "baseFareUsd": 110,
+      "cabinMultipliers": {
+        "Economy": 1,
+        "Business": 1.7
+      },
+      "frequencyNote": "Daily Air India domestic service"
+    },
+    {
+      "id": "flt-del-jai",
+      "origin": "DEL",
+      "destination": "JAI",
+      "type": "domestic",
+      "durationHours": 1,
+      "baseFareGbp": 71,
+      "baseFareUsd": 90,
+      "cabinMultipliers": {
+        "Economy": 1,
+        "Business": 1.7
+      },
+      "frequencyNote": "Multiple daily Air India domestic service"
+    },
+    {
+      "id": "flt-jai-del",
+      "origin": "JAI",
+      "destination": "DEL",
+      "type": "domestic",
+      "durationHours": 1,
+      "baseFareGbp": 71,
+      "baseFareUsd": 90,
+      "cabinMultipliers": {
+        "Economy": 1,
+        "Business": 1.7
+      },
+      "frequencyNote": "Multiple daily Air India domestic service"
+    },
+    {
+      "id": "flt-del-hyd",
+      "origin": "DEL",
+      "destination": "HYD",
+      "type": "domestic",
+      "durationHours": 2.2,
+      "baseFareGbp": 103,
+      "baseFareUsd": 130,
+      "cabinMultipliers": {
+        "Economy": 1,
+        "Business": 1.7
+      },
+      "frequencyNote": "Multiple daily Air India domestic service"
+    },
+    {
+      "id": "flt-hyd-del",
+      "origin": "HYD",
+      "destination": "DEL",
+      "type": "domestic",
+      "durationHours": 2.2,
+      "baseFareGbp": 103,
+      "baseFareUsd": 130,
+      "cabinMultipliers": {
+        "Economy": 1,
+        "Business": 1.7
+      },
+      "frequencyNote": "Multiple daily Air India domestic service"
+    },
+    {
+      "id": "flt-del-goi",
+      "origin": "DEL",
+      "destination": "GOI",
+      "type": "domestic",
+      "durationHours": 2.5,
+      "baseFareGbp": 111,
+      "baseFareUsd": 140,
+      "cabinMultipliers": {
+        "Economy": 1,
+        "Business": 1.7
+      },
+      "frequencyNote": "Daily Air India domestic service"
+    },
+    {
+      "id": "flt-goi-del",
+      "origin": "GOI",
+      "destination": "DEL",
+      "type": "domestic",
+      "durationHours": 2.5,
+      "baseFareGbp": 111,
+      "baseFareUsd": 140,
+      "cabinMultipliers": {
+        "Economy": 1,
+        "Business": 1.7
+      },
+      "frequencyNote": "Daily Air India domestic service"
+    },
+    {
+      "id": "flt-del-cok",
+      "origin": "DEL",
+      "destination": "COK",
+      "type": "domestic",
+      "durationHours": 3.3,
+      "baseFareGbp": 134,
+      "baseFareUsd": 170,
+      "cabinMultipliers": {
+        "Economy": 1,
+        "Business": 1.7
+      },
+      "frequencyNote": "Daily Air India domestic service"
+    },
+    {
+      "id": "flt-cok-del",
+      "origin": "COK",
+      "destination": "DEL",
+      "type": "domestic",
+      "durationHours": 3.3,
+      "baseFareGbp": 134,
+      "baseFareUsd": 170,
+      "cabinMultipliers": {
+        "Economy": 1,
+        "Business": 1.7
+      },
+      "frequencyNote": "Daily Air India domestic service"
+    },
+    {
+      "id": "flt-bom-udr",
+      "origin": "BOM",
+      "destination": "UDR",
+      "type": "domestic",
+      "durationHours": 1.2,
+      "baseFareGbp": 75,
+      "baseFareUsd": 95,
+      "cabinMultipliers": {
+        "Economy": 1,
+        "Business": 1.7
+      },
+      "frequencyNote": "Daily Air India domestic service"
+    },
+    {
+      "id": "flt-udr-bom",
+      "origin": "UDR",
+      "destination": "BOM",
+      "type": "domestic",
+      "durationHours": 1.2,
+      "baseFareGbp": 75,
+      "baseFareUsd": 95,
+      "cabinMultipliers": {
+        "Economy": 1,
+        "Business": 1.7
+      },
+      "frequencyNote": "Daily Air India domestic service"
+    },
+    {
+      "id": "flt-bom-jai",
+      "origin": "BOM",
+      "destination": "JAI",
+      "type": "domestic",
+      "durationHours": 1.3,
+      "baseFareGbp": 79,
+      "baseFareUsd": 100,
+      "cabinMultipliers": {
+        "Economy": 1,
+        "Business": 1.7
+      },
+      "frequencyNote": "Daily Air India domestic service"
+    },
+    {
+      "id": "flt-jai-bom",
+      "origin": "JAI",
+      "destination": "BOM",
+      "type": "domestic",
+      "durationHours": 1.3,
+      "baseFareGbp": 79,
+      "baseFareUsd": 100,
+      "cabinMultipliers": {
+        "Economy": 1,
+        "Business": 1.7
+      },
+      "frequencyNote": "Daily Air India domestic service"
+    },
+    {
+      "id": "flt-bom-hyd",
+      "origin": "BOM",
+      "destination": "HYD",
+      "type": "domestic",
+      "durationHours": 1.3,
+      "baseFareGbp": 75,
+      "baseFareUsd": 95,
+      "cabinMultipliers": {
+        "Economy": 1,
+        "Business": 1.7
+      },
+      "frequencyNote": "Multiple daily Air India domestic service"
+    },
+    {
+      "id": "flt-hyd-bom",
+      "origin": "HYD",
+      "destination": "BOM",
+      "type": "domestic",
+      "durationHours": 1.3,
+      "baseFareGbp": 75,
+      "baseFareUsd": 95,
+      "cabinMultipliers": {
+        "Economy": 1,
+        "Business": 1.7
+      },
+      "frequencyNote": "Multiple daily Air India domestic service"
+    },
+    {
+      "id": "flt-bom-goi",
+      "origin": "BOM",
+      "destination": "GOI",
+      "type": "domestic",
+      "durationHours": 1,
+      "baseFareGbp": 63,
+      "baseFareUsd": 80,
+      "cabinMultipliers": {
+        "Economy": 1,
+        "Business": 1.7
+      },
+      "frequencyNote": "Multiple daily Air India domestic service"
+    },
+    {
+      "id": "flt-goi-bom",
+      "origin": "GOI",
+      "destination": "BOM",
+      "type": "domestic",
+      "durationHours": 1,
+      "baseFareGbp": 63,
+      "baseFareUsd": 80,
+      "cabinMultipliers": {
+        "Economy": 1,
+        "Business": 1.7
+      },
+      "frequencyNote": "Multiple daily Air India domestic service"
+    },
+    {
+      "id": "flt-bom-cok",
+      "origin": "BOM",
+      "destination": "COK",
+      "type": "domestic",
+      "durationHours": 1.7,
+      "baseFareGbp": 95,
+      "baseFareUsd": 120,
+      "cabinMultipliers": {
+        "Economy": 1,
+        "Business": 1.7
+      },
+      "frequencyNote": "Daily Air India domestic service"
+    },
+    {
+      "id": "flt-cok-bom",
+      "origin": "COK",
+      "destination": "BOM",
+      "type": "domestic",
+      "durationHours": 1.7,
+      "baseFareGbp": 95,
+      "baseFareUsd": 120,
+      "cabinMultipliers": {
+        "Economy": 1,
+        "Business": 1.7
+      },
+      "frequencyNote": "Daily Air India domestic service"
+    },
+    {
+      "id": "flt-del-bom",
+      "origin": "DEL",
+      "destination": "BOM",
+      "type": "domestic",
+      "durationHours": 2,
+      "baseFareGbp": 87,
+      "baseFareUsd": 110,
+      "cabinMultipliers": {
+        "Economy": 1,
+        "Business": 1.7
+      },
+      "frequencyNote": "Multiple daily Air India domestic service, India's busiest trunk route"
+    },
+    {
+      "id": "flt-bom-del",
+      "origin": "BOM",
+      "destination": "DEL",
+      "type": "domestic",
+      "durationHours": 2,
+      "baseFareGbp": 87,
+      "baseFareUsd": 110,
+      "cabinMultipliers": {
+        "Economy": 1,
+        "Business": 1.7
+      },
+      "frequencyNote": "Multiple daily Air India domestic service, India's busiest trunk route"
+    },
+    {
+      "id": "flt-cok-mle",
+      "origin": "COK",
+      "destination": "MLE",
+      "type": "international",
+      "durationHours": 1.5,
+      "baseFareGbp": 142,
+      "baseFareUsd": 180,
+      "cabinMultipliers": {
+        "Economy": 1,
+        "Business": 1.9
+      },
+      "frequencyNote": "Daily Air India Express connecting service"
+    },
+    {
+      "id": "flt-mle-cok",
+      "origin": "MLE",
+      "destination": "COK",
+      "type": "international",
+      "durationHours": 1.5,
+      "baseFareGbp": 142,
+      "baseFareUsd": 180,
+      "cabinMultipliers": {
+        "Economy": 1,
+        "Business": 1.9
+      },
+      "frequencyNote": "Daily Air India Express connecting service"
+    }
+  ]
+}

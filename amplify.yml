@@ -1,0 +1,29 @@
+version: 1
+frontend:
+  phases:
+    preBuild:
+      commands: []
+    build:
+      commands:
+        - node build.mjs
+  artifacts:
+    baseDirectory: dist
+    files:
+      - '**/*'
+  cache:
+    paths: []
+customHeaders:
+  - pattern: '**'
+    headers:
+      - key: 'X-Robots-Tag'
+        value: 'noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate'
+      - key: 'X-Frame-Options'
+        value: 'DENY'
+      - key: 'X-Content-Type-Options'
+        value: 'nosniff'
+      - key: 'Referrer-Policy'
+        value: 'no-referrer'
+      - key: 'Permissions-Policy'
+        value: 'geolocation=(), microphone=(), camera=(), interest-cohort=()'
+      - key: 'Cross-Origin-Opener-Policy'
+        value: 'same-origin'

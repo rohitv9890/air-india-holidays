@@ -1,0 +1,99 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ethiopianholidays.example/schemas/day-ideas.schema.json",
+  "title": "Guzo Destination Day Programs",
+  "type": "object",
+  "required": ["schemaVersion", "version", "destinations"],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": { "type": "string", "const": "1.0.0" },
+    "version": { "type": "string", "pattern": "^v[0-9]+$" },
+    "overflowPolicy": {
+      "type": "string",
+      "enum": ["append-unused-then-leisure"]
+    },
+    "notes": { "type": "string" },
+    "destinations": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": { "$ref": "#/$defs/destinationProgram" }
+    }
+  },
+  "$defs": {
+    "destinationProgram": {
+      "type": "object",
+      "required": ["modules", "plans"],
+      "additionalProperties": false,
+      "properties": {
+        "modules": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/dayModule" }
+        },
+        "plans": {
+          "type": "object",
+          "required": ["1", "2", "3", "4", "5"],
+          "additionalProperties": false,
+          "properties": {
+            "1": { "$ref": "#/$defs/plan" },
+            "2": { "$ref": "#/$defs/plan" },
+            "3": { "$ref": "#/$defs/plan" },
+            "4": { "$ref": "#/$defs/plan" },
+            "5": { "$ref": "#/$defs/plan" }
+          }
+        },
+        "arrivalModuleId": { "type": "string", "minLength": 1 },
+        "departureModuleId": { "type": "string", "minLength": 1 },
+        "leisureModuleId": { "type": "string", "minLength": 1 }
+      }
+    },
+    "dayModule": {
+      "type": "object",
+      "required": [
+        "id",
+        "title",
+        "summary",
+        "highlights",
+        "image",
+        "imageAlt",
+        "expectedActivityHours",
+        "intensity"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 3,
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+        },
+        "title": { "type": "string", "minLength": 1 },
+        "summary": { "type": "string", "minLength": 1 },
+        "highlights": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "image": { "type": "string", "minLength": 1 },
+        "imageAlt": { "type": "string", "minLength": 1 },
+        "expectedActivityHours": { "type": "number", "minimum": 0, "maximum": 16 },
+        "intensity": {
+          "type": "string",
+          "enum": ["easy", "moderate", "active"]
+        },
+        "experienceIds": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 3 }
+        },
+        "kind": {
+          "type": "string",
+          "enum": ["full-day", "half-day", "arrival-light", "leisure", "transfer"]
+        }
+      }
+    },
+    "plan": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string", "minLength": 3 }
+    }
+  }
+}

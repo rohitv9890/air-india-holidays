@@ -1,0 +1,18 @@
+{
+  "name": "air-india-holidays",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Air India + Tata Group concept demo: Cricket World Cup 2027 and Taj Holidays packages (static, adapted from easyGDS's Ethiopian Holidays build).",
+  "scripts": {
+    "build": "node build.mjs",
+    "catalog:validate": "node scripts/validate-catalog.mjs",
+    "catalog:remediate": "node scripts/remediate-catalog-inventory.mjs",
+    "catalog:merge-dry": "node scripts/merge-hermes-import-bundle.mjs --dry-run",
+    "catalog:sync": "node scripts/sync-catalog-to-lambda.mjs",
+    "test:catalog": "node --test infrastructure/lambda/guzo-chat-handler/test/catalog.test.mjs",
+    "test:frontend": "node --test test/*.test.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

@@ -1,0 +1,154 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: Guzo chat backend — API Gateway, Lambda, DynamoDB sessions, OpenRouter
+
+Parameters:
+  Environment:
+    Type: String
+    Default: dev
+    AllowedValues: [dev, staging, prod]
+  GuzoModel:
+    Type: String
+    Default: openai/gpt-5.6-luna
+    Description: OpenRouter model id (e.g. openai/gpt-5.6-luna)
+  CorsAllowOrigins:
+    Type: CommaDelimitedList
+    Default: >-
+      http://localhost:3456,http://localhost:5500,http://localhost:3000,http://127.0.0.1:3456,http://127.0.0.1:5500,http://127.0.0.1:3000
+    Description: Comma-separated origins allowed for CORS
+
+Globals:
+  Function:
+    Timeout: 60
+    MemorySize: 512
+    Runtime: nodejs20.x
+    Architectures:
+      - arm64
+
+Resources:
+  GuzoSessionsTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: !Sub guzo-sessions-${Environment}
+      BillingMode: PAY_PER_REQUEST
+      AttributeDefinitions:
+        - AttributeName: sessionId
+          AttributeType: S
+      KeySchema:
+        - AttributeName: sessionId
+          KeyType: HASH
+      TimeToLiveSpecification:
+        AttributeName: ttl
+        Enabled: true
+
+  OpenRouterSecret:
+    Type: AWS::SecretsManager::Secret
+    Properties:
+      Name: !Sub guzo/openrouter-api-key-${Environment}
+      Description: OpenRouter API key for Guzo chat
+      SecretString: '{"OPENROUTER_API_KEY":"REPLACE_ME"}'
+
+  GuzoHttpApi:
+    Type: AWS::Serverless::HttpApi
+    Properties:
+      StageName: $default
+      CorsConfiguration:
+        AllowOrigins: !Ref CorsAllowOrigins
+        AllowMethods:
+          - GET
+          - POST
+          - OPTIONS
+        AllowHeaders:
+          - Content-Type
+          - Authorization
+        MaxAge: 600
+
+  GuzoChatHandler:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: !Sub guzo-chat-handler-${Environment}
+      CodeUri: lambda/guzo-chat-handler/
+      Handler: index.handler
+      Description: Guzo conversational trip planner (OpenRouter + tools)
+      InvokeMode: RESPONSE_STREAM
+      Environment:
+        Variables:
+          SESSIONS_TABLE: !Ref GuzoSessionsTable
+          GUZO_MODEL: !Ref GuzoModel
+          EASYGDS_API_BASE: https://demo.apps.easygds.com/api
+          OPENROUTER_SECRET_ARN: !Ref OpenRouterSecret
+          CORS_ALLOW_ORIGINS: !Join [',', !Ref CorsAllowOrigins]
+      Policies:
+        - DynamoDBCrudPolicy:
+            TableName: !Ref GuzoSessionsTable
+        - AWSSecretsManagerGetSecretValuePolicy:
+            SecretArn: !Ref OpenRouterSecret
+      Events:
+        Chat:
+          Type: HttpApi
+          Properties:
+            ApiId: !Ref GuzoHttpApi
+            Path: /guzo/chat
+            Method: POST
+        Session:
+          Type: HttpApi
+          Properties:
+            ApiId: !Ref GuzoHttpApi
+            Path: /guzo/session
+            Method: POST
+        Health:
+          Type: HttpApi
+          Properties:
+            ApiId: !Ref GuzoHttpApi
+            Path: /guzo/health
+            Method: GET
+        CatalogSearch:
+          Type: HttpApi
+          Properties:
+            ApiId: !Ref GuzoHttpApi
+            Path: /guzo/catalog/search
+            Method: GET
+        CatalogProduct:
+          Type: HttpApi
+          Properties:
+            ApiId: !Ref GuzoHttpApi
+            Path: /guzo/catalog/product/{id}
+            Method: GET
+        Enhancements:
+          Type: HttpApi
+          Properties:
+            ApiId: !Ref GuzoHttpApi
+            Path: /guzo/enhancements
+            Method: GET
+        Quote:
+          Type: HttpApi
+          Properties:
+            ApiId: !Ref GuzoHttpApi
+            Path: /guzo/quote
+            Method: POST
+        ItineraryPost:
+          Type: HttpApi
+          Properties:
+            ApiId: !Ref GuzoHttpApi
+            Path: /guzo/itinerary
+            Method: POST
+        ItineraryGet:
+          Type: HttpApi
+          Properties:
+            ApiId: !Ref GuzoHttpApi
+            Path: /guzo/itinerary
+            Method: GET
+
+Outputs:
+  ApiUrl:
+    Description: Guzo HTTP API base URL (append /guzo/chat, /guzo/session, /guzo/health, /guzo/catalog/*, /guzo/enhancements, /guzo/quote, /guzo/itinerary)
+    Value: !Sub https://${GuzoHttpApi}.execute-api.${AWS::Region}.amazonaws.com
+  SessionsTableName:
+    Description: DynamoDB sessions table
+    Value: !Ref GuzoSessionsTable
+  OpenRouterSecretArn:
+    Description: Set OPENROUTER_API_KEY in this secret before chatting
+    Value: !Ref OpenRouterSecret
+  GuzoChatHandlerArn:
+    Description: Lambda function ARN
+    Value: !GetAtt GuzoChatHandler.Arn

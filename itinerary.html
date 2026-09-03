@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Itinerary | Air India Holidays</title>
+    <meta name="description" content="Personalised India itinerary built with Maharaja — day-by-day plan, flights, hotels, and EasyGDS availability search.">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                fontFamily: {
+                    sans: ['Open Sans', 'sans-serif'],
+                    display: ['Cormorant Garamond', 'serif'],
+                },
+                extend: {
+                    colors: {
+                        brand: {
+                            primary: '#8B1D3F',
+                            secondary: '#5C1029',
+                            accent: '#D4AF6A',
+                            text: '#1C1A16',
+                            muted: '#6E675B',
+                            surface: '#FAF8F3',
+                            white: '#FFFFFF',
+                            gold: '#B07C1C',
+                            red: '#B3122B',
+                            line: '#E9E4D9',
+                        }
+                    }
+                }
+            }
+        };
+    </script>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        :root {
+            --paper: #FAF8F3;
+            --ink: #1C1A16;
+            --muted: #6E675B;
+            --green: #8B1D3F;
+            --greenD: #5C1029;
+            --gold: #B07C1C;
+            --red: #B3122B;
+            --line: #E9E4D9;
+            --card: #FFFFFF;
+        }
+
+        body.tour-page {
+            background: var(--paper);
+            color: var(--ink);
+        }
+
+        @keyframes kenburns {
+            0% { transform: scale(1.05) translate(0, 0); }
+            100% { transform: scale(1.18) translate(-2%, -2.5%); }
+        }
+
+        .kenburns {
+            animation: kenburns 22s ease-in-out infinite alternate;
+        }
+
+        .tour-section-nav {
+            position: sticky;
+            /* Sit flush under the fixed h-20 site header when stuck */
+            top: 5rem;
+            z-index: 50;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            padding: 14px 24px;
+            background: rgba(250, 248, 243, 0.92);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--line);
+        }
+
+        @media (min-width: 1024px) {
+            .tour-section-nav {
+                padding-left: 44px;
+                padding-right: 44px;
+            }
+        }
+
+        .tour-section-nav a {
+            padding-bottom: 3px;
+            border-bottom: 2px solid transparent;
+            color: var(--muted);
+            opacity: 0.75;
+            transition: color 0.2s, border-color 0.2s, opacity 0.2s;
+            white-space: nowrap;
+        }
+
+        .tour-section-nav a.is-active {
+            border-bottom-color: var(--green);
+            color: var(--ink);
+            opacity: 1;
+        }
+
+        .tour-section-nav a:hover {
+            color: var(--ink);
+            opacity: 1;
+        }
+
+        .day-card {
+            display: grid;
+            gap: 0;
+            background: var(--card);
+            border: 1px solid var(--line);
+            border-radius: 18px;
+            overflow: hidden;
+        }
+
+        @media (min-width: 768px) {
+            .day-card {
+                grid-template-columns: 1.05fr 1fr;
+            }
+
+            .day-card.is-flip {
+                grid-template-columns: 1fr 1.05fr;
+            }
+
+            .day-card.is-flip .day-card-media {
+                order: 2;
+            }
+
+            .day-card.is-flip .day-card-body {
+                order: 1;
+            }
+        }
+
+        .day-card-media {
+            position: relative;
+            min-height: 220px;
+        }
+
+        @media (min-width: 768px) {
+            .day-card-media {
+                min-height: 280px;
+            }
+        }
+
+        .day-card-media img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .kenburns { animation: none; }
+        }
+
+        /* Keep the back arrow legible over light hero imagery */
+        .itinerary-back-btn {
+            filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.7))
+                drop-shadow(0 2px 8px rgba(0, 0, 0, 0.45));
+        }
+
+        #main-header.is-scrolled .itinerary-back-btn {
+            filter: none;
+        }
+    </style>
+</head>
+
+<body class="tour-page font-sans antialiased pb-28 lg:pb-24" id="itinerary-root" aria-busy="true">
+
+    <header class="absolute top-0 left-0 right-0 z-[60] h-20 flex items-center transition-all duration-300"
+        id="main-header">
+        <div class="container mx-auto px-6 lg:px-12 flex justify-between items-center h-full gap-3">
+            <div class="flex items-center gap-2 sm:gap-3 min-w-0">
+                <a href="index.html" id="itinerary-back"
+                    class="itinerary-back-btn header-menu-btn flex-shrink-0 inline-flex items-center justify-center w-10 h-10 rounded-full text-white hover:bg-white/15 transition-colors"
+                    aria-label="Back to Maharaja">
+                    <i data-lucide="arrow-left" class="w-6 h-6"></i>
+                </a>
+                <a href="index.html" class="flex items-center gap-3 group min-w-0">
+                    <span class="header-logo-badge w-11 h-11 rounded-full bg-white flex items-center justify-center text-brand-primary font-display font-bold text-lg shadow-md transition-transform duration-300 group-hover:scale-105 flex-shrink-0">AI</span>
+                    <span class="font-display font-bold text-xl text-white leading-none header-logo-text truncate">Air India <span class="text-brand-accent font-normal text-sm align-top">Holidays</span></span>
+                </a>
+            </div>
+
+            <div class="hidden lg:flex items-center gap-8 text-sm font-semibold text-white/95 header-nav">
+                <a href="index.html" class="hover:text-white transition-all duration-300 hover:underline underline-offset-4">Home</a>
+                <a href="index.html"
+                    class="header-join-btn bg-brand-primary text-white border border-white/20 px-6 py-2.5 rounded-full hover:bg-brand-secondary transition-all duration-300 shadow-lg">Ask Maharaja</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="relative" id="tour-hero-wrap">
+        <section id="itinerary-hero" class="relative h-[560px] max-h-[75vh] min-h-[420px] overflow-hidden bg-[#0d1a0e]">
+            <div class="absolute inset-[-8%_0] will-change-transform" data-parallax>
+                <img data-hero-img src="https://commons.wikimedia.org/wiki/Special:FilePath/Taj%20Mahal%20(Edited).jpeg?width=1280"
+                    alt="India itinerary"
+                    class="absolute inset-0 w-full h-full object-cover object-center kenburns">
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[rgba(8,14,8,0.92)] via-[rgba(8,14,8,0.28)] to-[rgba(139,29,63,0.22)]"></div>
+
+            <div class="relative z-10 h-full flex flex-col justify-end px-6 lg:px-11 pb-8 lg:pb-9 pt-28">
+                <span
+                    class="inline-flex items-center gap-2 self-start bg-brand-primary/90 text-white text-[11px] font-bold tracking-[0.16em] uppercase px-3.5 py-1.5 rounded-full mb-4 border border-white/15">
+                    <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+                    Built with Maharaja
+                </span>
+                <h1 data-hero-title class="font-display text-4xl sm:text-5xl lg:text-[58px] leading-[1.02] font-bold text-white tracking-tight max-w-3xl drop-shadow-lg">
+                    Your India itinerary
+                </h1>
+                <p data-hero-subtitle class="mt-4 mb-6 max-w-xl text-base sm:text-lg leading-relaxed text-white/90 font-light">
+                    A personalised day-by-day plan with Air India flights and recommended stays.
+                </p>
+                <div class="flex gap-3 flex-wrap">
+                    <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl px-4 py-2.5">
+                        <div class="text-[10px] uppercase tracking-[0.12em] text-white/60 font-bold">Route</div>
+                        <div data-hero-route class="text-white font-semibold text-sm mt-0.5">Jaipur → Agra → Udaipur</div>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl px-4 py-2.5">
+                        <div class="text-[10px] uppercase tracking-[0.12em] text-white/60 font-bold">Duration</div>
+                        <div data-hero-duration class="text-white font-semibold text-sm mt-0.5">6 days · 5 nights</div>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl px-4 py-2.5">
+                        <div class="text-[10px] uppercase tracking-[0.12em] text-white/60 font-bold">Maharaja Points</div>
+                        <div class="text-white font-semibold text-sm mt-0.5">About <span data-miles-estimate>4,170</span> points</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <nav class="tour-section-nav" id="section-nav" aria-label="Itinerary sections">
+        <a href="index.html" class="hidden sm:block font-extrabold tracking-[0.14em] text-xs uppercase text-brand-secondary no-underline border-0 opacity-100">Air India Holidays</a>
+        <div class="flex gap-4 sm:gap-6 text-[12.5px] font-semibold overflow-x-auto scrollbar-hide flex-1 sm:flex-none sm:justify-center">
+            <a href="#overview" data-link="overview" class="is-active">Overview</a>
+            <a href="#itinerary" data-link="itinerary">Itinerary</a>
+            <a href="#flights" data-link="flights">Flights</a>
+            <a href="#stays" data-link="stays">Stays</a>
+            <a href="#enhance" data-link="enhance">Tailor</a>
+            <a href="#includes" data-link="includes">Includes</a>
+        </div>
+        <div class="font-extrabold text-brand-primary text-sm sm:text-[15px] shrink-0">
+            <span data-book-currency>USD</span> <span data-book-price>1,895</span>
+        </div>
+    </nav>
+
+    <section id="overview" data-sec="overview" class="bg-white border-b border-brand-line">
+        <div id="itinerary-overview-stats" class="grid grid-cols-3 lg:grid-cols-6"></div>
+    </section>
+
+    <section class="max-w-[720px] px-6 lg:px-11 pt-12 lg:pt-14 pb-2">
+        <div class="text-xs font-bold tracking-[0.18em] uppercase text-brand-primary mb-3.5">Your journey</div>
+        <h2 class="font-display text-3xl lg:text-[34px] leading-tight font-bold tracking-tight m-0">
+            Day-by-day across your trip
+        </h2>
+        <p class="mt-4 text-base lg:text-[16.5px] leading-relaxed text-brand-muted m-0">
+            See how your flights, transfers, monument visits and guided experiences come together, then check your dates and price below.
+        </p>
+    </section>
+
+    <section id="itinerary" data-sec="itinerary" class="px-6 lg:px-11 py-10 flex flex-col gap-6 lg:gap-7">
+        <div id="itinerary-days" class="flex flex-col gap-6 lg:gap-7"></div>
+    </section>
+
+    <section id="flights" data-sec="flights" class="px-6 lg:px-11 py-6">
+        <h2 class="font-display text-2xl font-bold mb-4">Your Air India flights</h2>
+        <div id="itinerary-flights" class="bg-white border border-brand-line rounded-[18px] px-5"></div>
+    </section>
+
+    <section id="stays" data-sec="stays" class="px-6 lg:px-11 py-6">
+        <h2 class="font-display text-2xl font-bold mb-4">Recommended stays</h2>
+        <div id="itinerary-hotels" class="bg-white border border-brand-line rounded-[18px] px-5"></div>
+    </section>
+
+    <section id="enhance" data-sec="enhance" class="px-6 lg:px-11 py-8">
+        <div class="bg-[#F3EFE5] border border-brand-line rounded-[18px] p-6 lg:p-8">
+            <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-4 mb-5">
+                <div>
+                    <div class="text-[11px] font-bold tracking-[0.16em] uppercase text-brand-primary">Optional</div>
+                    <h2 class="font-display text-2xl lg:text-3xl font-bold mt-1">Enhance your trip</h2>
+                    <p class="text-sm text-brand-muted mt-2 max-w-xl">A few catalogued options relevant to this route. Nothing is added until you choose it.</p>
+                </div>
+                <a id="tailor-with-guzo" href="index.html"
+                    class="inline-flex items-center justify-center rounded-xl border border-brand-primary text-brand-primary font-bold text-sm px-5 py-3 hover:bg-brand-primary hover:text-white transition-colors">
+                    Tailor this trip with Maharaja
+                </a>
+            </div>
+            <div id="itinerary-enhancements" class="grid grid-cols-1 md:grid-cols-2 gap-3"></div>
+            <div id="itinerary-enhancement-quote" class="hidden mt-5 bg-white border border-brand-line rounded-xl p-5"></div>
+        </div>
+    </section>
+
+    <section id="includes" data-sec="includes" class="px-6 lg:px-11 py-8 grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="bg-white border border-brand-line rounded-[18px] p-7">
+            <h3 class="text-base font-extrabold mb-4 flex items-center gap-2">
+                <i data-lucide="badge-check" class="w-[18px] h-[18px] text-brand-primary"></i>
+                Included
+            </h3>
+            <ul id="itinerary-inclusions" class="space-y-2.5 text-brand-muted text-sm"></ul>
+        </div>
+        <div class="bg-white border border-brand-line rounded-[18px] p-7">
+            <h3 class="text-base font-extrabold mb-4 flex items-center gap-2">
+                <i data-lucide="circle-x" class="w-[18px] h-[18px] text-brand-red"></i>
+                Not included
+            </h3>
+            <ul id="itinerary-exclusions" class="space-y-2.5 text-brand-muted text-sm"></ul>
+        </div>
+    </section>
+
+    <footer class="bg-brand-secondary text-white pt-12 pb-8 mt-10">
+        <div class="container mx-auto px-6 lg:px-12 flex flex-col md:flex-row justify-between items-start gap-8 mb-8">
+            <div>
+                <span class="font-display font-bold text-2xl text-white leading-none mb-4 inline-block">Air India <span class="text-brand-accent font-normal text-base align-top">Holidays</span></span>
+                <p class="text-green-100 text-sm leading-relaxed max-w-xs">
+                    Concept demo — Cricket World Cup 2027 and Taj Holidays packages, tailor-made with Air India Holidays. Not an official Air India product.
+                </p>
+            </div>
+            <div class="flex gap-8 text-sm">
+                <a href="index.html" class="text-green-100 hover:text-white transition-colors">Home</a>
+            </div>
+        </div>
+        <div class="container mx-auto px-6 lg:px-12 pt-6 border-t border-white/10 text-sm text-green-200">
+            <p>&copy; 2026 Air India Holidays. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Sticky booking bar -->
+    <div class="fixed bottom-0 left-0 right-0 z-[45] flex items-center justify-between gap-4 px-5 sm:px-8 py-4 bg-white/95 backdrop-blur-md border-t border-brand-line shadow-[0_-8px_24px_rgba(0,0,0,0.06)]">
+        <div>
+            <div class="text-[11px] uppercase tracking-[0.1em] text-brand-muted font-bold">
+                <span data-book-name>classic</span> · from
+            </div>
+            <div class="text-2xl font-extrabold text-brand-primary">
+                <span data-book-currency>USD</span> <span data-book-price>1,895</span>
+            </div>
+            <div class="text-[11px] text-brand-muted font-semibold mt-0.5">
+                About <span data-miles-estimate>4,170</span> Maharaja Points
+            </div>
+        </div>
+        <button id="book-itinerary-btn" type="button"
+            class="border-0 cursor-pointer bg-brand-primary text-white font-bold text-[15px] px-6 sm:px-8 py-3.5 rounded-xl shadow-[0_8px_24px_-8px_rgba(139,29,63,0.6)] hover:bg-brand-secondary transition-colors">
+            Check availability
+        </button>
+    </div>
+
+    <!-- Keep catalog crawlable from this page too -->
+    <a href="data/catalog/v1/catalog.json" class="sr-only" tabindex="-1" aria-hidden="true">Catalog</a>
+
+    <script src="scripts.js"></script>
+    <script type="module" src="js/itinerary-renderer.js"></script>
+</body>
+
+</html>
