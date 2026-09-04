@@ -919,75 +919,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     document.getElementById('pkg-search-btn').onclick = () => {
-        const originInput = document.getElementById('pkg-origin');
-        const destInput = document.getElementById('pkg-dest');
-        updateInputError(originInput, !originInput.value);
-        updateInputError(destInput, !destInput.value);
-        if (!originInput.value || !destInput.value) return;
-
-        const dates = document.getElementById('pkg-dates').value.split(' to ');
-        const def = getDefaultDates();
-
-        // Check Partial Hotel Date Logic
-        const isSep = document.getElementById('pkg-partial-hotel').checked;
-        if (isSep) {
-            const hInput = document.getElementById('pkg-hotel-dates');
-            const hDates = hInput.value.split(' to ');
-
-            if (hDates.length < 2) {
-                updateInputError(hInput, true);
-                return;
-            } else {
-                updateInputError(hInput, false);
-            }
-
-            if (dates.length === 2 && !validateDateRange(hDates, dates)) {
-                hInput.value = ''; // Clear invalid
-                hInput.placeholder = "Dates must be within flight dates";
-                updateInputError(hInput, true);
-                return;
-            }
-        }
-
-        const originCode = getCode('pkg-origin', 'SIN');
-        const destCode = getCode('pkg-dest', 'HKT');
-        const destId = (destInput && destInput.dataset.id) ? destInput.dataset.id : destCode;
-
-        const travelersApi = [];
-        pkgTravelerState.forEach((room, rIndex) => {
-            for (let i = 0; i < room.adults; i++) travelersApi.push({ type: 'adult', age: 30, room: rIndex + 1 });
-            room.children.forEach(age => travelersApi.push({ type: 'child', age: age, room: rIndex + 1 }));
-            for (let i = 0; i < room.infants; i++) travelersApi.push({ type: 'infant', age: 1, room: rIndex + 1 });
-        });
-
-        const cabinVal = document.getElementById('pkg-cabin-val').textContent;
-        // isSep already defined above
-
-        go({
-            process: 'bundle',
-            package_id: PACKAGE_CONFIG_ID,
-            place_type: 'airport',
-            place_id: destId,
-            is_separate: isSep,
-            expectation: JSON.stringify({
-                fl_cabin_class: cabinVal,
-                fl_departure_date: dates[0] || def.startStr,
-                fl_return_date: dates[1] || def.endStr,
-                fl_round_trip: true,
-                start_place_code: originCode,
-                start_place_type: 'airport_code',
-                des_code: destCode,
-                des_type: 'airport_code',
-                ht_des_code: destCode,
-                ht_des_type: 'airport_code',
-                ht_des_type: 'airport_code',
-                ht_checkin_date: isSep ? document.getElementById('pkg-hotel-dates').value.split(' to ')[0] : (dates[0] || def.startStr),
-                ht_checkout_date: isSep ? document.getElementById('pkg-hotel-dates').value.split(' to ')[1] : (dates[1] || def.endStr),
-                is_separate: isSep,
-                stars: null
-            }),
-            travelers: JSON.stringify(travelersApi)
-        });
+        location.href = document.getElementById('pkg-origin').value === 'LHR' ? 'search-taj.html' : 'search-cwc.html';
     };
 
 

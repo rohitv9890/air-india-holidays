@@ -51,25 +51,20 @@ function isPackagesRichReady(intent) {
 }
 
 /**
- * The two flagship packages should recommend themselves on the first mention,
- * not after a 3-question interrogation. When a message unambiguously names one
- * of them, fill in any still-missing trip facts with sensible defaults so
- * isPackagesRichReady() passes immediately.
+ * We only sell two fixed-date packages. The assistant's job for these isn't
+ * to run the general itinerary engine — it's a 2-step Q&A that ends in a link
+ * to the real page: (1) recognize the package, (2) ask travellers, (3) link.
  */
 const FLAGSHIP_PACKAGES = [
     {
         match: /\b(india\s*v(?:s)?\.?\s*australia|cwc\s*opener|world\s*cup\s*open(?:er|ing)|johannesburg\s*opener|wanderers)\b/i,
-        destination: { name: 'Johannesburg', code: 'JNB' },
-        defaultStart: '2027-10-02',
-        nights: 5,
-        taj: false,
+        name: 'CWC 2027 Opener: India v Australia, Johannesburg',
+        href: 'search-cwc.html',
     },
     {
         match: /\b(taj\s*lake\s*palace|udaipur)\b/i,
-        destination: { name: 'Udaipur', code: 'UDR' },
-        defaultStart: '2027-02-15',
-        nights: 3,
-        taj: true,
+        name: 'Taj Holidays: Udaipur & the Lake Palace',
+        href: 'search-taj.html',
     },
 ];
 
@@ -77,22 +72,9 @@ function matchFlagshipPackage(text) {
     return FLAGSHIP_PACKAGES.find((p) => p.match.test(text || '')) || null;
 }
 
-function addDaysIso(iso, n) {
-    const d = new Date(iso + 'T12:00:00');
-    d.setDate(d.getDate() + n);
-    return d.toISOString().split('T')[0];
-}
-
-function applyFlagshipDefaults(intent, flagship) {
-    const next = structuredClone(intent);
-    if (!next.destination?.name) next.destination = flagship.destination;
-    if (!next.origin?.code) next.origin = { name: 'Delhi', code: 'DEL' };
-    if (!next.dates) next.dates = {};
-    if (!next.dates.start) next.dates.start = flagship.defaultStart;
-    if (!next.dates.end) next.dates.end = addDaysIso(next.dates.start, flagship.nights);
-    if (!next.travelers) next.travelers = {};
-    if (!(next.travelers.adults >= 1)) next.travelers.adults = 2;
-    return next;
+function parseTravellerCount(text) {
+    const m = String(text || '').match(/\d+/);
+    return m ? Number(m[0]) : null;
 }
 
 function formatItineraryReadyReply(result) {
@@ -412,14 +394,44 @@ export async function planFromMessage(text, tab, pendingIntent, callbacks = {}) 
 
     let intent = mergeIntent(pendingIntent, slots, tab);
 
-    // Flagship packages recommend themselves on first mention — no interrogation,
-    // and no short-message bailout below should pre-empt this.
+    // Flagship packages: a direct 2-step Q&A ending in a link, not the general
+    // itinerary engine. Step 1 recognizes the package and asks travellers;
+    // step 2 reads the count and links straight to the real booking page.
     if (tab === 'packages') {
-        const flagship = matchFlagshipPackage(text) || matchFlagshipPackage(intent?.destination?.name || '');
+        const pendingFlagship = pendingIntent?._flagship;
+        if (pendingFlagship) {
+            const count = parseTravellerCount(text);
+            if (!count) {
+                return {
+                    intent,
+                    complete: false,
+                    response: { role: 'assistant', type: 'text', content: 'Just need a number — how many travellers?' },
+                };
+            }
+            await delay(GUZO_CONFIG.typingDelayMs);
+            return {
+                intent,
+                complete: true,
+                response: {
+                    role: 'assistant',
+                    type: 'text',
+                    content: `Got it — ${count} traveller${count > 1 ? 's' : ''} for ${pendingFlagship.name}. Continue here:`,
+                },
+                responses: [
+                    { role: 'assistant', type: 'text', content: `Got it — ${count} traveller${count > 1 ? 's' : ''} for ${pendingFlagship.name}. Continue here:` },
+                    { role: 'assistant', type: 'actions', actions: [{ id: 'open', label: 'Open package', href: pendingFlagship.href }] },
+                ],
+            };
+        }
+
+        const flagship = matchFlagshipPackage(text);
         if (flagship) {
-            const readyIntent = applyFlagshipDefaults(intent, flagship);
-            const family = (readyIntent.travelers?.children || 0) > 0;
-            return buildRichPackageResponse(readyIntent, { family, taj: flagship.taj });
+            await delay(GUZO_CONFIG.typingDelayMs);
+            return {
+                intent: { ...intent, _flagship: flagship },
+                complete: false,
+                response: { role: 'assistant', type: 'text', content: `${flagship.name} — how many travellers?` },
+            };
         }
     }
 
