@@ -2,7 +2,7 @@ export const INR_PER_USD = 83;
 export const GBP_PER_USD = 0.79;
 export const AED_PER_USD = 3.67;
 
-export const DEFAULT_DISPLAY_CURRENCY = 'USD';
+export const DEFAULT_DISPLAY_CURRENCY = 'INR';
 
 export const ORIGIN_DISPLAY_CURRENCY = Object.freeze({
     DEL: 'INR',

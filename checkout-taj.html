@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | Taj Lake Palace | Air India Holidays</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                fontFamily: {
+                    sans: ['Inter', 'sans-serif'],
+                    display: ['Playfair Display', 'Georgia', 'serif'],
+                },
+                extend: {
+                    colors: {
+                        brand: {
+                            primary: '#8B1D3F',
+                            secondary: '#5C1029',
+                            accent: '#D4AF6A',
+                            text: '#1A1A1A',
+                            muted: '#555555',
+                            surface: '#F3F4F6',
+                            white: '#FFFFFF',
+                            gold: '#B3122B',
+                        }
+                    },
+                    boxShadow: {
+                        'elegant': '0 4px 20px -5px rgba(139, 29, 63, 0.15)',
+                        'elegant-lg': '0 10px 30px -5px rgba(139, 29, 63, 0.2)',
+                        'elegant-xl': '0 20px 40px -5px rgba(139, 29, 63, 0.25)',
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-brand-surface text-brand-text font-sans antialiased">
+
+    <!-- ================= HEADER ================= -->
+    <header class="is-scrolled relative top-0 left-0 right-0 z-[60] h-20 flex items-center transition-all duration-300"
+        id="main-header">
+        <div class="container mx-auto px-6 lg:px-12 flex justify-between items-center h-full gap-3">
+            <div class="flex items-center gap-2 sm:gap-3 min-w-0">
+                <a href="select-taj.html"
+                    class="flex-shrink-0 inline-flex items-center justify-center w-10 h-10 rounded-full text-brand-primary hover:bg-brand-surface transition-colors"
+                    aria-label="Back to package selection">
+                    <i data-lucide="arrow-left" class="w-6 h-6"></i>
+                </a>
+                <a href="index.html" class="flex items-center gap-3 group min-w-0">
+                    <span
+                        class="w-11 h-11 rounded-full bg-brand-primary flex items-center justify-center text-white font-display font-bold text-lg shadow-md transition-transform duration-300 group-hover:scale-105 flex-shrink-0">AI</span>
+                    <span class="font-display font-bold text-xl text-brand-primary leading-none truncate">Air India
+                        <span class="text-brand-gold font-normal text-sm align-top">Holidays</span></span>
+                </a>
+            </div>
+            <div class="hidden lg:flex items-center gap-3 text-sm font-semibold text-brand-muted">
+                <i data-lucide="lock" class="w-4 h-4 text-brand-primary"></i>
+                <span>Secure Checkout</span>
+            </div>
+        </div>
+    </header>
+
+    <main id="checkout-view" class="pb-32">
+        <div class="container mx-auto px-6 lg:px-12 pt-6 max-w-3xl">
+
+            <!-- ================= BREADCRUMB ================= -->
+            <nav class="flex items-center gap-2 text-sm font-semibold text-brand-muted mb-6">
+                <a href="select-taj.html" class="hover:text-brand-primary transition-colors">Your Cart</a>
+                <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+                <span class="text-brand-primary">Checkout</span>
+            </nav>
+
+            <!-- ================= ORDER RECAP ================= -->
+            <div class="bg-white rounded-2xl shadow-elegant border border-gray-100 p-5 mb-6 flex items-center gap-4">
+                <div class="w-16 h-16 rounded-xl overflow-hidden flex-shrink-0">
+                    <img src="images/taj-lake-palace-udaipur.jpg" alt="Taj Holidays: Udaipur & the Lake Palace" class="w-full h-full object-cover">
+                </div>
+                <div class="min-w-0 flex-1">
+                    <h2 class="font-bold text-brand-text truncate">Taj Holidays: Udaipur &amp; the Lake Palace</h2>
+                    <p class="text-xs text-brand-muted">AI 161/9631 &middot; LHR &#8596; JAI (via DEL) &middot; 13&ndash;18 Nov 2026 &middot; Lake-View Room, Taj Lake Palace</p>
+                </div>
+            </div>
+
+            <!-- ================= CONTACT DETAILS ================= -->
+            <section class="bg-white rounded-2xl shadow-elegant border border-gray-100 p-5 md:p-6 mb-6">
+                <h2 class="font-display text-lg font-bold text-brand-primary mb-1">Contact Details</h2>
+                <p class="text-xs text-brand-muted mb-5">Your e-ticket and hotel voucher will be sent here.</p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="sm:col-span-2">
+                        <label class="booking-form-label" for="taj-email">Email Address</label>
+                        <input type="email" id="taj-email" placeholder="you@example.com" class="booking-form-input">
+                    </div>
+                    <div>
+                        <label class="booking-form-label" for="taj-country">Country</label>
+                        <select id="taj-country" class="booking-form-select">
+                            <option selected>United Kingdom</option>
+                            <option>India</option>
+                            <option>United States</option>
+                            <option>United Arab Emirates</option>
+                            <option>South Africa</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="booking-form-label" for="taj-phone">Phone Number</label>
+                        <div class="flex gap-2">
+                            <select class="booking-form-select w-24 flex-shrink-0" aria-label="Country code">
+                                <option selected>+44</option>
+                                <option>+91</option>
+                                <option>+1</option>
+                                <option>+27</option>
+                            </select>
+                            <input type="tel" id="taj-phone" placeholder="7700 900123" class="booking-form-input">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ================= PASSENGER 1 ================= -->
+            <section class="pax-accordion is-open bg-white rounded-2xl shadow-elegant border border-gray-100 mb-4 overflow-hidden">
+                <button type="button" class="pax-accordion-header w-full flex items-center justify-between p-5 md:p-6" data-toggle="pax-1">
+                    <div class="flex items-center gap-3">
+                        <span class="w-8 h-8 rounded-full bg-brand-primary/10 text-brand-primary flex items-center justify-center font-bold text-sm">1</span>
+                        <span class="font-bold text-brand-text">Passenger 1 <span class="text-brand-muted font-normal text-sm">(Adult)</span></span>
+                    </div>
+                    <i data-lucide="chevron-down" class="pax-accordion-chevron w-5 h-5 text-brand-muted"></i>
+                </button>
+                <div class="pax-accordion-body">
+                    <div class="px-5 md:px-6 pb-6 grid grid-cols-1 sm:grid-cols-4 gap-4">
+                        <div>
+                            <label class="booking-form-label">Title</label>
+                            <select class="booking-form-select">
+                                <option>Mr</option>
+                                <option>Mrs</option>
+                                <option>Ms</option>
+                                <option>Dr</option>
+                            </select>
+                        </div>
+                        <div class="sm:col-span-1">
+                            <label class="booking-form-label">First Name</label>
+                            <input type="text" placeholder="First name" class="booking-form-input">
+                        </div>
+                        <div class="sm:col-span-1">
+                            <label class="booking-form-label">Last Name</label>
+                            <input type="text" placeholder="Last name" class="booking-form-input">
+                        </div>
+                        <div>
+                            <label class="booking-form-label">Date of Birth</label>
+                            <input type="date" class="booking-form-input">
+                        </div>
+                        <div class="sm:col-span-2">
+                            <label class="booking-form-label">Nationality</label>
+                            <select class="booking-form-select">
+                                <option>United Kingdom</option>
+                                <option>India</option>
+                                <option>United States</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div class="sm:col-span-2">
+                            <label class="booking-form-label">Passport Number</label>
+                            <input type="text" placeholder="Passport number" class="booking-form-input">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ================= PASSENGER 2 ================= -->
+            <section class="pax-accordion bg-white rounded-2xl shadow-elegant border border-gray-100 mb-4 overflow-hidden">
+                <button type="button" class="pax-accordion-header w-full flex items-center justify-between p-5 md:p-6" data-toggle="pax-2">
+                    <div class="flex items-center gap-3">
+                        <span class="w-8 h-8 rounded-full bg-brand-primary/10 text-brand-primary flex items-center justify-center font-bold text-sm">2</span>
+                        <span class="font-bold text-brand-text">Passenger 2 <span class="text-brand-muted font-normal text-sm">(Adult)</span></span>
+                    </div>
+                    <i data-lucide="chevron-down" class="pax-accordion-chevron w-5 h-5 text-brand-muted"></i>
+                </button>
+                <div class="pax-accordion-body">
+                    <div class="px-5 md:px-6 pb-6 grid grid-cols-1 sm:grid-cols-4 gap-4">
+                        <div>
+                            <label class="booking-form-label">Title</label>
+                            <select class="booking-form-select">
+                                <option>Mr</option>
+                                <option>Mrs</option>
+                                <option>Ms</option>
+                                <option>Dr</option>
+                            </select>
+                        </div>
+                        <div class="sm:col-span-1">
+                            <label class="booking-form-label">First Name</label>
+                            <input type="text" placeholder="First name" class="booking-form-input">
+                        </div>
+                        <div class="sm:col-span-1">
+                            <label class="booking-form-label">Last Name</label>
+                            <input type="text" placeholder="Last name" class="booking-form-input">
+                        </div>
+                        <div>
+                            <label class="booking-form-label">Date of Birth</label>
+                            <input type="date" class="booking-form-input">
+                        </div>
+                        <div class="sm:col-span-2">
+                            <label class="booking-form-label">Nationality</label>
+                            <select class="booking-form-select">
+                                <option>United Kingdom</option>
+                                <option>India</option>
+                                <option>United States</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div class="sm:col-span-2">
+                            <label class="booking-form-label">Passport Number</label>
+                            <input type="text" placeholder="Passport number" class="booking-form-input">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- ================= CONFIRMATION VIEW (hidden until Confirm & Pay) ================= -->
+    <main id="confirmation-view" class="hidden pb-24">
+        <div class="container mx-auto px-6 lg:px-12 pt-16 max-w-lg text-center">
+            <div class="w-16 h-16 rounded-full bg-green-50 text-green-600 flex items-center justify-center mx-auto mb-5">
+                <i data-lucide="check" class="w-8 h-8"></i>
+            </div>
+            <h1 class="font-display text-2xl font-bold text-brand-primary mb-2">Booking Confirmed</h1>
+            <p class="text-brand-muted mb-6">Your Taj Lake Palace package is booked. A confirmation and e-ticket will be sent to your email &mdash; this is a demo, no payment was taken.</p>
+            <div class="bg-white rounded-2xl shadow-elegant border border-gray-100 p-5 text-left text-sm space-y-2 mb-8">
+                <div class="flex justify-between"><span class="text-brand-muted">Booking Reference</span><span class="font-bold text-brand-text">AIH-TAJ-LKP26</span></div>
+                <div class="flex justify-between"><span class="text-brand-muted">Route</span><span class="font-bold text-brand-text">LHR &#8596; JAI (via DEL)</span></div>
+                <div class="flex justify-between"><span class="text-brand-muted">Dates</span><span class="font-bold text-brand-text">13 &ndash; 18 Nov 2026</span></div>
+                <div class="flex justify-between"><span class="text-brand-muted">Travellers</span><span class="font-bold text-brand-text">2 Adults</span></div>
+                <div class="flex justify-between pt-2 border-t border-gray-100"><span class="text-brand-muted">Total Paid</span><span class="font-bold text-brand-primary">&pound;3,792</span></div>
+            </div>
+            <a href="index.html" class="search-btn-primary h-12 px-8 text-sm uppercase tracking-wide inline-flex">Back to Home</a>
+        </div>
+    </main>
+
+    <!-- ================= STICKY BOTTOM BAR ================= -->
+    <div class="sticky-bottom-bar" id="checkout-bottom-bar">
+        <div class="container mx-auto px-6 lg:px-12 py-4 flex items-center justify-between gap-4">
+            <div>
+                <div class="text-xs text-brand-muted font-semibold">2 travellers &middot; 1 package</div>
+                <div class="text-xl font-bold text-brand-primary">&pound;3,792 total</div>
+            </div>
+            <button type="button" id="confirm-pay-btn" class="search-btn-primary h-12 px-8 text-sm uppercase tracking-wide">
+                <span>Confirm &amp; Pay</span>
+                <i data-lucide="lock" class="w-4 h-4"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="bg-brand-secondary text-white pt-10 pb-8">
+        <div class="container mx-auto px-6 lg:px-12 pt-2 text-center text-xs text-white/50">
+            &copy; 2027 Air India Holidays (concept demo). All rights reserved. Not a real payment flow.
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.pax-accordion-header').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                btn.closest('.pax-accordion').classList.toggle('is-open');
+            });
+        });
+
+        document.getElementById('confirm-pay-btn').addEventListener('click', function () {
+            document.getElementById('checkout-view').classList.add('hidden');
+            document.getElementById('checkout-bottom-bar').classList.add('hidden');
+            document.getElementById('confirmation-view').classList.remove('hidden');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        if (typeof lucide !== 'undefined') { lucide.createIcons(); }
+    </script>
+</body>
+
+</html>

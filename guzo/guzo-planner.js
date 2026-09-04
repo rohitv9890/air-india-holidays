@@ -50,6 +50,51 @@ function isPackagesRichReady(intent) {
     );
 }
 
+/**
+ * The two flagship packages should recommend themselves on the first mention,
+ * not after a 3-question interrogation. When a message unambiguously names one
+ * of them, fill in any still-missing trip facts with sensible defaults so
+ * isPackagesRichReady() passes immediately.
+ */
+const FLAGSHIP_PACKAGES = [
+    {
+        match: /\b(india\s*v(?:s)?\.?\s*australia|cwc\s*opener|world\s*cup\s*open(?:er|ing)|johannesburg\s*opener|wanderers)\b/i,
+        destination: { name: 'Johannesburg', code: 'JNB' },
+        defaultStart: '2027-10-02',
+        nights: 5,
+        taj: false,
+    },
+    {
+        match: /\b(taj\s*lake\s*palace|udaipur)\b/i,
+        destination: { name: 'Udaipur', code: 'UDR' },
+        defaultStart: '2027-02-15',
+        nights: 3,
+        taj: true,
+    },
+];
+
+function matchFlagshipPackage(text) {
+    return FLAGSHIP_PACKAGES.find((p) => p.match.test(text || '')) || null;
+}
+
+function addDaysIso(iso, n) {
+    const d = new Date(iso + 'T12:00:00');
+    d.setDate(d.getDate() + n);
+    return d.toISOString().split('T')[0];
+}
+
+function applyFlagshipDefaults(intent, flagship) {
+    const next = structuredClone(intent);
+    if (!next.destination?.name) next.destination = flagship.destination;
+    if (!next.origin?.code) next.origin = { name: 'Delhi', code: 'DEL' };
+    if (!next.dates) next.dates = {};
+    if (!next.dates.start) next.dates.start = flagship.defaultStart;
+    if (!next.dates.end) next.dates.end = addDaysIso(next.dates.start, flagship.nights);
+    if (!next.travelers) next.travelers = {};
+    if (!(next.travelers.adults >= 1)) next.travelers.adults = 2;
+    return next;
+}
+
 function formatItineraryReadyReply(result) {
     const itinerary = result?.itinerary;
     const title = itinerary?.title || 'your India holiday';
@@ -366,6 +411,17 @@ export async function planFromMessage(text, tab, pendingIntent, callbacks = {}) 
     }
 
     let intent = mergeIntent(pendingIntent, slots, tab);
+
+    // Flagship packages recommend themselves on first mention — no interrogation,
+    // and no short-message bailout below should pre-empt this.
+    if (tab === 'packages') {
+        const flagship = matchFlagshipPackage(text) || matchFlagshipPackage(intent?.destination?.name || '');
+        if (flagship) {
+            const readyIntent = applyFlagshipDefaults(intent, flagship);
+            const family = (readyIntent.travelers?.children || 0) > 0;
+            return buildRichPackageResponse(readyIntent, { family, taj: flagship.taj });
+        }
+    }
 
     if (!hasParsedSlots(slots) && text.length < 20 && !pendingIntent) {
         await delay(GUZO_CONFIG.typingDelayMs);

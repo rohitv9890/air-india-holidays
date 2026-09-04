@@ -7,6 +7,7 @@ import { loadDayIdeas, selectDayIdea } from './day-content.js';
 
 import {
     amountInCurrency,
+    DEFAULT_DISPLAY_CURRENCY,
     displayCurrencyForOrigin,
     formatDisplayPrice,
 } from './display-currency.js';
@@ -183,7 +184,9 @@ export function productToCard(product, displayCurrency = null) {
     const img = product.images?.[0];
     const days = product.duration?.days;
     const sourceCurrency = String(price.currency || 'USD').toUpperCase();
-    const currency = String(displayCurrency || sourceCurrency).toUpperCase();
+    // No explicit display currency (e.g. no origin known yet) -> show the
+    // site-wide default (INR), not the catalog's internal source currency.
+    const currency = String(displayCurrency || DEFAULT_DISPLAY_CURRENCY).toUpperCase();
     const priceFrom = priceInDisplayCurrency(price.amount, sourceCurrency, currency);
     return {
         id: product.id,
