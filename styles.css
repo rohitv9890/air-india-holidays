@@ -324,6 +324,12 @@
         font-size: 0.9375rem;
     }
 
+    /* Sticky-bar CTAs sit beside a price, not alone — don't force full width. */
+    .sticky-bottom-bar .search-btn-primary {
+        width: auto;
+        flex-shrink: 0;
+    }
+
     .search-label {
         font-size: 9px;
     }
