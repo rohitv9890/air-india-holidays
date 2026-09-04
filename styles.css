@@ -62,6 +62,10 @@
     color: #8B1D3F;
 }
 
+#main-header.is-scrolled .header-logo-text {
+    color: #B3122B;
+}
+
 #main-header.is-scrolled .header-join-btn {
     border-color: transparent;
 }
