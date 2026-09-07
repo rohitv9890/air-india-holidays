@@ -73,7 +73,7 @@ function renderTextBubble(msg, isUser) {
 
     return `
         <div class="guzo-msg ${isUser ? 'guzo-msg-user' : 'guzo-msg-assistant'}" data-msg-id="${escapeHtml(msg.id || '')}">
-            <div class="guzo-msg-avatar" aria-hidden="true">${isUser ? 'You' : 'M'}</div>
+            <div class="guzo-msg-avatar" aria-hidden="true">${isUser ? 'You' : 'g'}</div>
             <div class="guzo-msg-bubble">${formatMessageHtml(content, { markdown: !isUser })}</div>
         </div>
     `;
@@ -117,7 +117,7 @@ function renderCardsMessage(msg) {
 
     return `
         <div class="guzo-msg guzo-msg-assistant guzo-msg-wide" data-msg-id="${escapeHtml(msg.id || '')}">
-            <div class="guzo-msg-avatar" aria-hidden="true">M</div>
+            <div class="guzo-msg-avatar" aria-hidden="true">g</div>
             <div class="guzo-msg-rich">
                 ${pathHead
                     ? `<div class="guzo-choice-path">${pathHead}${rail}</div>`
@@ -148,7 +148,7 @@ function renderItineraryCta(msg) {
 
     return `
         <div class="guzo-msg guzo-msg-assistant guzo-msg-wide" data-msg-id="${escapeHtml(msg.id || '')}">
-            <div class="guzo-msg-avatar" aria-hidden="true">M</div>
+            <div class="guzo-msg-avatar" aria-hidden="true">g</div>
             <div class="guzo-msg-rich">
                 <div class="guzo-itinerary-cta">
                     <p class="guzo-choice-path-label">${escapeHtml(pathLabel)}</p>
@@ -169,7 +169,7 @@ function renderActionsMessage(msg) {
     const actions = msg.actions || [];
     return `
         <div class="guzo-msg guzo-msg-assistant guzo-msg-wide" data-msg-id="${escapeHtml(msg.id || '')}">
-            <div class="guzo-msg-avatar" aria-hidden="true">M</div>
+            <div class="guzo-msg-avatar" aria-hidden="true">g</div>
             <div class="guzo-msg-rich">
                 <div class="guzo-actions-row">
                     ${actions.map(a => `
@@ -188,7 +188,7 @@ function renderEnhancementsMessage(msg) {
     const selected = new Set(guzoState.selectedEnhancementIds || []);
     return `
         <div class="guzo-msg guzo-msg-assistant guzo-msg-wide" data-msg-id="${escapeHtml(msg.id || '')}">
-            <div class="guzo-msg-avatar" aria-hidden="true">M</div>
+            <div class="guzo-msg-avatar" aria-hidden="true">g</div>
             <div class="guzo-msg-rich guzo-enhancements">
                 <p class="guzo-enhancements-title">Optional ways to tailor this trip</p>
                 ${(msg.items || []).slice(0, 4).map(item => {
@@ -212,7 +212,7 @@ function renderQuoteMessage(msg) {
     const lines = quote.lines || [];
     return `
         <div class="guzo-msg guzo-msg-assistant guzo-msg-wide" data-msg-id="${escapeHtml(msg.id || '')}">
-            <div class="guzo-msg-avatar" aria-hidden="true">M</div>
+            <div class="guzo-msg-avatar" aria-hidden="true">g</div>
             <div class="guzo-msg-rich guzo-quote">
                 <p class="guzo-quote-title">Trip price</p>
                 ${lines.map(line => `<div class="guzo-quote-line">
@@ -231,7 +231,7 @@ function renderTripSummaryInline(msg) {
     const s = msg.summary || {};
     return `
         <div class="guzo-msg guzo-msg-assistant guzo-msg-wide" data-msg-id="${escapeHtml(msg.id || '')}">
-            <div class="guzo-msg-avatar" aria-hidden="true">M</div>
+            <div class="guzo-msg-avatar" aria-hidden="true">g</div>
             <div class="guzo-msg-rich">
                 <div class="guzo-summary-chip-row">
                     ${s.origin ? `<span class="guzo-summary-pill">${escapeHtml(s.origin)}</span>` : ''}
@@ -262,8 +262,8 @@ function renderMessage(msg) {
 
 function renderTyping() {
     return `
-        <div class="guzo-msg guzo-msg-assistant guzo-typing-msg" aria-label="Maharaja is typing">
-            <div class="guzo-msg-avatar" aria-hidden="true">M</div>
+        <div class="guzo-msg guzo-msg-assistant guzo-typing-msg" aria-label="AI.g is typing">
+            <div class="guzo-msg-avatar" aria-hidden="true">g</div>
             <div class="guzo-msg-bubble">
                 <div class="guzo-typing"><span></span><span></span><span></span></div>
             </div>
@@ -502,7 +502,7 @@ export function updateSubtitles(state) {
         } else if (state.inputMode === 'guzo') {
             el.textContent = `Planning ${tabLabel.toLowerCase()}`;
         } else {
-            el.textContent = 'Your Air India travel guide';
+            el.textContent = 'How may I help you today?';
         }
     });
 }

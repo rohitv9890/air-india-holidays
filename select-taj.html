@@ -9,7 +9,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
 
@@ -18,13 +18,13 @@
             theme: {
                 fontFamily: {
                     sans: ['Inter', 'sans-serif'],
-                    display: ['Playfair Display', 'Georgia', 'serif'],
+                    display: ['Inter', 'sans-serif'],
                 },
                 extend: {
                     colors: {
                         brand: {
-                            primary: '#8B1D3F',
-                            secondary: '#5C1029',
+                            primary: '#DA0E29',
+                            secondary: '#AF162D',
                             accent: '#D4AF6A',
                             text: '#1A1A1A',
                             muted: '#555555',
@@ -34,9 +34,9 @@
                         }
                     },
                     boxShadow: {
-                        'elegant': '0 4px 20px -5px rgba(139, 29, 63, 0.15)',
-                        'elegant-lg': '0 10px 30px -5px rgba(139, 29, 63, 0.2)',
-                        'elegant-xl': '0 20px 40px -5px rgba(139, 29, 63, 0.25)',
+                        'elegant': '0 4px 20px -5px rgba(218, 14, 41, 0.15)',
+                        'elegant-lg': '0 10px 30px -5px rgba(218, 14, 41, 0.2)',
+                        'elegant-xl': '0 20px 40px -5px rgba(218, 14, 41, 0.25)',
                     },
                     animation: {
                         'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
@@ -114,6 +114,15 @@
                 </div>
             </div>
 
+            <!-- ================= TAJ PARTNERSHIP BANNER ================= -->
+            <div class="bg-brand-secondary rounded-2xl px-4 py-3 flex items-center gap-3">
+                <img src="images/taj-logo-mob-header.svg" alt="Taj Hotels" class="h-7 w-auto flex-shrink-0">
+                <div class="h-7 w-px bg-white/25 flex-shrink-0"></div>
+                <p class="text-white text-[11px] sm:text-xs font-bold uppercase tracking-wide leading-snug">
+                    Exclusive <span class="text-brand-accent">&middot;</span> Air India &times; Taj Curated Holiday
+                </p>
+            </div>
+
             <!-- ================= SECTION HEADER ================= -->
             <div>
                 <h1 class="font-display text-xl md:text-2xl font-bold text-brand-primary mb-1">Choose your room</h1>
@@ -124,7 +133,7 @@
             <div class="room-card is-selected overflow-hidden" id="room-card-1" data-price="1896">
                 <div class="grid grid-cols-1 sm:grid-cols-[220px_1fr_auto] gap-5 p-5 items-center">
                     <div class="relative h-40 sm:h-full rounded-xl overflow-hidden min-h-[140px]">
-                        <img src="images/taj-lake-palace-udaipur.jpg" alt="Luxury Room, Taj Lake Palace"
+                        <img src="images/taj-lake-palace-room-real.jpg" alt="Luxury Room, Taj Lake Palace"
                             class="absolute inset-0 w-full h-full object-cover">
                     </div>
                     <div class="min-w-0">
@@ -166,7 +175,7 @@
             <div class="room-card overflow-hidden" id="room-card-2" data-price="2450">
                 <div class="grid grid-cols-1 sm:grid-cols-[220px_1fr_auto] gap-5 p-5 items-center">
                     <div class="relative h-40 sm:h-full rounded-xl overflow-hidden min-h-[140px]">
-                        <img src="images/taj-lake-palace-udaipur.jpg" alt="Historical Suite, Taj Lake Palace"
+                        <img src="images/taj-lake-palace-real.jpg" alt="Historical Suite, Taj Lake Palace"
                             class="absolute inset-0 w-full h-full object-cover">
                     </div>
                     <div class="min-w-0">
@@ -208,7 +217,7 @@
             <div class="room-card overflow-hidden" id="room-card-3" data-price="3400">
                 <div class="grid grid-cols-1 sm:grid-cols-[220px_1fr_auto] gap-5 p-5 items-center">
                     <div class="relative h-40 sm:h-full rounded-xl overflow-hidden min-h-[140px]">
-                        <img src="images/taj-lake-palace-udaipur.jpg" alt="Grand Royal Suite, Taj Lake Palace"
+                        <img src="images/taj-lake-palace-exterior-real.jpg" alt="Grand Royal Suite, Taj Lake Palace"
                             class="absolute inset-0 w-full h-full object-cover">
                     </div>
                     <div class="min-w-0">

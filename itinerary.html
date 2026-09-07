@@ -6,12 +6,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Itinerary | Air India Holidays</title>
-    <meta name="description" content="Personalised India itinerary built with Maharaja — day-by-day plan, flights, hotels, and EasyGDS availability search.">
+    <meta name="description" content="Personalised India itinerary built with AI.g — day-by-day plan, flights, hotels, and EasyGDS availability search.">
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
 
@@ -19,14 +19,14 @@
         tailwind.config = {
             theme: {
                 fontFamily: {
-                    sans: ['Open Sans', 'sans-serif'],
-                    display: ['Cormorant Garamond', 'serif'],
+                    sans: ['Inter', 'sans-serif'],
+                    display: ['Inter', 'sans-serif'],
                 },
                 extend: {
                     colors: {
                         brand: {
-                            primary: '#8B1D3F',
-                            secondary: '#5C1029',
+                            primary: '#DA0E29',
+                            secondary: '#AF162D',
                             accent: '#D4AF6A',
                             text: '#1C1A16',
                             muted: '#6E675B',
@@ -49,8 +49,8 @@
             --paper: #FAF8F3;
             --ink: #1C1A16;
             --muted: #6E675B;
-            --green: #8B1D3F;
-            --greenD: #5C1029;
+            --green: #DA0E29;
+            --greenD: #AF162D;
             --gold: #B07C1C;
             --red: #B3122B;
             --line: #E9E4D9;
@@ -184,7 +184,7 @@
             <div class="flex items-center gap-2 sm:gap-3 min-w-0">
                 <a href="index.html" id="itinerary-back"
                     class="itinerary-back-btn header-menu-btn flex-shrink-0 inline-flex items-center justify-center w-10 h-10 rounded-full text-white hover:bg-white/15 transition-colors"
-                    aria-label="Back to Maharaja">
+                    aria-label="Back to AI.g">
                     <i data-lucide="arrow-left" class="w-6 h-6"></i>
                 </a>
                 <a href="index.html" class="flex items-center gap-2 group min-w-0">
@@ -196,7 +196,7 @@
             <div class="hidden lg:flex items-center gap-8 text-sm font-semibold text-white/95 header-nav">
                 <a href="index.html" class="hover:text-white transition-all duration-300 hover:underline underline-offset-4">Home</a>
                 <a href="index.html"
-                    class="header-join-btn bg-brand-primary text-white border border-white/20 px-6 py-2.5 rounded-full hover:bg-brand-secondary transition-all duration-300 shadow-lg">Ask Maharaja</a>
+                    class="header-join-btn bg-brand-primary text-white border border-white/20 px-6 py-2.5 rounded-full hover:bg-brand-secondary transition-all duration-300 shadow-lg">Ask AI.g</a>
             </div>
         </div>
     </header>
@@ -208,13 +208,13 @@
                     alt="India itinerary"
                     class="absolute inset-0 w-full h-full object-cover object-center kenburns">
             </div>
-            <div class="absolute inset-0 bg-gradient-to-t from-[rgba(8,14,8,0.92)] via-[rgba(8,14,8,0.28)] to-[rgba(139,29,63,0.22)]"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[rgba(8,14,8,0.92)] via-[rgba(8,14,8,0.28)] to-[rgba(218,14,41,0.22)]"></div>
 
             <div class="relative z-10 h-full flex flex-col justify-end px-6 lg:px-11 pb-8 lg:pb-9 pt-28">
                 <span
                     class="inline-flex items-center gap-2 self-start bg-brand-primary/90 text-white text-[11px] font-bold tracking-[0.16em] uppercase px-3.5 py-1.5 rounded-full mb-4 border border-white/15">
                     <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
-                    Built with Maharaja
+                    Built with AI.g
                 </span>
                 <h1 data-hero-title class="font-display text-4xl sm:text-5xl lg:text-[58px] leading-[1.02] font-bold text-white tracking-tight max-w-3xl drop-shadow-lg">
                     Your India itinerary
@@ -293,7 +293,7 @@
                 </div>
                 <a id="tailor-with-guzo" href="index.html"
                     class="inline-flex items-center justify-center rounded-xl border border-brand-primary text-brand-primary font-bold text-sm px-5 py-3 hover:bg-brand-primary hover:text-white transition-colors">
-                    Tailor this trip with Maharaja
+                    Tailor this trip with AI.g
                 </a>
             </div>
             <div id="itinerary-enhancements" class="grid grid-cols-1 md:grid-cols-2 gap-3"></div>
@@ -349,7 +349,7 @@
             </div>
         </div>
         <button id="book-itinerary-btn" type="button"
-            class="border-0 cursor-pointer bg-brand-primary text-white font-bold text-[15px] px-6 sm:px-8 py-3.5 rounded-xl shadow-[0_8px_24px_-8px_rgba(139,29,63,0.6)] hover:bg-brand-secondary transition-colors">
+            class="border-0 cursor-pointer bg-brand-primary text-white font-bold text-[15px] px-6 sm:px-8 py-3.5 rounded-xl shadow-[0_8px_24px_-8px_rgba(218,14,41,0.6)] hover:bg-brand-secondary transition-colors">
             Check availability
         </button>
     </div>

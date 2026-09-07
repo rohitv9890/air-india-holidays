@@ -21,7 +21,7 @@ export function getMaharajaClubContext() {
 
 export function getMaharajaClubSubtitle() {
     const ctx = getMaharajaClubContext();
-    if (!ctx.authenticated) return 'Your Air India travel guide';
+    if (!ctx.authenticated) return 'How may I help you today?';
     const points = ctx.milesBalance != null ? ` · ${ctx.milesBalance.toLocaleString()} pts` : '';
     return `${ctx.tier}${points}`;
 }

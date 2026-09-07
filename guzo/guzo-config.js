@@ -21,7 +21,7 @@ export const GUZO_CONFIG = {
     },
 
     tabGreetings: {
-        packages: "Namaste! I'm Maharaja, your Air India Holidays assistant. Tell me where you'd like to go — the Cricket World Cup 2027 in South Africa, a Taj Holidays escape, or anywhere else — and I'll build your itinerary.\n\nHere are some suggested trips:",
+        packages: "Namaste! I'm AI.g, your Air India Holidays assistant. Tell me where you'd like to go — the Cricket World Cup 2027 in South Africa, a Taj Holidays escape, or anywhere else — and I'll build your itinerary.\n\nHere are some suggested trips:",
         hotels: "Namaste! Tell me the city, dates, and guests. I'll ask for anything still missing, then search.",
         tours: "Namaste! Share your destination and dates. I'll fill in the gaps, then search.",
         transfers: "Namaste! Pickup, dropoff, and time. I'll confirm the details, then search.",

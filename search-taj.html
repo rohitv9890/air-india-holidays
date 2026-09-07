@@ -9,7 +9,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
 
@@ -18,13 +18,13 @@
             theme: {
                 fontFamily: {
                     sans: ['Inter', 'sans-serif'],
-                    display: ['Playfair Display', 'Georgia', 'serif'],
+                    display: ['Inter', 'sans-serif'],
                 },
                 extend: {
                     colors: {
                         brand: {
-                            primary: '#8B1D3F',
-                            secondary: '#5C1029',
+                            primary: '#DA0E29',
+                            secondary: '#AF162D',
                             accent: '#D4AF6A',
                             text: '#1A1A1A',
                             muted: '#555555',
@@ -34,9 +34,9 @@
                         }
                     },
                     boxShadow: {
-                        'elegant': '0 4px 20px -5px rgba(139, 29, 63, 0.15)',
-                        'elegant-lg': '0 10px 30px -5px rgba(139, 29, 63, 0.2)',
-                        'elegant-xl': '0 20px 40px -5px rgba(139, 29, 63, 0.25)',
+                        'elegant': '0 4px 20px -5px rgba(218, 14, 41, 0.15)',
+                        'elegant-lg': '0 10px 30px -5px rgba(218, 14, 41, 0.2)',
+                        'elegant-xl': '0 20px 40px -5px rgba(218, 14, 41, 0.25)',
                     },
                     animation: {
                         'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
@@ -287,11 +287,18 @@
             <div class="bg-white rounded-2xl shadow-elegant-lg overflow-hidden border border-gray-100 grid grid-cols-1 md:grid-cols-[340px_1fr]">
                 <div class="flex flex-col">
                     <div class="relative h-56 md:h-64 min-h-[220px] flex-shrink-0">
-                        <img src="images/taj-lake-palace-udaipur.jpg" alt="Taj Lake Palace floating on Lake Pichola, Udaipur"
+                        <img src="images/taj-lake-palace-real.jpg" alt="Taj Lake Palace floating on Lake Pichola, Udaipur"
                             class="absolute inset-0 w-full h-full object-cover">
                         <div class="absolute top-4 left-4 bg-brand-accent text-brand-secondary text-[11px] font-bold px-3 py-1 rounded-full uppercase tracking-wide">
                             Signature
                         </div>
+                    </div>
+                    <div class="bg-brand-secondary px-4 py-3 flex items-center gap-3">
+                        <img src="images/taj-logo-mob-header.svg" alt="Taj Hotels" class="h-8 w-auto flex-shrink-0">
+                        <div class="h-8 w-px bg-white/25 flex-shrink-0"></div>
+                        <p class="text-white text-[11px] sm:text-xs font-bold uppercase tracking-wide leading-snug">
+                            Exclusive <span class="text-brand-accent">&middot;</span> Air India &times; Taj Curated Holiday
+                        </p>
                     </div>
                     <div class="grid grid-cols-4 gap-2 p-3 bg-brand-surface md:flex-1">
                         <img src="images/city-palace-udaipur.jpg" alt="City Palace, Udaipur"
@@ -300,7 +307,7 @@
                             class="h-20 w-full rounded-lg object-cover">
                         <img src="images/sajjangarh-monsoon-palace-udaipur.jpg" alt="Sajjangarh Monsoon Palace, Udaipur"
                             class="h-20 w-full rounded-lg object-cover">
-                        <img src="images/taj-lake-palace-udaipur.jpg" alt="Taj Lake Palace exterior"
+                        <img src="images/taj-lake-palace-exterior-real.jpg" alt="Taj Lake Palace exterior"
                             class="h-20 w-full rounded-lg object-cover">
                     </div>
                 </div>
